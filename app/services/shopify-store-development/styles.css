@@ -1,0 +1,442 @@
+:root {
+  --black: #050505;
+  --white: #F5F5F0;
+  --grey-dark: #0E0E0E;
+  --grey-mid: #1A1A1A;
+  --grey-card: #131313;
+  --grey-light: #7A7A7A;
+  --border: #222222;
+  --border-light: #2E2E2E;
+}
+
+.shopify-dev-page {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.shopify-dev-page *, .shopify-dev-page *::before, .shopify-dev-page *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GRAIN */
+.shopify-dev-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.3;
+}
+
+/* HERO */
+.shopify-dev-page .hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8vw;
+  position: relative;
+  overflow: hidden;
+  gap: 4rem;
+}
+
+.shopify-dev-page .hero-content {
+  flex: 1;
+  max-width: 650px;
+  position: relative;
+  z-index: 10;
+}
+
+.shopify-dev-page .hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.shopify-dev-page .hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+}
+
+.shopify-dev-page .hero-shopify-icon {
+  opacity: 0.1;
+  pointer-events: none;
+  user-select: none;
+  color: var(--white);
+  animation: floatY 8s ease-in-out infinite;
+}
+
+.shopify-dev-page .hero-badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  color: var(--grey-light);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.3s forwards;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.shopify-dev-page .hero-badge-line {
+  width: 28px;
+  height: 1px;
+  background: var(--grey-light);
+}
+.shopify-dev-page .hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--grey-light);
+}
+
+.shopify-dev-page .hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 8vw, 120px);
+  line-height: 0.95;
+  letter-spacing: 1px;
+  color: var(--white);
+  opacity: 0;
+  animation: fadeUp 0.8s 0.5s forwards;
+}
+.shopify-dev-page .hero-title em {
+  font-style: normal;
+  -webkit-text-stroke: 1.5px var(--white);
+  color: transparent;
+}
+
+.shopify-dev-page .hero-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-top: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.7s forwards;
+}
+.shopify-dev-page .hero-desc {
+  max-width: 460px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--grey-light);
+}
+.shopify-dev-page .hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 200px;
+}
+.shopify-dev-page .btn-primary {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+.shopify-dev-page .btn-primary:hover { opacity: 0.85; }
+.shopify-dev-page .btn-ghost {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid var(--border-light);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+.shopify-dev-page .btn-ghost:hover { border-color: var(--grey-light); }
+
+.shopify-dev-page .hero-scroll {
+  position: absolute;
+  right: 3rem;
+  bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  animation: fadeIn 1s 1.1s forwards;
+}
+.shopify-dev-page .hero-scroll span {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.5rem;
+  letter-spacing: 2px;
+  color: var(--grey-light);
+  writing-mode: vertical-rl;
+}
+.shopify-dev-page .scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--grey-light), transparent);
+  animation: pulse 2s infinite;
+}
+
+/* TICKER */
+.shopify-dev-page .ticker-wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 0;
+  background: var(--grey-dark);
+}
+.shopify-dev-page .ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+.shopify-dev-page .ticker-item {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey-light);
+  padding: 0 2.5rem;
+  white-space: nowrap;
+}
+.shopify-dev-page .ticker-item b { color: var(--white); font-weight: 400; }
+
+/* SECTION BASE */
+.shopify-dev-page section { padding: 7rem 8vw; border-top: 1px solid var(--border); }
+.shopify-dev-page .s-label { font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 3px; color: var(--grey-light); text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; }
+.shopify-dev-page .s-label-line { width: 20px; height: 1px; background: var(--grey-light); display: inline-block; }
+.shopify-dev-page .s-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 6.5vw, 88px); line-height: 1; letter-spacing: 1px; }
+
+/* INTRO SPLIT */
+.shopify-dev-page .intro-split { display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: center; margin-top: 3.5rem; }
+.shopify-dev-page .intro-text p { font-size: 1rem; line-height: 1.85; color: var(--grey-light); margin-bottom: 1.2rem; }
+.shopify-dev-page .intro-text p b { color: var(--white); font-weight: 500; }
+.shopify-dev-page .intro-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); }
+.shopify-dev-page .i-stat { padding: 2rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.shopify-dev-page .i-stat:nth-child(even) { border-right: none; }
+.shopify-dev-page .i-stat:nth-last-child(-n+2) { border-bottom: none; }
+.shopify-dev-page .i-stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--white); display: block; line-height: 1; }
+.shopify-dev-page .i-stat-label { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 2px; color: var(--grey-light); text-transform: uppercase; margin-top: 0.4rem; display: block; }
+
+/* SERVICES */
+.shopify-dev-page .services-section { background: var(--grey-dark); }
+.shopify-dev-page .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 4rem; }
+.shopify-dev-page .services-header p { font-size: 0.95rem; line-height: 1.8; color: var(--grey-light); }
+
+.shopify-dev-page .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.shopify-dev-page .srv-card { background: var(--grey-dark); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.35s; }
+.shopify-dev-page .srv-card::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 0; background: var(--white); transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 0; }
+.shopify-dev-page .srv-card:hover { background: var(--grey-dark); }
+.shopify-dev-page .srv-card:hover::before { height: 100%; }
+.shopify-dev-page .srv-card:hover .srv-num, .shopify-dev-page .srv-card:hover .srv-icon, .shopify-dev-page .srv-card:hover .srv-name, .shopify-dev-page .srv-card:hover .srv-desc, .shopify-dev-page .srv-card:hover .srv-tags span { color: var(--black) !important; border-color: rgba(0,0,0,0.15) !important; }
+.shopify-dev-page .srv-num { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 2px; color: var(--grey-light); position: relative; z-index: 1; transition: color 0.3s; margin-bottom: 2rem; }
+.shopify-dev-page .srv-icon { font-size: 2rem; display: block; position: relative; z-index: 1; margin-bottom: 1rem; transition: color 0.3s; }
+.shopify-dev-page .srv-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 1px; color: var(--white); position: relative; z-index: 1; transition: color 0.3s; margin-bottom: 0.6rem; }
+.shopify-dev-page .srv-desc { font-size: 0.82rem; line-height: 1.7; color: var(--grey-light); position: relative; z-index: 1; transition: color 0.3s; margin-bottom: 1.2rem; }
+.shopify-dev-page .srv-tags { display: flex; flex-wrap: wrap; gap: 6px; position: relative; z-index: 1; }
+.shopify-dev-page .srv-tags span { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 1px; color: var(--grey-light); border: 1px solid var(--border-light); padding: 3px 8px; text-transform: uppercase; transition: color 0.3s, border-color 0.3s; }
+
+/* PROCESS */
+.shopify-dev-page .process-wrap { margin-top: 4rem; }
+.shopify-dev-page .process-row { display: grid; grid-template-columns: 60px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--border); align-items: start; position: relative; }
+.shopify-dev-page .process-row:first-child { border-top: 1px solid var(--border); }
+.shopify-dev-page .process-row::after { content: ''; position: absolute; left: 29px; top: 4.5rem; bottom: -1px; width: 1px; background: linear-gradient(to bottom, var(--border-light), transparent); }
+.shopify-dev-page .process-row:last-child::after { display: none; }
+.shopify-dev-page .proc-num { width: 60px; height: 60px; border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--grey-light); flex-shrink: 0; transition: all 0.3s; }
+.shopify-dev-page .process-row:hover .proc-num { background: var(--white); color: var(--black); border-color: var(--white); }
+.shopify-dev-page .proc-content h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 1px; color: var(--white); margin-bottom: 0.5rem; }
+.shopify-dev-page .proc-content p { font-size: 0.87rem; line-height: 1.75; color: var(--grey-light); max-width: 640px; }
+.shopify-dev-page .proc-tools { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 1rem; }
+.shopify-dev-page .proc-tool { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 1px; color: var(--grey-light); border: 1px solid var(--border); padding: 4px 10px; text-transform: uppercase; }
+
+/* PACKAGES */
+.shopify-dev-page .packages-section { background: var(--grey-dark); }
+.shopify-dev-page .pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 4rem; border: 1px solid var(--border); }
+.shopify-dev-page .pkg-card { padding: 2.5rem; border-right: 1px solid var(--border); position: relative; }
+.shopify-dev-page .pkg-card:last-child { border-right: none; }
+.shopify-dev-page .pkg-card.featured { background: var(--white); color: var(--black); }
+.shopify-dev-page .pkg-popular { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 2px; text-transform: uppercase; color: var(--black); background: var(--black); padding: 4px 10px; display: inline-block; margin-bottom: 1.5rem; }
+.shopify-dev-page .pkg-name { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 1px; margin-bottom: 0.3rem; }
+.shopify-dev-page .pkg-price { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; line-height: 1; margin-bottom: 0.3rem; }
+.shopify-dev-page .pkg-price span { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 1px; color: var(--grey-light); vertical-align: middle; margin-left: 4px; }
+.shopify-dev-page .pkg-card.featured .pkg-price span { color: rgba(0,0,0,0.4); }
+.shopify-dev-page .pkg-desc { font-size: 0.82rem; line-height: 1.6; color: var(--grey-light); margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+.shopify-dev-page .pkg-card.featured .pkg-desc { color: rgba(0,0,0,0.5); border-color: rgba(0,0,0,0.1); }
+.shopify-dev-page .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+.shopify-dev-page .pkg-features li { font-size: 0.82rem; color: var(--grey-light); display: flex; gap: 10px; align-items: flex-start; }
+.shopify-dev-page .pkg-card.featured .pkg-features li { color: rgba(0,0,0,0.6); }
+.shopify-dev-page .pkg-features li::before { content: '→'; color: var(--white); font-size: 0.8rem; flex-shrink: 0; }
+.shopify-dev-page .pkg-card.featured .pkg-features li::before { color: var(--black); }
+.shopify-dev-page .pkg-btn { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; width: 100%; padding: 0.9rem; border: none; transition: opacity 0.2s; display: block; text-align: center; text-decoration: none; }
+.shopify-dev-page .pkg-btn-dark { background: var(--white); color: var(--black); }
+.shopify-dev-page .pkg-btn-inv { background: var(--black); color: var(--white); }
+.shopify-dev-page .pkg-btn:hover { opacity: 0.85; }
+
+/* TECH STACK */
+.shopify-dev-page .tech-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin-top: 4rem; border: 1px solid var(--border); }
+.shopify-dev-page .tech-item { padding: 2rem 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; transition: background 0.3s; position: relative; overflow: hidden; }
+.shopify-dev-page .tech-item:nth-child(6n) { border-right: none; }
+.shopify-dev-page .tech-item:hover { background: var(--grey-mid); }
+.shopify-dev-page .tech-icon { font-size: 1.8rem; margin-bottom: 0.8rem; display: block; }
+.shopify-dev-page .tech-name { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 1px; color: var(--grey-light); text-transform: uppercase; }
+
+/* PORTFOLIO */
+.shopify-dev-page .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); margin-top: 4rem; }
+.shopify-dev-page .port-item { background: var(--grey-card); position: relative; overflow: hidden; aspect-ratio: 4/3; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; }
+.shopify-dev-page .port-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: rgba(255,255,255,0.03); letter-spacing: 4px; pointer-events: none; }
+.shopify-dev-page .port-tag { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 2px; color: var(--grey-light); text-transform: uppercase; margin-bottom: 0.4rem; position: relative; z-index: 1; }
+.shopify-dev-page .port-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 1px; color: var(--white); position: relative; z-index: 1; }
+.shopify-dev-page .port-overlay { position: absolute; inset: 0; background: var(--white); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem; opacity: 0; transition: opacity 0.35s; z-index: 2; }
+.shopify-dev-page .port-overlay span { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 2px; color: var(--black); }
+.shopify-dev-page .port-overlay p { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 2px; color: rgba(0,0,0,0.4); text-transform: uppercase; }
+.shopify-dev-page .port-item:hover .port-overlay { opacity: 0; }
+
+/* WHY */
+.shopify-dev-page .why-section { background: var(--grey-dark); }
+.shopify-dev-page .why-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); margin-top: 4rem; }
+.shopify-dev-page .why-col { padding: 3rem; border-right: 1px solid var(--border); }
+.shopify-dev-page .why-col:last-child { border-right: none; background: var(--white); color: var(--black); }
+.shopify-dev-page .why-col-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 1px; margin-bottom: 2rem; color: inherit; }
+.shopify-dev-page .why-item { display: flex; gap: 1rem; padding: 1.2rem 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+.shopify-dev-page .why-col:last-child .why-item { border-color: rgba(0,0,0,0.1); }
+.shopify-dev-page .why-item:last-child { border-bottom: none; }
+.shopify-dev-page .why-check { width: 20px; height: 20px; border: 1px solid var(--grey-light); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; margin-top: 2px; }
+.shopify-dev-page .why-col:last-child .why-check { border-color: rgba(0,0,0,0.2); background: var(--black); color: var(--white); }
+.shopify-dev-page .why-item p { font-size: 0.87rem; line-height: 1.65; color: var(--grey-light); }
+.shopify-dev-page .why-col:last-child .why-item p { color: rgba(0,0,0,0.55); }
+
+/* FAQ */
+.shopify-dev-page .faq-list { margin-top: 4rem; }
+.shopify-dev-page .faq-item { border-bottom: 1px solid var(--border); }
+.shopify-dev-page .faq-item:first-child { border-top: 1px solid var(--border); }
+.shopify-dev-page .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; cursor: pointer; }
+.shopify-dev-page .faq-q h4 { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 1rem; color: var(--white); }
+.shopify-dev-page .faq-toggle { font-size: 1.2rem; color: var(--grey-light); transition: transform 0.3s; }
+.shopify-dev-page .faq-item.open .faq-toggle { transform: rotate(45deg); color: var(--white); }
+.shopify-dev-page .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
+.shopify-dev-page .faq-a p { font-size: 0.88rem; line-height: 1.8; color: var(--grey-light); padding-bottom: 1.5rem; }
+.shopify-dev-page .faq-item.open .faq-a { max-height: 200px; }
+
+/* CTA */
+.shopify-dev-page .cta-section { background: var(--white); color: var(--black); border-top: none; text-align: center; padding: 8rem 8vw; }
+.shopify-dev-page .cta-section .s-label { color: rgba(0,0,0,0.4); justify-content: center; }
+.shopify-dev-page .cta-section .s-label-line { background: rgba(0,0,0,0.3); }
+.shopify-dev-page .cta-section .s-title { color: var(--black); }
+.shopify-dev-page .cta-section p { max-width: 500px; margin: 1.5rem auto 3rem; font-size: 0.95rem; line-height: 1.8; color: rgba(0,0,0,0.5); }
+.shopify-dev-page .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.shopify-dev-page .cta-dark { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--white); background: var(--black); border: none; padding: 1.1rem 2.5rem; text-decoration: none; transition: opacity 0.2s; }
+.shopify-dev-page .cta-dark:hover { opacity: 0.85; }
+.shopify-dev-page .cta-outline { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--black); background: transparent; border: 1px solid rgba(0,0,0,0.2); padding: 1.1rem 2.5rem; text-decoration: none; transition: border-color 0.2s; }
+.shopify-dev-page .cta-outline:hover { border-color: var(--black); }
+
+/* CONTACT */
+.shopify-dev-page .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; }
+.shopify-dev-page .contact-left { padding: 5rem 8vw; border-right: 1px solid var(--border); border-top: 1px solid var(--border); }
+.shopify-dev-page .contact-right { padding: 5rem 8vw; border-top: 1px solid var(--border); background: var(--grey-dark); }
+.shopify-dev-page .contact-info { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0; }
+.shopify-dev-page .ci { padding: 1.2rem 0; border-bottom: 1px solid var(--border); }
+.shopify-dev-page .ci-label { font-family: 'Space Mono', monospace; font-size: 0.52rem; letter-spacing: 2px; color: var(--grey-light); text-transform: uppercase; margin-bottom: 0.3rem; }
+.shopify-dev-page .ci-val { font-size: 0.95rem; color: var(--white); }
+.shopify-dev-page .form-group { margin-bottom: 1.5rem; }
+.shopify-dev-page .form-group label { font-family: 'Space Mono', monospace; font-size: 0.52rem; letter-spacing: 2px; color: var(--grey-light); text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+.shopify-dev-page .form-group input, .shopify-dev-page .form-group textarea, .shopify-dev-page .form-group select {
+  width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--border);
+  color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; padding: 0.65rem 0;
+  outline: none; transition: border-color 0.2s; appearance: none;
+}
+.shopify-dev-page .form-group input:focus, .shopify-dev-page .form-group textarea:focus, .shopify-dev-page .form-group select:focus { border-color: var(--white); }
+.shopify-dev-page .form-group textarea { resize: none; height: 75px; }
+.shopify-dev-page .form-group select option { background: var(--black); }
+.shopify-dev-page .form-submit { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--black); background: var(--white); border: none; padding: 1rem 2rem; width: 100%; margin-top: 0.5rem; transition: opacity 0.2s; cursor: pointer; }
+.shopify-dev-page .form-submit:hover { opacity: 0.85; }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(28px) } to { opacity: 1; transform: none } }
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+@keyframes ticker { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+@keyframes pulse { 0%, 100% { opacity: 0.3 } 50% { opacity: 1 } }
+@keyframes floatY { 0%, 100% { transform: translateY(-50%) translateX(0) } 50% { transform: translateY(calc(-50% - 20px)) translateX(-10px) } }
+
+.shopify-dev-page .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.shopify-dev-page .reveal.visible { opacity: 1; transform: none; }
+
+/* RESPONSIVE MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+  .shopify-dev-page .intro-split { gap: 3rem; }
+  .shopify-dev-page .services-grid,
+  .shopify-dev-page .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .shopify-dev-page .pkg-grid { grid-template-columns: repeat(2, 1fr); }
+  .shopify-dev-page .pkg-card { border-bottom: 1px solid var(--border); }
+  .shopify-dev-page .pkg-card:nth-child(2) { border-right: none; }
+  .shopify-dev-page .tech-grid { grid-template-columns: repeat(4, 1fr); }
+  .shopify-dev-page .tech-item:nth-child(4n) { border-right: none; }
+  .shopify-dev-page .tech-item:nth-child(6n) { border-right: 1px solid var(--border); }
+}
+
+@media (max-width: 992px) {
+  .shopify-dev-page .intro-split,
+  .shopify-dev-page .why-cols,
+  .shopify-dev-page .contact-wrap { grid-template-columns: 1fr; gap: 2rem; }
+  .shopify-dev-page .why-col,
+  .shopify-dev-page .contact-left,
+  .shopify-dev-page .contact-right { border-right: none; }
+  .shopify-dev-page .why-col:first-child,
+  .shopify-dev-page .contact-left { border-bottom: 1px solid var(--border); }
+  .shopify-dev-page .process-row { grid-template-columns: 60px 1fr; }
+  .shopify-dev-page .hero-meta { flex-direction: column; gap: 2rem; }
+  .shopify-dev-page .hero { padding: 8rem 2rem 4rem; }
+  .shopify-dev-page section { padding: 5rem 2rem; }
+  .shopify-dev-page .hero-scroll { right: 2rem; }
+  .shopify-dev-page .hero-shopify-icon { opacity: 0.03; font-size: 20rem; right: -2rem; }
+}
+
+@media (max-width: 768px) {
+  .shopify-dev-page .services-grid,
+  .shopify-dev-page .portfolio-grid,
+  .shopify-dev-page .pkg-grid { grid-template-columns: 1fr; }
+  .shopify-dev-page .pkg-card,
+  .shopify-dev-page .srv-card { border-right: none; border-bottom: 1px solid var(--border); }
+  .shopify-dev-page .pkg-card:last-child,
+  .shopify-dev-page .srv-card:last-child { border-bottom: none; }
+  .shopify-dev-page .tech-grid { grid-template-columns: repeat(2, 1fr); }
+  .shopify-dev-page .tech-item:nth-child(even) { border-right: none; }
+  .shopify-dev-page .intro-stats { grid-template-columns: 1fr; }
+  .shopify-dev-page .i-stat { border-right: none; border-bottom: 1px solid var(--border); }
+  .shopify-dev-page .i-stat:last-child { border-bottom: none; }
+  .shopify-dev-page .hero-title { font-size: clamp(48px, 12vw, 80px); }
+  .shopify-dev-page .s-title { font-size: clamp(36px, 8vw, 60px); }
+  .shopify-dev-page .why-col { padding: 2rem 1.5rem; }
+  .shopify-dev-page .contact-left,
+  .shopify-dev-page .contact-right { padding: 3rem 1.5rem; }
+  .shopify-dev-page .process-row { grid-template-columns: 1fr; gap: 1rem; }
+  .shopify-dev-page .proc-num { width: 60px; height: 60px; font-size: 1.2rem; }
+  .shopify-dev-page .process-row::after { display: none; }
+  .shopify-dev-page .cta-btns { flex-direction: column; }
+  .shopify-dev-page .srv-card::before { height: 100%; opacity: 0; }
+  .shopify-dev-page .srv-card:hover::before { opacity: 1; }
+  .shopify-dev-page .hero-shopify-icon { display: none; }
+}
