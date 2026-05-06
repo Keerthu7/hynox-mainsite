@@ -573,138 +573,161 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
-{/* PORTFOLIO SECTION - REEL VIEW (FIXED IMAGES) */}
+{/* PORTFOLIO SECTION - 6 BOXES WITH VIDEO & CUSTOM SCROLLBAR */}
       <section style={{ background: 'var(--black)', overflow: 'hidden' }} id="portfolio">
         <style>{`
           .portfolio-grid { 
             display: flex; 
-            gap: 1.5rem; 
+            gap: 1.2rem; 
             margin-top: 4rem; 
             overflow-x: auto; 
-            padding: 0 5vw 2rem;
-            scrollbar-width: none;
+            padding: 0 4vw 2rem;
+            scrollbar-width: none; /* Hide default scrollbar */
             scroll-snap-type: x mandatory;
             position: relative;
           }
           .portfolio-grid::-webkit-scrollbar { display: none; }
           
           .port-item { 
-            flex: 0 0 320px; 
+            /* 5 boxes visible aaga width calculation: (100% - total gap) / 5 */
+            flex: 0 0 calc((92vw - (1.2rem * 4)) / 5); 
             aspect-ratio: 9/16; 
             position: relative; 
             overflow: hidden; 
             display: flex; 
             flex-direction: column; 
             justify-content: flex-end; 
-            padding: 2rem; 
-            background-color: #111; 
-            border-radius: 24px;
+            padding: 1.5rem; 
+            background-color: #000; 
+            border-radius: 20px;
             scroll-snap-align: start;
             border: 1px solid rgba(255,255,255,0.1);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
           }
-          .port-tag { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.6rem; position: relative; z-index: 1; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 4px; display: inline-block; width: fit-content; color: #fff; }
-          .port-name { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 1px; color: var(--white); position: relative; z-index: 1; text-shadow: 0 2px 15px rgba(0,0,0,1); }
+
+          .port-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+          }
+
+          .port-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+            z-index: 1;
+            pointer-events: none; /* Video mela click aagama irukka */
+          }
+
+          .port-content { position: relative; z-index: 2; pointer-events: none; }
+          .port-tag { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; background: rgba(0,0,0,0.7); padding: 4px 10px; border-radius: 4px; display: inline-block; color: #fff; }
+          .port-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--white); text-shadow: 0 2px 10px rgba(0,0,0,1); }
           
-          /* INGE MAATHAVUM: Scroll Line Styling */
-          .scroll-indicator-wrap {
+          /* Gray Scroll Indicator */
+          .scroll-bar-wrap {
             width: 100%;
             display: flex;
             justify-content: center;
             margin-top: 1rem;
-            padding-bottom: 3rem;
+            padding-bottom: 4rem;
           }
-          .scroll-line-container {
-            width: 120px;
-            height: 2px;
-            background: rgba(255,255,255,0.1);
+          .scroll-track {
+            width: 180px;
+            height: 6px;
+            background: #1a1a1a; 
             position: relative;
+            border-radius: 10px;
             overflow: hidden;
-            border-radius: 2px;
           }
-          .scroll-line-fill {
+          .scroll-thumb {
             position: absolute;
-            width: 40%;
+            width: 35%;
             height: 100%;
-            background: #fff;
-            animation: scrollMove 2s infinite ease-in-out;
+            background: #4a4a4a; 
+            border-radius: 10px;
+            animation: scrollProgress 3s infinite ease-in-out;
           }
-          @keyframes scrollMove {
+          @keyframes scrollProgress {
             0% { transform: translateX(-100%); }
-            100% { transform: translateX(250%); }
+            50% { transform: translateX(180%); }
+            100% { transform: translateX(-100%); }
           }
 
-          @media (max-width: 768px) { .port-item { flex: 0 0 280px; } }
+          @media (max-width: 1024px) {
+            .port-item { flex: 0 0 250px; } 
+          }
         `}</style>
         
-        <div className="s-label reveal" style={{ marginLeft: '5vw' }}><span className="s-label-line"></span>02 — Portfolio</div>
-        <div className="s-title reveal" style={{ marginLeft: '5vw' }}>Recent Projects</div>
+        <div className="s-label reveal" style={{ marginLeft: '4vw' }}><span className="s-label-line"></span>02 — Portfolio</div>
+        <div className="s-title reveal" style={{ marginLeft: '4vw' }}>Recent Works</div>
         
         <div className="portfolio-grid reveal" style={{ transitionDelay: '0.2s' }}>
-          {/* Project 1 */}
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%), url("/sugarstar_web.jpeg")' }}>
-            <div className="port-tag">Viral Reel</div>
-            <div className="port-name">SugarStar</div>
+          
+          {/* Box 1 */}
+          <div className="port-item">
+            {/* NOTE: path-la /public nu poda koodathu. Verum /1.mp4 thaan podanum */}
+            <video className="port-video" autoPlay loop muted playsInline>
+              <source src="/1.mp4" type="video/mp4" />
+            </video>
+            
           </div>
 
-          {/* Project 2 */}
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%), url("/team3-logo-white.png")', backgroundSize: 'contain', backgroundColor: '#0a0a0a' }}>
-            <div className="port-tag">Shorts</div>
-            <div className="port-name">Team3</div>
+          {/* Box 2 */}
+          <div className="port-item">
+            <video className="port-video" autoPlay loop muted playsInline>
+              <source src="/2.mp4" type="video/mp4" />
+            </video>
+           
           </div>
 
-         {/* Project 3 - Sun Holidays (Fixed Position) */}
-          <div className="port-item" style={{ 
-            backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%), url("/sun_holidays_web.png")',
-            backgroundPosition: 'top center' // Ithu image-oda mela paguthi theriya vaikum
-          }}>
-            <div className="port-tag">IG Campaign</div>
-            <div className="port-name">Sun Holidays</div>
+          {/* Box 3 */}
+          <div className="port-item">
+            <video className="port-video" autoPlay loop muted playsInline>
+              <source src="/3.mp4" type="video/mp4" />
+            </video>
+            
           </div>
 
-          {/* CTA Box */}
-          <div className="port-item" style={{ background: '#1a1a1a', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '1.5rem', textAlign: 'center', border: '1px dashed rgba(255,255,255,0.3)' }}>
-            <div style={{ fontFamily: "'Bebas Neue'", fontSize: '2.8rem', letterSpacing: '2px', lineHeight: '1.1', color: '#fff' }}>Your Brand<br/>Next?</div>
-            <a href="/contact" style={{ fontFamily: "'Space Mono'", fontSize: '0.75rem', letterSpacing: '2px', color: '#000', background: '#fff', padding: '14px 28px', textDecoration: 'none', textTransform: 'uppercase', borderRadius: '50px', fontWeight: 'bold' }}>Start Now →</a>
+          {/* Box 4 */}
+          <div className="port-item">
+            {/* Oru vellai videos folder-kulla iruntha ippadi podanum: /videos/client4.mp4 */}
+            <video className="port-video" autoPlay loop muted playsInline>
+              <source src="/4.mp4" type="video/mp4" />
+            </video>
+           
           </div>
+
+          {/* Box 5 */}
+          <div className="port-item">
+            <video className="port-video" autoPlay loop muted playsInline>
+              <source src="/5.mp4" type="video/mp4" />
+            </video>
+           
+          </div>
+
+          {/* Box 6 - CTA (Hidden until scroll) */}
+          <div className="port-item" style={{ background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', border: '1px dashed rgba(255,255,255,0.2)' }}>
+            <div className="port-content">
+              <div style={{ fontFamily: "'Bebas Neue'", fontSize: '2rem', lineHeight: '1.1', color: '#fff' }}>Your Brand<br/>Next?</div>
+              <a href="/contact" style={{ fontFamily: "'Space Mono'", fontSize: '0.6rem', background: '#fff', color: '#000', padding: '10px 18px', borderRadius: '4px', textDecoration: 'none', display: 'inline-block', marginTop: '1rem', fontWeight: 'bold' }}>Start Now →</a>
+            </div>
+          </div>
+
         </div>
 
-        {/* INGE MAATHAVUM: Animated Scroll Line HTML */}
-        <div className="scroll-indicator-wrap reveal">
-          <div className="scroll-line-container">
-            <div className="scroll-line-fill"></div>
+        {/* Gray Scroll Bar Indicator */}
+        <div className="scroll-bar-wrap reveal">
+          <div className="scroll-track">
+            <div className="scroll-thumb"></div>
           </div>
         </div>
       </section>
-
-      {/* WHY */}
-      <section className="why-section">
-        <div className="s-label reveal"><span className="s-label-line"></span>12 — Why HYNOX</div>
-        <div className="s-title reveal">Why Choose Us<br/>Over Others</div>
-        <div className="why-cols reveal" style={{ transitionDelay: '0.15s' }}>
-          <div className="why-col">
-            <div className="why-col-title">Generic SMM Agencies</div>
-            <div className="why-item"><div className="why-mark">✗</div><p>Post the same content template for every client</p></div>
-            <div className="why-item"><div className="why-mark">✗</div><p>No influencer network — cold outreach every time</p></div>
-            <div className="why-item"><div className="why-mark">✗</div><p>No video production capability — just static posts</p></div>
-            <div className="why-item"><div className="why-mark">✗</div><p>Vanity metrics — followers without real engagement</p></div>
-            <div className="why-item"><div className="why-mark">✗</div><p>No AI tools — guessing at trends and posting times</p></div>
-            <div className="why-item"><div className="why-mark">✗</div><p>Junior staff managing your accounts without oversight</p></div>
-          </div>
-          <div className="why-col">
-            <div className="why-col-title">HYNOX</div>
-            <div className="why-item"><div className="why-mark">✓</div><p>100% custom strategy built for your brand and goals</p></div>
-            <div className="why-item"><div className="why-mark">✓</div><p>200+ vetted influencer network across all niches</p></div>
-            <div className="why-item"><div className="why-mark">✓</div><p>In-house video production — Reels, Shorts and long-form</p></div>
-            <div className="why-item"><div className="why-mark">✓</div><p>Engagement, reach and revenue — real business metrics</p></div>
-            <div className="why-item"><div className="why-mark">✓</div><p>AI-powered scheduling, trend analysis and optimisation</p></div>
-            <div className="why-item"><div className="why-mark">✓</div><p>Senior strategists on every account with full transparency</p></div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section id="faq">
         <div className="s-label reveal"><span className="s-label-line"></span>13 — FAQ</div>

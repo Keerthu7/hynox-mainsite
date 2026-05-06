@@ -12,8 +12,8 @@ export default function HeroSection() {
       data-section
       className="min-h-screen flex items-center justify-center relative pt-20 bg-black"
     >
-      <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-10">
+      <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Main Heading */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -22,7 +22,7 @@ export default function HeroSection() {
             className="space-y-6"
           >
             <motion.h1
-              className="text-5xl md:text-7xl font-light leading-tight"
+              className="text-6xl md:text-8xl font-light leading-tight"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
@@ -44,7 +44,7 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <motion.p
-            className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
@@ -65,7 +65,7 @@ export default function HeroSection() {
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
-                <Button className="bg-white text-black hover:bg-gray-100 px-6 py-2.5 text-base font-normal rounded-none border-0">
+                <Button className="bg-white text-black hover:bg-gray-100 px-8 py-3 text-lg font-normal rounded-none border-0">
                   View Services
                 </Button>
               </motion.div>
@@ -79,7 +79,7 @@ export default function HeroSection() {
               >
                 <Button
                   variant="outline"
-                  className="bg-black border-white text-white hover:bg-white hover:text-black px-6 py-2.5 text-base font-normal rounded-none"
+                  className="bg-black border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg font-normal rounded-none"
                 >
                   Get in Touch
                 </Button>
