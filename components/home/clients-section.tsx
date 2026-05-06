@@ -4,9 +4,56 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+const row1Clients = [
+  { title: "SugarStar", category: "Textile", image: "/sugarstar_logo.jpg" },
+  { title: "JP Aluminium", category: "Interiors", image: "/jpnets_logo.jpg" },
+  { title: "Team3", category: "Technology", image: "/team3-logo-white.png" },
+  { title: "Aharraa", category: "Food", image: "/aharraa_logo.jpg" },
+  { title: "Teerex", category: "Textile", image: "/teerex_logo.jpg" },
+  { title: "Twinstar", category: "Textile", image: "/twinstar_logo.jpg" },
+  { title: "Kyto", category: "Textile", image: "/kyto_logo.jpg" },
+  { title: "NSK", category: "Textile", image: "/nsk_logo.jpg" },
+];
+
+const row2Clients = [
+  { title: "Mallika Garments", category: "Textile", image: "/mallika_garments_logo.jpg" },
+  { title: "NP Global Exports", category: "Textile", image: "/npglobal_logo.jpg" },
+  { title: "Zyden", category: "Textile", image: "/zyden_logo.jpg" },
+  { title: "Graaps", category: "Textile", image: "/graasp_logo.jpg" },
+  { title: "Kores Fabrics", category: "Textile", image: "/kores_logo.jpg" },
+  { title: "Kido Care", category: "Textile", image: "/kido_care_logo.png" },
+  { title: "Sun Holidays", category: "Travel", image: "/sun_holidays_logo.png" },
+  { title: "Livinza", category: "Textile", image: "/livinza_logo.png" },
+];
+
+function ClientCard({ client }: { client: { title: string; category: string; image: string } }) {
+  return (
+    <div className="group flex-shrink-0 flex flex-col items-center space-y-3 mx-6 md:mx-8">
+      <div className="relative w-20 h-20 md:w-24 md:h-24">
+        <div className="w-full h-full overflow-hidden border border-gray-700 group-hover:border-gray-500 transition-colors duration-300 bg-gray-900/20 rounded-lg">
+          <img
+            src={client.image}
+            alt={client.title}
+            className="w-full h-full object-cover group-hover:grayscale-0 transition-all duration-300"
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-300 pointer-events-none rounded-lg" />
+      </div>
+      <div className="text-center space-y-1">
+        <h3 className="text-sm md:text-base font-light text-gray-300 group-hover:text-white transition-colors duration-300 whitespace-nowrap">
+          {client.title}
+        </h3>
+        <span className="text-xs text-gray-600 group-hover:text-gray-400 transition-colors duration-300 font-light tracking-wider">
+          {client.category}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export default function ClientsSection() {
   return (
-    <section id="clients" data-section className="py-32 bg-black relative">
+    <section id="clients" data-section className="py-32 bg-black relative overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -45,136 +92,64 @@ export default function ClientsSection() {
             Trusted by businesses across industries
           </motion.p>
         </motion.div>
+      </div>
 
-        {/* Clients Grid */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 md:gap-16 mb-20"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          {[
-            {
-              title: "Aharraa",
-              category: "Food",
-              image: "/aharraa_logo.jpg",
-            },
-            {
-              title: "Teerex",
-              category: "Textile",
-              image: "/teerex_logo.jpg",
-            },
-            {
-              title: "SugarStar",
-              category: "Textile",
-              image: "/sugarstar_logo.jpg",
-            },
-            {
-              title: "Twinstar",
-              category: "Textile",
-              image: "/twinstar_logo.jpg",
-            },
-            {
-              title: "Kyto",
-              category: "Textile",
-              image: "/kyto_logo.jpg",
-            },
-            {
-              title: "NSK",
-              category: "Textile",
-              image: "/nsk_logo.jpg",
-            },
-            {
-              title: "Mallika Garments",
-              category: "Textile",
-              image: "/mallika_garments_logo.jpg",
-            },
-            {
-              title: "NP Global Exports",
-              category: "Textile",
-              image: "/npglobal_logo.jpg",
-            },
-            {
-              title: "JP Aluminium",
-              category: "Interiors",
-              image: "/jpnets_logo.jpg",
-            },
-            {
-              title: "Zyden",
-              category: "Textile",
-              image: "/zyden_logo.jpg",
-            },
-            {
-              title: "Graaps",
-              category: "Textile",
-              image: "/graasp_logo.jpg",
-            },
-            {
-              title: "Kores Fabrics",
-              category: "Textile",
-              image: "/kores_logo.jpg",
-            },
-            {
-              title: "Kido Care",
-              category: "Textile",
-              image: "/kido_care_logo.png",
-            },
-            {
-              title: "Sun Holidays",
-              category: "Textile",
-              image: "/sun_holidays_logo.png",
-            },
-            {
-              title: "Livinza",
-              category: "Textile",
-              image: "/livinza_logo.png",
-            },
-          ].map((client, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="group flex flex-col items-center space-y-4"
-            >
-              <motion.a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center space-y-4"
-                whileHover={{ scale: 1.05, y: -2 }}
-                transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              >
-                {/* Logo Container */}
-                <div className="relative w-20 h-20 md:w-24 md:h-24">
-                  <div className="w-full h-full overflow-hidden border border-gray-700 group-hover:border-gray-500 transition-colors duration-300 bg-gray-900/20">
-                    <img
-                      src={client.image}
-                      alt={client.title}
-                      className="w-full h-full object-cover group-hover:grayscale-0 transition-all duration-300"
-                    />
-                  </div>
+      {/* Marquee Rows */}
+      <div className="space-y-16 mb-24">
+        {/* Row 1 — RIGHT SCROLL (Moving to Right) */}
+        <div className="relative flex overflow-hidden py-4">
+          <motion.div
+            className="flex flex-row flex-nowrap"
+            animate={{
+              x: ["-33.33%", "0%"],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 30,
+                ease: "linear",
+              },
+            }}
+            style={{ width: "max-content" }}
+          >
+            {[...row1Clients, ...row1Clients, ...row1Clients].map((client, i) => (
+              <ClientCard key={`r1-${i}`} client={client} />
+            ))}
+          </motion.div>
+          {/* Fading Gradients */}
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
+        </div>
 
-                  {/* Subtle overlay */}
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-300 pointer-events-none" />
-                </div>
+        {/* Row 2 — LEFT SCROLL (Moving to Left) */}
+        <div className="relative flex overflow-hidden py-4">
+          <motion.div
+            className="flex flex-row flex-nowrap"
+            animate={{
+              x: ["0%", "-33.33%"],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 30,
+                ease: "linear",
+              },
+            }}
+            style={{ width: "max-content" }}
+          >
+            {[...row2Clients, ...row2Clients, ...row2Clients].map((client, i) => (
+              <ClientCard key={`r2-${i}`} client={client} />
+            ))}
+          </motion.div>
+          {/* Fading Gradients */}
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
+        </div>
+      </div>
 
-                {/* Client Info */}
-                <div className="text-center space-y-1">
-                  <h3 className="text-sm md:text-base font-light text-gray-300 group-hover:text-white transition-colors duration-300">
-                    {client.title}
-                  </h3>
-                  <span className="text-xs text-gray-600 group-hover:text-gray-400 transition-colors duration-300 font-light tracking-wider">
-                    {client.category}
-                  </span>
-                </div>
-              </motion.a>
-            </motion.div>
-          ))}
-        </motion.div>
-
+      <div className="container mx-auto px-4">
         {/* Industry Categories */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center mb-16"
@@ -197,7 +172,7 @@ export default function ClientsSection() {
             {
               category: "Food Delivery",
               count: "1",
-              description: "Food Delivery Partnet that connects the Home Cooks"
+              description: "Food Delivery Partner that connects the Home Cooks"
             }
           ].map((industry, index) => (
             <motion.div
@@ -273,37 +248,6 @@ export default function ClientsSection() {
               </Button>
             </motion.div>
           </Link>
-        </motion.div>
-
-        {/* Decorative Elements */}
-        <motion.div
-          className="absolute top-32 left-16"
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 1.8 }}
-        >
-          <div className="w-1 h-1 bg-gray-700 rounded-full" />
-        </motion.div>
-
-        <motion.div
-          className="absolute top-1/2 right-20"
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 2 }}
-        >
-          <div className="w-2 h-px bg-gray-700" />
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-32 left-24"
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 2.2 }}
-        >
-          <div className="w-px h-3 bg-gray-700" />
         </motion.div>
       </div>
 

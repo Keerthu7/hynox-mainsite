@@ -50,6 +50,30 @@ export default function WorkSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {[
             {
+              title: "SugarStar",
+              category: "Shopify Development",
+              image: "/sugarstar_web.jpeg?height=400&width=600",
+              description: "Premium confectionery online store",
+            },
+            {
+              title: "JP Interiors",
+              category: "App Development",
+              image: "/JpApp_works.png?height=400&width=600",
+              description: "Interior design and projects management app",
+            },
+            {
+              title: "Team3",
+              category: "Custom Development",
+              image: "/team3-logo-white.png?height=400&width=600",
+              description: "Interior Design and Project Execution",
+            },
+            {
+              title: "JP Interiors Web",
+              category: "Web Development",
+              image: "/JpWeb_works.png?height=400&width=600",
+              description: "Interior design portfolio and service showcase",
+            },
+            {
               title: "Food delivery app",
               category: "Custom Development",
               image: "/aharraa_web.png?height=400&width=600",
@@ -60,18 +84,6 @@ export default function WorkSection() {
               category: "Custom Development",
               image: "/teerex_web.jpeg?height=400&width=600",
               description: "E-commerce platform with custom features",
-            },
-            {
-              title: "SugarStar",
-              category: "Shopify Development",
-              image: "/sugarstar_web.jpeg?height=400&width=600",
-              description: "Premium confectionery online store",
-            },
-            {
-              title: "JP Interiors",
-              category: "Custom Development",
-              image: "/JpApp_works.png?height=400&width=600",
-              description: "Interior design and projects management app",
             },
             {
               title: "Mallika Garments",
@@ -259,7 +271,7 @@ export default function WorkSection() {
               </motion.div>
             </Link>
 
-            <Link href="/#products">
+            <Link href="/#work">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

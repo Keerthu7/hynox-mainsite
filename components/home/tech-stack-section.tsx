@@ -47,84 +47,81 @@ export default function TechStackSection() {
           </motion.p>
         </motion.div>
 
-        {/* Technologies Minimal Grid */}
+        {/* Technologies Marquee */}
         <motion.div
-          className="mb-32"
+          className="mb-32 overflow-hidden"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-8 md:gap-12 max-w-6xl mx-auto">
-            {[
-              {
-                name: "React",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-              },
-              {
-                name: "Next.js",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-              },
-              {
-                name: "Node.js",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-              },
-              {
-                name: "TypeScript",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-              },
-              {
-                name: "MongoDB",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-              },
-              {
-                name: "AWS",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
-              },
-              {
-                name: "Docker",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-              },
-              {
-                name: "Firebase",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-              },
-              {
-                name: "Python",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-              },
-              {
-                name: "PostgreSQL",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-              },
-              {
-                name: "Figma",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-              },
-            ].map((tech, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="group flex flex-col items-center space-y-3"
-              >
-                <motion.div
-                  className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                >
-                  <img
-                    src={tech.logo}
-                    alt={tech.name}
-                    className="w-full h-full object-contain group-hover:grayscale-0 transition-all duration-300"
-                  />
-                </motion.div>
-                <span className="text-xs md:text-sm text-gray-500 group-hover:text-gray-300 transition-colors duration-300 text-center font-light">
-                  {tech.name}
-                </span>
-              </motion.div>
+          <div className="flex w-max animate-marquee py-4 pause-hover">
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex flex-row items-center space-x-16 md:space-x-24 px-8 md:px-12 shrink-0">
+                {[
+                  {
+                    name: "React",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                  },
+                  {
+                    name: "Next.js",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+                  },
+                  {
+                    name: "Node.js",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+                  },
+                  {
+                    name: "TypeScript",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+                  },
+                  {
+                    name: "MongoDB",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+                  },
+                  {
+                    name: "AWS",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+                  },
+                  {
+                    name: "Docker",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+                  },
+                  {
+                    name: "Firebase",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+                  },
+                  {
+                    name: "Python",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+                  },
+                  {
+                    name: "PostgreSQL",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+                  },
+                  {
+                    name: "Figma",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+                  },
+                ].map((tech, index) => (
+                  <div key={index} className="group flex flex-col items-center space-y-3 shrink-0">
+                    <motion.div
+                      className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center"
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                    >
+                      <img
+                        src={tech.logo}
+                        alt={tech.name}
+                        className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                      />
+                    </motion.div>
+                    <span className="text-xs md:text-sm text-gray-500 group-hover:text-gray-300 transition-colors duration-300 text-center font-light">
+                      {tech.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             ))}
           </div>
         </motion.div>
@@ -156,9 +153,9 @@ export default function TechStackSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
           />
 
-          {/* Marketing Platforms Minimal Grid */}
+          {/* Marketing Platforms Grid */}
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 md:gap-16 max-w-4xl mx-auto mb-20"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 md:gap-16 max-w-4xl mx-auto mb-20"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -182,10 +179,6 @@ export default function TechStackSection() {
                 logo: "https://www.svgrepo.com/show/448224/facebook.svg",
               },
               {
-                name: "TikTok",
-                logo: "https://www.svgrepo.com/show/452114/tiktok.svg",
-              },
-              {
                 name: "Hotstar",
                 logo: "/hotstar-svgrepo.png",
               },
@@ -206,7 +199,7 @@ export default function TechStackSection() {
                   <img
                     src={platform.logo}
                     alt={platform.name}
-                    className="w-full h-full object-contain group-hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                   />
                 </motion.div>
                 <span className="text-xs text-gray-500 group-hover:text-gray-300 transition-colors duration-300 font-light">
@@ -228,7 +221,7 @@ export default function TechStackSection() {
               Comprehensive solutions from development to digital marketing
             </p>
 
-            <Link href="/marketing">
+            <Link href="/services/performance-marketing">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

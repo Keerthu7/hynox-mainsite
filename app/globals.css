@@ -105,9 +105,12 @@
 }
 
 .animate-scroll:hover,
-.animate-scroll-reverse:hover {
-  animation-play-state: paused;
+.animate-scroll-reverse:hover,
+.animate-marquee:hover,
+.pause-hover:hover {
+  animation-play-state: paused !important;
 }
+
 
 .shopify-card {
   background-image: url('/onlinestore.jpg');
