@@ -71,26 +71,17 @@ export default function EcommerceSupport() {
       <section className="hero" id="hero">
         {/* Store Mockup */}
         {/* Text Content Wrapper to move text to the right */}
-        <div className="hero-text-wrapper" style={{ paddingLeft: "4%", position: "relative", zIndex: 2 }}>
-          <div className="hero-eyebrow" style={{ fontSize: "1rem", letterSpacing: "1px", marginBottom: "1rem" }}>
+        <div className="hero-text-wrapper">
+          <div className="hero-eyebrow">
             <div className="he-dot"></div>
             <div className="he-line"></div>End-to-End E-Commerce — HYNOX 
           </div>
           
-          <div 
-            className="hero-stamp" 
-            style={{ 
-              fontSize: "0.85rem", 
-              padding: "0.3rem 0.8rem", 
-              display: "inline-block", 
-              width: "max-content", 
-              marginBottom: "1.5rem" 
-            }}
-          >
+          <div className="hero-stamp">
             From Idea to Revenue
           </div>
           
-          <h1 className="hero-title" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", lineHeight: "1.1" }}>
+          <h1 className="hero-title">
             We Handle
             <br />
             <em>Everything.</em>
@@ -98,22 +89,22 @@ export default function EcommerceSupport() {
             You Sell.
           </h1>
           
-          <div className="hero-sub-line" style={{ fontSize: "0.95rem", marginTop: "1rem" }}>
+          <div className="hero-sub-line">
             Website · Ads · Content · Growth · Analytics — All Under One Roof
           </div>
           
-          <div className="hero-meta" style={{ marginTop: "1.5rem" }}>
-            <p className="hero-desc" style={{ fontSize: "1rem", lineHeight: "1.6", maxWidth: "500px" }}>
+          <div className="hero-meta">
+            <p className="hero-desc">
               HYNOX is your complete e-commerce partner — we build your store,
               run your ads, create your content, manage your social media and
               track every number that matters. One team. Zero gaps. Full
               accountability.
             </p>
-            <div className="hero-actions" style={{ marginTop: "2rem" }}>
-              <Link href="/#work" className="btn-p" style={{ fontSize: "0.9rem", padding: "0.6rem 1.2rem", marginRight: "1rem" }}>
+            <div className="hero-actions">
+              <Link href="/#work" className="btn-p">
                 See Our Works
               </Link>
-              <a href="#contact" className="btn-g" style={{ fontSize: "0.9rem", padding: "0.6rem 1.2rem" }}>
+              <a href="#contact" className="btn-g">
                 Free Strategy Call
               </a>
             </div>

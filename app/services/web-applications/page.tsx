@@ -63,7 +63,7 @@ export default function WebApplicationsPage() {
 
       {/* HERO */}
       <section className="hero" id="hero">
-        <div className="hero-content" style={{ marginTop: '4rem' }}>
+        <div className="hero-content">
           <div className="hero-badge">
             <div className="badge-dot"></div>
             <div className="badge-line"></div>
@@ -80,9 +80,9 @@ export default function WebApplicationsPage() {
             <p className="hero-desc">HYNOX builds blazing-fast, conversion-optimised websites and web apps — from landing pages to full SaaS platforms. Clean code, pixel-perfect design, built to scale.</p>
             
             {/* INGE MAATHAVUM: flex column add panni onnuku keela onnu kondu vanthurukom */}
-            <div className="hero-actions" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem', alignItems: 'flex-start' }}>
-              <a href="/#work" className="btn-p" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', width: 'fit-content', textAlign: 'center' }}>See Our Works</a>
-              <a href="/contact" className="btn-g" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', width: 'fit-content', textAlign: 'center' }}>Free Consultation</a>
+            <div className="hero-actions">
+              <a href="/#work" className="btn-p">See Our Works</a>
+              <a href="/contact" className="btn-g">Free Consultation</a>
             </div>
 
           </div>

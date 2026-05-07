@@ -53,6 +53,8 @@
   max-width: 650px;
   position: relative;
   z-index: 10;
+  margin-top: 4rem;
+  margin-left: 2rem;
 }
 
 .shopify-dev-page .hero-visual {
@@ -62,6 +64,7 @@
   align-items: center;
   position: relative;
   z-index: 5;
+  margin-top: 3rem;
 }
 
 .shopify-dev-page .hero-grid-bg {
@@ -82,6 +85,8 @@
   user-select: none;
   color: var(--white);
   animation: floatY 8s ease-in-out infinite;
+  transform: scale(1.2);
+  transform-origin: center;
 }
 
 .shopify-dev-page .hero-badge {
@@ -112,7 +117,7 @@
 .shopify-dev-page .hero-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(40px, 8vw, 120px);
-  line-height: 0.95;
+  line-height: 1.1;
   letter-spacing: 1px;
   color: var(--white);
   opacity: 0;
@@ -141,37 +146,43 @@
 .shopify-dev-page .hero-actions {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: flex-start;
   min-width: 200px;
 }
 .shopify-dev-page .btn-primary {
   font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
+  font-size: 1.05rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--black);
   background: var(--white);
   border: none;
-  padding: 1rem 2rem;
+  padding: 12px 28px;
   text-decoration: none;
   display: block;
   text-align: center;
   transition: opacity 0.2s;
+  white-space: nowrap;
+  width: fit-content;
 }
 .shopify-dev-page .btn-primary:hover { opacity: 0.85; }
 .shopify-dev-page .btn-ghost {
   font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
+  font-size: 1.05rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--white);
   background: transparent;
   border: 1px solid var(--border-light);
-  padding: 1rem 2rem;
+  padding: 12px 28px;
   text-decoration: none;
   display: block;
   text-align: center;
   transition: border-color 0.2s;
+  white-space: nowrap;
+  width: fit-content;
 }
 .shopify-dev-page .btn-ghost:hover { border-color: var(--grey-light); }
 
@@ -398,6 +409,57 @@
 }
 
 @media (max-width: 992px) {
+  .shopify-dev-page .hero {
+    flex-direction: column;
+    padding: 120px 2rem 60px;
+    text-align: center;
+    gap: 3rem;
+    min-height: auto;
+  }
+  .shopify-dev-page .hero-content {
+    margin-top: 0;
+    margin-left: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .shopify-dev-page .hero-badge {
+    justify-content: center;
+  }
+  .shopify-dev-page .hero-title {
+    font-size: clamp(48px, 12vw, 80px);
+  }
+  .shopify-dev-page .hero-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .shopify-dev-page .hero-desc {
+    max-width: 100%;
+  }
+  .shopify-dev-page .hero-actions {
+    align-items: center;
+    width: 100%;
+  }
+  .shopify-dev-page .btn-primary, .shopify-dev-page .btn-ghost {
+    width: 100%;
+    max-width: 300px;
+  }
+  .shopify-dev-page .hero-visual {
+    width: 100%;
+    justify-content: center;
+    padding: 2rem 0;
+    margin-top: 0;
+  }
+  .shopify-dev-page .hero-shopify-icon {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  .shopify-dev-page .hero-scroll {
+    display: none;
+  }
   .shopify-dev-page .intro-split,
   .shopify-dev-page .why-cols,
   .shopify-dev-page .contact-wrap { grid-template-columns: 1fr; gap: 2rem; }
@@ -407,36 +469,64 @@
   .shopify-dev-page .why-col:first-child,
   .shopify-dev-page .contact-left { border-bottom: 1px solid var(--border); }
   .shopify-dev-page .process-row { grid-template-columns: 60px 1fr; }
-  .shopify-dev-page .hero-meta { flex-direction: column; gap: 2rem; }
-  .shopify-dev-page .hero { padding: 8rem 2rem 4rem; }
   .shopify-dev-page section { padding: 5rem 2rem; }
-  .shopify-dev-page .hero-scroll { right: 2rem; }
-  .shopify-dev-page .hero-shopify-icon { opacity: 0.03; font-size: 20rem; right: -2rem; }
 }
 
 @media (max-width: 768px) {
+  .shopify-dev-page .services-header {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .shopify-dev-page .s-label {
+    justify-content: center;
+  }
   .shopify-dev-page .services-grid,
   .shopify-dev-page .portfolio-grid,
-  .shopify-dev-page .pkg-grid { grid-template-columns: 1fr; }
+  .shopify-dev-page .pkg-grid {
+    grid-template-columns: 1fr;
+  }
   .shopify-dev-page .pkg-card,
-  .shopify-dev-page .srv-card { border-right: none; border-bottom: 1px solid var(--border); }
-  .shopify-dev-page .pkg-card:last-child,
-  .shopify-dev-page .srv-card:last-child { border-bottom: none; }
-  .shopify-dev-page .tech-grid { grid-template-columns: repeat(2, 1fr); }
-  .shopify-dev-page .tech-item:nth-child(even) { border-right: none; }
-  .shopify-dev-page .intro-stats { grid-template-columns: 1fr; }
-  .shopify-dev-page .i-stat { border-right: none; border-bottom: 1px solid var(--border); }
-  .shopify-dev-page .i-stat:last-child { border-bottom: none; }
-  .shopify-dev-page .hero-title { font-size: clamp(48px, 12vw, 80px); }
-  .shopify-dev-page .s-title { font-size: clamp(36px, 8vw, 60px); }
-  .shopify-dev-page .why-col { padding: 2rem 1.5rem; }
-  .shopify-dev-page .contact-left,
-  .shopify-dev-page .contact-right { padding: 3rem 1.5rem; }
-  .shopify-dev-page .process-row { grid-template-columns: 1fr; gap: 1rem; }
-  .shopify-dev-page .proc-num { width: 60px; height: 60px; font-size: 1.2rem; }
-  .shopify-dev-page .process-row::after { display: none; }
-  .shopify-dev-page .cta-btns { flex-direction: column; }
-  .shopify-dev-page .srv-card::before { height: 100%; opacity: 0; }
-  .shopify-dev-page .srv-card:hover::before { opacity: 1; }
-  .shopify-dev-page .hero-shopify-icon { display: none; }
+  .shopify-dev-page .srv-card {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .shopify-dev-page .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .shopify-dev-page .tech-item:nth-child(even) {
+    border-right: none;
+  }
+  .shopify-dev-page .intro-stats {
+    grid-template-columns: 1fr;
+  }
+  .shopify-dev-page .i-stat {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .shopify-dev-page .s-title {
+    font-size: clamp(36px, 8vw, 60px);
+  }
+  .shopify-dev-page .process-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .shopify-dev-page .proc-num {
+    margin: 0 auto;
+  }
+  .shopify-dev-page .proc-tools {
+    justify-content: center;
+  }
+  .shopify-dev-page .cta-btns {
+    flex-direction: column;
+  }
+  .shopify-dev-page .hero-shopify-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .shopify-dev-page .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

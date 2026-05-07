@@ -56,78 +56,63 @@ export default function MobileApplicationsPage() {
             App Development — HYNOX
           </div>
 
-          <h1 className="hero-title" style={{ fontSize: '5.5rem', lineHeight: '1.1' }}>
+          <h1 className="hero-title">
             Apps That <em>Scale</em><br/>
             Businesses,<br/>
             Not Just Look Good
           </h1>
 
           <div className="hero-meta">
-            <p className="hero-desc" style={{ fontSize: '1rem', maxWidth: '90%' }}>
+            <p className="hero-desc">
               HYNOX designs and builds high-performance mobile and web applications — from concept to App Store. Powered by AI, built for scale, delivered on time.
             </p>
             
-            <div className="hero-actions" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem', alignItems: 'flex-start' }}>
-              <a href="/#work" className="btn-primary" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', width: 'fit-content', textAlign: 'center' }}>See Our Works</a>
-              <a href="/contact" className="btn-ghost" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', width: 'fit-content', textAlign: 'center' }}>Free Consultation</a>
+            <div className="hero-actions">
+              <a href="/#work" className="btn-primary">See Our Works</a>
+              <a href="/contact" className="btn-ghost">Free Consultation</a>
             </div>
           </div>
         </div>
 
-        {/* INGE MAATHAVUM: marginTop add panni phone image-a konjam keela move pannirukom */}
-        <div className="hero-visual" style={{ marginTop: '5rem' }}>
+        <div className="hero-visual">
           <motion.div 
             className="hero-phone"
             animate={{ y: [0, -20, 0] }} 
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            style={{
-              height: '580px',
-              backgroundColor: '#050505',
-              borderRadius: '45px',
-              border: '14px solid #1a1a1a',
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 80px rgba(79, 70, 229, 0.15)',
-              position: 'relative',
-              padding: '20px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '16px',
-              transform: 'rotate(2deg)',
-            }}
           >
             {/* Phone Notch */}
-            <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '120px', height: '28px', backgroundColor: '#1a1a1a', borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', zIndex: 10 }}>
-              <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.1)' }}></div>
-              <div style={{ width: '40px', height: '6px', borderRadius: '4px', backgroundColor: 'rgba(255,255,255,0.1)' }}></div>
+            <div className="phone-notch">
+              <div className="phone-notch-dot"></div>
+              <div className="phone-notch-bar"></div>
             </div>
 
             {/* App Header */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '20px' }}>
-              <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div className="phone-header">
+              <div className="phone-header-icon">
                 <Code size={20} color="#8b5cf6" />
               </div>
-              <div style={{ width: '80px', height: '12px', borderRadius: '6px', backgroundColor: 'rgba(255,255,255,0.1)' }}></div>
+              <div className="phone-header-bar"></div>
             </div>
 
             {/* Main Gradient Card */}
-            <div style={{ width: '100%', height: '180px', borderRadius: '24px', background: 'linear-gradient(135deg, #4F46E5, #9333EA)', padding: '24px', position: 'relative', overflow: 'hidden' }}>
-              <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.85rem', fontFamily: "'Space Mono', monospace" }}>Total Users</div>
-              <div style={{ color: '#fff', fontSize: '2.8rem', fontWeight: 'bold', marginTop: '4px', fontFamily: "'Bebas Neue', sans-serif", letterSpacing: '1px' }}>842.5K</div>
-              <div style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', height: '60px', background: 'linear-gradient(transparent, rgba(255,255,255,0.15))' }}></div>
-              {/* Decorative circle */}
-              <div style={{ position: 'absolute', right: '-20px', top: '-20px', width: '100px', height: '100px', borderRadius: '50%', border: '20px solid rgba(255,255,255,0.1)' }}></div>
+            <div className="phone-grad-card">
+              <div className="phone-grad-label">Total Users</div>
+              <div className="phone-grad-val">842.5K</div>
+              <div className="phone-grad-shine"></div>
+              <div className="phone-grad-circle"></div>
             </div>
 
             {/* List Items */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
-              <div style={{ fontSize: '0.9rem', color: '#888', marginBottom: '4px', fontWeight: 500 }}>Recent Activity</div>
+            <div className="phone-list">
+              <div className="phone-list-title">Recent Activity</div>
               {[1, 2, 3].map((item) => (
-                <div key={item} style={{ width: '100%', padding: '14px', borderRadius: '16px', backgroundColor: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '14px' }}>
-                  <div style={{ width: '36px', height: '36px', borderRadius: '10px', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <div style={{ width: '18px', height: '18px', borderRadius: '4px', backgroundColor: item === 1 ? '#10B981' : item === 2 ? '#3B82F6' : '#F59E0B' }}></div>
+                <div key={item} className="phone-list-item">
+                  <div className="phone-item-icon-box">
+                    <div className="phone-item-icon" style={{ backgroundColor: item === 1 ? '#10B981' : item === 2 ? '#3B82F6' : '#F59E0B' }}></div>
                   </div>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ width: '70%', height: '8px', borderRadius: '4px', backgroundColor: 'rgba(255,255,255,0.3)', marginBottom: '8px' }}></div>
-                    <div style={{ width: '40%', height: '6px', borderRadius: '3px', backgroundColor: 'rgba(255,255,255,0.15)' }}></div>
+                  <div className="phone-item-content">
+                    <div className="phone-item-line-1"></div>
+                    <div className="phone-item-line-2"></div>
                   </div>
                 </div>
               ))}
@@ -135,30 +120,31 @@ export default function MobileApplicationsPage() {
 
             {/* Floating Element 1 (Left - Status) */}
             <motion.div 
-              animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 3, delay: 1 }}
-              style={{ position: 'absolute', top: '140px', left: '-60px', backgroundColor: '#111', border: '1px solid rgba(255,255,255,0.1)', padding: '14px 18px', borderRadius: '16px', boxShadow: '0 15px 35px rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', gap: '12px' }}
+              className="phone-float-status"
+              animate={{ y: [0, 8, 0] }} 
+              transition={{ repeat: Infinity, duration: 3, delay: 1 }}
             >
-              <div style={{ width: '14px', height: '14px', borderRadius: '50%', backgroundColor: '#10B981', boxShadow: '0 0 12px #10B981' }}></div>
-              <span style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 'bold', fontFamily: "'Space Mono', monospace" }}>0 Bugs</span>
+              <div className="phone-status-dot"></div>
+              <span className="phone-status-text">0 Bugs</span>
             </motion.div>
 
             {/* Floating Element 2 (Right - AI) */}
             <motion.div 
-              animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 3.5, delay: 0.5 }}
-              style={{ position: 'absolute', bottom: '120px', right: '-70px', backgroundColor: 'rgba(20,20,20,0.85)', backdropFilter: 'blur(12px)', border: '1px solid rgba(147, 51, 234, 0.3)', padding: '18px', borderRadius: '20px', boxShadow: '0 20px 40px rgba(0,0,0,0.8)', zIndex: 30 }}
+              className="phone-float-ai"
+              animate={{ y: [0, -10, 0] }} 
+              transition={{ repeat: Infinity, duration: 3.5, delay: 0.5 }}
             >
-              <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '1px' }}>AI Engine</div>
-              <div style={{ color: '#c084fc', fontSize: '1.3rem', fontWeight: 'bold' }}>Automated</div>
+              <div className="phone-ai-label">AI Engine</div>
+              <div className="phone-ai-val">Automated</div>
             </motion.div>
 
             {/* Floating Element 3 (Top Right Icon) */}
             <motion.div 
-              animate={{ rotate: [0, 10, -10, 0] }} transition={{ repeat: Infinity, duration: 5 }}
-              style={{ position: 'absolute', top: '-20px', right: '-20px', backgroundColor: '#111', border: '1px solid rgba(255,255,255,0.1)', padding: '16px', borderRadius: '50%', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', zIndex: 30 }}
+              className="phone-float-brain"
+              animate={{ rotate: [0, 10, -10, 0] }} 
+              transition={{ repeat: Infinity, duration: 5 }}
             >
-              <div style={{ color: '#3B82F6', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Brain size={32} />
-              </div>
+              <Brain size={32} />
             </motion.div>
           </motion.div>
         </div>

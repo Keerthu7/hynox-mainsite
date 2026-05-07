@@ -49,32 +49,31 @@ export default function ShopifyDevelopmentPage() {
       <section className="hero" id="hero">
         <div className="hero-grid-bg"></div>
         
-        <div className="hero-content" style={{ marginTop: '4rem', marginLeft: '2rem' }}>
+        <div className="hero-content">
           <div className="hero-badge">
             <div className="hero-badge-dot"></div>
             <div className="hero-badge-line"></div>
             Shopify Development — HYNOX
           </div>
 
-          <h1 className="hero-title" style={{ fontSize: '5rem', lineHeight: '1.1' }}>
+          <h1 className="hero-title">
             Shopify Stores<br/>
             That <em>Sell</em><br/>
             Not Just Look Good
           </h1>
 
           <div className="hero-meta">
-            <p className="hero-desc" style={{ fontSize: '1rem', maxWidth: '90%' }}>We build high-converting, blazing-fast Shopify stores for brands that want to dominate online. From custom theme development to full AI-powered automation — HYNOX delivers stores built to scale.</p>
+            <p className="hero-desc">We build high-converting, blazing-fast Shopify stores for brands that want to dominate online. From custom theme development to full AI-powered automation — HYNOX delivers stores built to scale.</p>
             
-            {/* INGE MAATHAVUM: Buttons-a flex column add panni onnuku keela onnu (stacked) aakirukom */}
-            <div className="hero-actions" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem', alignItems: 'flex-start' }}>
-              <a href="/#work" className="btn-primary" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', width: 'fit-content', textAlign: 'center' }}>See Our Works</a>
-              <a href="/contact" className="btn-ghost" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', width: 'fit-content', textAlign: 'center' }}>Free Consultation</a>
+            <div className="hero-actions">
+              <a href="/#work" className="btn-primary">See Our Works</a>
+              <a href="/contact" className="btn-ghost">Free Consultation</a>
             </div>
           </div>
         </div>
 
-        <div className="hero-visual" style={{ marginTop: '3rem' }}>
-          <div className="hero-shopify-icon" style={{ transform: 'scale(1.2)', transformOrigin: 'center' }}>
+        <div className="hero-visual">
+          <div className="hero-shopify-icon">
             <Hexagon size={280} strokeWidth={0.5} className="mx-auto" />
           </div>
         </div>
