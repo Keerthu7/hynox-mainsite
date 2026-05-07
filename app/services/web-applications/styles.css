@@ -1307,6 +1307,30 @@
 }
 
 @media (max-width: 992px) {
+  .web-app-page .hero {
+    flex-direction: column;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    justify-content: center;
+    min-height: auto;
+  }
+  .web-app-page .hero-content {
+    max-width: 100%;
+  }
+  .web-app-page .hero-visual {
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .web-app-page .hero-badge {
+    justify-content: center;
+  }
+  .web-app-page .hero-actions {
+    align-items: center !important;
+  }
+  .web-app-page .hero-desc {
+    margin: 0 auto;
+  }
   .web-app-page .intro-grid,
   .web-app-page .perf-grid,
   .web-app-page .why-cols,
@@ -1333,15 +1357,15 @@
   }
   .web-app-page .hero-code-bg {
     opacity: 0.2 !important;
-    right: -2rem;
+    position: relative;
+    right: auto;
     z-index: 0;
+    margin: 0 auto;
   }
   .web-app-page .hero-meta {
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
-  }
-  .web-app-page .hero {
-    padding: 8rem 2rem 4rem;
   }
   .web-app-page section {
     padding: 5rem 2rem;
@@ -1355,6 +1379,10 @@
 }
 
 @media (max-width: 768px) {
+  .web-app-page .hero-title {
+    font-size: clamp(32px, 12vw, 64px);
+    line-height: 1;
+  }
   .web-app-page .nav-links {
     display: none;
   }
@@ -1374,23 +1402,23 @@
     border-bottom: none;
   }
   .web-app-page .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .web-app-page .tech-item:nth-child(even) {
+    border-right: 1px solid var(--border);
+  }
+  .web-app-page .tech-item:nth-child(3n) {
     border-right: none;
   }
   .web-app-page .expertise-strip {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
-  .web-app-page .exp-item:nth-child(even) {
-    border-right: none;
-  }
-  .web-app-page .exp-item:nth-child(3) {
-    border-right: 1px solid var(--border);
+  .web-app-page .exp-item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
   }
   .web-app-page .exp-item:last-child {
-    grid-column: 1 / -1;
-    border-right: none;
+    border-bottom: none;
   }
   .web-app-page footer {
     flex-direction: column;
@@ -1412,11 +1440,8 @@
   .web-app-page .is-item:last-child {
     border-bottom: none;
   }
-  .web-app-page .hero-title {
-    font-size: clamp(48px, 12vw, 80px);
-  }
   .web-app-page .s-title {
-    font-size: clamp(36px, 8vw, 60px);
+    font-size: clamp(32px, 10vw, 52px);
   }
   .web-app-page .why-col {
     padding: 2rem 1.5rem;
@@ -1431,11 +1456,19 @@
   .web-app-page .proc-row {
     grid-template-columns: 1fr;
     gap: 1rem;
+    text-align: center;
   }
   .web-app-page .proc-num {
     width: 60px;
     height: 60px;
     font-size: 1.2rem;
+    margin: 0 auto;
+  }
+  .web-app-page .proc-duration {
+    margin: 0.5rem auto 0;
+  }
+  .web-app-page .proc-tools {
+    justify-content: center;
   }
   .web-app-page .cta-btns {
     flex-direction: column;
@@ -1448,3 +1481,4 @@
     opacity: 1;
   }
 }
+

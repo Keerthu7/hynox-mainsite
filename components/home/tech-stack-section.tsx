@@ -57,7 +57,7 @@ export default function TechStackSection() {
         >
           <div className="flex w-max animate-marquee py-4 pause-hover">
             {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex flex-row items-center space-x-16 md:space-x-24 px-8 md:px-12 shrink-0">
+              <div key={i} className="flex flex-row items-center space-x-10 sm:space-x-16 md:space-x-24 px-8 md:px-12 shrink-0">
                 {[
                   {
                     name: "React",
@@ -106,7 +106,7 @@ export default function TechStackSection() {
                 ].map((tech, index) => (
                   <div key={index} className="group flex flex-col items-center space-y-3 shrink-0">
                     <motion.div
-                      className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center"
+                      className="w-10 h-10 md:w-16 md:h-16 flex items-center justify-center"
                       whileHover={{ scale: 1.1, y: -2 }}
                       transition={{ type: "spring", stiffness: 300, damping: 25 }}
                     >
@@ -116,7 +116,7 @@ export default function TechStackSection() {
                         className="w-full h-full object-contain transition-all duration-300"
                       />
                     </motion.div>
-                    <span className="text-xs md:text-sm text-gray-500 group-hover:text-gray-300 transition-colors duration-300 text-center font-light">
+                    <span className="text-[10px] md:text-sm text-gray-500 group-hover:text-gray-300 transition-colors duration-300 text-center font-light">
                       {tech.name}
                     </span>
                   </div>
@@ -144,7 +144,6 @@ export default function TechStackSection() {
             Digital
             <span className="block text-gray-400 italic">Presence</span>
           </motion.h3>
-
           <motion.div
             className="w-10 h-px bg-gray-600 mx-auto mb-16"
             initial={{ width: 0 }}
@@ -155,7 +154,7 @@ export default function TechStackSection() {
 
           {/* Marketing Platforms Grid */}
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 md:gap-16 max-w-4xl mx-auto mb-20"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-16 max-w-4xl mx-auto mb-20"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

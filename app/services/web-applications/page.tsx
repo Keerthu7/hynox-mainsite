@@ -341,7 +341,7 @@ export default function WebApplicationsPage() {
             <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Shopify</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Online Store</span></div>
             <div className="port-overlay"><span>View Project</span><p>Premium Confectionery Online Store</p></div>
           </div>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/team3-logo-white.png")', backgroundSize: 'cover, contain', backgroundRepeat: 'no-repeat, no-repeat', backgroundPosition: 'center, center' }}>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/team3_logo.png")', backgroundSize: 'cover, contain', backgroundRepeat: 'no-repeat, no-repeat', backgroundPosition: 'center, center' }}>
             <div className="port-category" style={{ color: '#eee' }}>Architectural & Interior</div>
             <div className="port-name">Team3</div>
             <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Architecture</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Interior Design</span></div>

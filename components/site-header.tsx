@@ -47,7 +47,7 @@ export function SiteHeader() {
         }`}
       >
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="flex justify-between items-center py-6">
+          <div className="flex justify-between items-center py-4 md:py-6">
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}

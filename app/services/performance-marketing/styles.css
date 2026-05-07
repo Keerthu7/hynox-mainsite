@@ -304,20 +304,69 @@
 .performance-marketing-page .reveal.visible { opacity: 1; transform: none; }
 
 @media (max-width: 992px) {
-  .performance-marketing-page .hero-dashboard { display: none; }
+  .performance-marketing-page .hero { 
+    flex-direction: column; 
+    padding: 8rem 2rem 4rem; 
+    text-align: center;
+    justify-content: center;
+    min-height: auto;
+  }
+  .performance-marketing-page .hero-content {
+    max-width: 100%;
+  }
+  .performance-marketing-page .hero-visual {
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .performance-marketing-page .hero-dashboard { 
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .performance-marketing-page .hero-badge {
+    justify-content: center;
+  }
+  .performance-marketing-page .hero-meta {
+    align-items: center;
+    gap: 2rem;
+  }
+  .performance-marketing-page .hero-actions {
+    justify-content: center;
+    max-width: 100%;
+  }
+  .performance-marketing-page section {
+    padding: 5rem 2rem;
+  }
+  .performance-marketing-page .s-label {
+    margin-left: 0;
+    justify-content: center;
+  }
   .performance-marketing-page .intro-grid, .performance-marketing-page .ch-header, .performance-marketing-page .funnel-grid { grid-template-columns: 1fr; gap: 3rem; }
   .performance-marketing-page .ch-grid, .performance-marketing-page .creative-grid, .performance-marketing-page .results-grid { grid-template-columns: repeat(2, 1fr); }
   .performance-marketing-page .plat-grid, .performance-marketing-page .pkg-grid { grid-template-columns: repeat(2, 1fr); }
   .performance-marketing-page .metrics-strip { grid-template-columns: repeat(3, 1fr); }
   .performance-marketing-page .metric-item:nth-child(3) { border-right: none; }
   .performance-marketing-page .why-cols { grid-template-columns: 1fr; }
+  .performance-marketing-page .funnel-visual {
+    position: relative;
+    top: 0;
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .performance-marketing-page .hero-title { font-size: clamp(32px, 12vw, 64px); line-height: 1; }
   .performance-marketing-page .ch-grid, .performance-marketing-page .creative-grid, .performance-marketing-page .results-grid, .performance-marketing-page .plat-grid, .performance-marketing-page .pkg-grid, .performance-marketing-page .metrics-strip { grid-template-columns: 1fr; }
+  .performance-marketing-page .ch-card, .performance-marketing-page .cr-card, .performance-marketing-page .result-case, .performance-marketing-page .plat-item, .performance-marketing-page .pkg-card, .performance-marketing-page .metric-item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+  }
   .performance-marketing-page .tools-grid { grid-template-columns: repeat(3, 1fr); }
-  .performance-marketing-page .proc-row { grid-template-columns: 1fr; }
-  .performance-marketing-page .proc-badge { position: static; margin-top: 1rem; width: max-content; }
-  .performance-marketing-page .hero-title { font-size: clamp(48px, 12vw, 80px); }
+  .performance-marketing-page .proc-row { grid-template-columns: 1fr; text-align: center; }
+  .performance-marketing-page .proc-num { margin: 0 auto; }
+  .performance-marketing-page .proc-badge { position: static; margin: 1rem auto 0; width: max-content; }
   .performance-marketing-page .hero-meta { flex-direction: column; gap: 2rem; }
+  .performance-marketing-page .hero-actions { flex-direction: column; }
 }
+

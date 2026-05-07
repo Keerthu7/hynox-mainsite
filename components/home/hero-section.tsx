@@ -10,9 +10,9 @@ export default function HeroSection() {
     <section
       id="home"
       data-section
-      className="min-h-screen flex items-center justify-center relative pt-20 bg-black"
+      className="min-h-screen flex items-center justify-center relative pt-24 md:pt-20 bg-black"
     >
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Main Heading */}
           <motion.div
@@ -22,7 +22,7 @@ export default function HeroSection() {
             className="space-y-6"
           >
             <motion.h1
-              className="text-6xl md:text-8xl font-light leading-tight"
+              className="text-4xl sm:text-6xl md:text-8xl font-light leading-tight"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
@@ -44,7 +44,7 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <motion.p
-            className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
@@ -190,7 +190,7 @@ export default function HeroSection() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <span className="text-sm font-light tracking-widest rotate-90 origin-center">
+          <span className="text-xs sm:text-sm font-light tracking-widest rotate-90 origin-center">
             SCROLL
           </span>
           <div className="w-px h-8 bg-gray-600" />

@@ -394,7 +394,7 @@ export default function MobileApplicationsPage() {
             <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Custom App</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Automation</span></div>
             <div className="show-overlay"><span>View Project</span><p>Business Automation Platform</p></div>
           </div>
-          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/team3-logo-white.png")', backgroundSize: 'cover, contain', backgroundRepeat: 'no-repeat, no-repeat', backgroundPosition: 'center, center', aspectRatio: '16/9' }}>
+          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/team3_logo.png")', backgroundSize: 'cover, contain', backgroundRepeat: 'no-repeat, no-repeat', backgroundPosition: 'center, center', aspectRatio: '16/9' }}>
             <div className="show-category" style={{ color: '#eee' }}>Architectural & Interior</div>
             <div className="show-name">Team3</div>
             <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Architecture</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Interior Design</span></div>

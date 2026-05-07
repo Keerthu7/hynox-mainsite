@@ -15,7 +15,7 @@ export function WhatsAppButton() {
         damping: 20,
         delay: 1 
       }}
-      className="fixed bottom-6 right-6 z-50"
+      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50"
     >
       <Link
         href="https://wa.me/918870524355?text=Hi%20Hynox,%20I'm%20interested%20in%20your%20services.%20Can%20we%20discuss?"
@@ -30,12 +30,11 @@ export function WhatsAppButton() {
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="relative bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center justify-center border-2 border-white/20"
+          className="relative bg-[#25D366] text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center justify-center border-2 border-white/20"
         >
           <svg
             viewBox="0 0 24 24"
-            width="28"
-            height="28"
+            className="w-6 h-6 md:w-7 md:h-7"
             stroke="currentColor"
             strokeWidth="0"
             fill="currentColor"

@@ -283,3 +283,212 @@
 @keyframes spFill{from{width:0}to{width:82%}}
 .ecommerce-page .reveal{opacity:0;transform:translateY(36px);transition:opacity 0.8s ease,transform 0.8s ease;}
 .ecommerce-page .reveal.visible{opacity:1;transform:none;}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .ecommerce-page .hero-store {
+    right: 2rem;
+    width: 280px;
+  }
+  .ecommerce-page .hero-title {
+    max-width: 500px;
+  }
+  .ecommerce-page .hero-meta {
+    gap: 2rem;
+  }
+  .ecommerce-page .srv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ecommerce-page .pkg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ecommerce-page .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ecommerce-page section {
+    padding: 5rem 1.5rem;
+  }
+  .ecommerce-page .hero {
+    padding: 8rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: auto;
+  }
+  .ecommerce-page .hero-text-wrapper {
+    padding-left: 0 !important;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ecommerce-page .hero-store {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 340px;
+    margin: 3rem auto 0;
+    opacity: 1;
+    animation: none;
+  }
+  .ecommerce-page .hero-eyebrow {
+    justify-content: center;
+  }
+  .ecommerce-page .hero-title {
+    font-size: clamp(42px, 12vw, 64px);
+    line-height: 1;
+    margin: 0 auto;
+  }
+  .ecommerce-page .hero-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .ecommerce-page .hero-actions {
+    width: 100%;
+    min-width: unset;
+  }
+  .ecommerce-page .hero-desc {
+    max-width: 100%;
+  }
+  
+  .ecommerce-page .promise-band {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  .ecommerce-page .pb-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 2rem;
+  }
+  
+  .ecommerce-page .journey-header, 
+  .ecommerce-page .srv-header, 
+  .ecommerce-page .funnel-intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .ecommerce-page .s-label {
+    justify-content: center;
+  }
+  
+  .ecommerce-page .j-step {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .ecommerce-page .j-num {
+    margin: 0 auto;
+  }
+  .ecommerce-page .j-tags {
+    justify-content: center;
+  }
+  .ecommerce-page .j-desc {
+    margin: 0 auto 1rem;
+  }
+  
+  .ecommerce-page .srv-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ecommerce-page .store-grid {
+    grid-template-columns: 1fr;
+  }
+  .ecommerce-page .st-card {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .ecommerce-page .funnel-stages {
+    grid-template-columns: 1fr;
+  }
+  .ecommerce-page .fs-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .ecommerce-page .fs-arrow {
+    display: none;
+  }
+  
+  .ecommerce-page .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .ecommerce-page .met-card {
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .ecommerce-page .cr-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  .ecommerce-page .cr-types {
+    grid-template-columns: 1fr;
+  }
+  .ecommerce-page .cr-type {
+    border-right: none !important;
+  }
+  
+  .ecommerce-page .pkg-grid {
+    grid-template-columns: 1fr;
+  }
+  .ecommerce-page .pkg-card {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .ecommerce-page .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ecommerce-page .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .ecommerce-page .why-cols {
+    grid-template-columns: 1fr;
+  }
+  .ecommerce-page .why-col {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .ecommerce-page .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+  .ecommerce-page .contact-left {
+    border-right: none;
+  }
+  
+  .ecommerce-page footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .ecommerce-page .f-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecommerce-page .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ecommerce-page .cta-btns {
+    flex-direction: column;
+  }
+  .ecommerce-page .hero-scroll {
+    display: none;
+  }
+}
+

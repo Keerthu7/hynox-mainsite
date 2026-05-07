@@ -574,6 +574,39 @@
 }
 
 @media (max-width: 992px) {
+  .social-media-page .hero { 
+    flex-direction: column; 
+    padding: 8rem 2rem 4rem; 
+    text-align: center;
+    justify-content: center;
+    min-height: auto;
+  }
+  .social-media-page .hero-content {
+    max-width: 100%;
+  }
+  .social-media-page .hero-visual {
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .social-media-page .hero-badge {
+    justify-content: center;
+  }
+  .social-media-page .hero-meta { 
+    flex-direction: column; 
+    align-items: center;
+    gap: 2rem; 
+  }
+  .social-media-page .hero-actions {
+    align-items: center !important;
+  }
+  .social-media-page .hero-desc {
+    margin: 0 auto;
+  }
+  .social-media-page .hero-feed { 
+    margin: 0 auto;
+    width: 240px;
+  }
   .social-media-page .intro-grid,
   .social-media-page .why-cols,
   .social-media-page .contact-wrap,
@@ -587,14 +620,12 @@
   .social-media-page .contact-left { border-bottom: 1px solid var(--border); }
   .social-media-page .proc-row { grid-template-columns: 80px 1fr; gap: 1rem; }
   .social-media-page .proc-badge { justify-self: start; grid-column: 2; margin-top: 0.5rem; }
-  .social-media-page .hero-meta { flex-direction: column; gap: 2rem; }
-  .social-media-page .hero { padding: 8rem 2rem 4rem; }
   .social-media-page section { padding: 5rem 2rem; }
   .social-media-page .hero-scroll { right: 2rem; }
-  .social-media-page .hero-feed { display: none; }
 }
 
 @media (max-width: 768px) {
+  .social-media-page .hero-title { font-size: clamp(32px, 12vw, 64px); line-height: 1; }
   .social-media-page .platform-grid,
   .social-media-page .srv-grid,
   .social-media-page .pillars-grid,
@@ -623,17 +654,18 @@
   .social-media-page .is-item { border-right: none; border-bottom: 1px solid var(--border); }
   .social-media-page .is-item:last-child { border-bottom: none; }
   
-  .social-media-page .hero-title { font-size: clamp(48px, 12vw, 80px); }
-  .social-media-page .s-title { font-size: clamp(36px, 8vw, 60px); }
+  .social-media-page .s-title { font-size: clamp(32px, 10vw, 52px); }
   .social-media-page .why-col { padding: 2rem 1.5rem; }
   .social-media-page .contact-left,
   .social-media-page .contact-right { padding: 3rem 1.5rem; }
   
-  .social-media-page .proc-row { grid-template-columns: 1fr; gap: 1rem; }
-  .social-media-page .proc-num-box { width: 60px; height: 60px; font-size: 1.2rem; }
-  .social-media-page .proc-badge { grid-column: 1; }
+  .social-media-page .proc-row { grid-template-columns: 1fr; gap: 1rem; text-align: center; }
+  .social-media-page .proc-num-box { width: 60px; height: 60px; font-size: 1.2rem; margin: 0 auto; }
+  .social-media-page .proc-badge { grid-column: 1; margin: 0.5rem auto 0; }
+  .social-media-page .proc-tools { justify-content: center; }
   
   .social-media-page .cta-btns { flex-direction: column; }
   .social-media-page .srv-card::before { height: 100%; opacity: 0; }
   .social-media-page .srv-card:hover::before { opacity: 1; }
 }
+
