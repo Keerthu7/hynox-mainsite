@@ -205,13 +205,13 @@ export default function AiMlSolutionsPage() {
         <div className="section-label reveal"><span></span>03 — Portfolio</div>
         <div className="section-title reveal">Recent Projects</div>
         <div className="portfolio-grid reveal" style={{ transitionDelay: '0.2s' }}>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/ml_cover.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className="port-tag" style={{ color: '#ccc' }}>Workflow Automation</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/ml_cover.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="port-tag" style={{ color: '#eee' }}>Workflow Automation</div>
             <div className="port-name">n8n Integration</div>
             <div className="port-overlay"><span>View Project</span><p>AI Pipeline · Automation</p></div>
           </div>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/voice_cover.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className="port-tag" style={{ color: '#ccc' }}>Voice AI Assistant</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/voice_cover.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="port-tag" style={{ color: '#eee' }}>Voice AI Assistant</div>
             <div className="port-name">Aura Voice</div>
             <div className="port-overlay"><span>View Project</span><p>NLP · Voice Recognition</p></div>
           </div>

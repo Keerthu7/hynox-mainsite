@@ -276,28 +276,28 @@ export default function ShopifyDevelopmentPage() {
         <div className="s-label reveal"><span className="s-label-line"></span>06 — Portfolio</div>
         <div className="s-title reveal">Recent Builds</div>
         <div className="portfolio-grid reveal" style={{ transitionDelay: '0.2s' }}>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/sugarstar_web.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
-            <div className="port-tag" style={{ color: '#ccc' }}>Confectionery</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/sugarstar_web.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
+            <div className="port-tag" style={{ color: '#eee' }}>Confectionery</div>
             <div className="port-name">SugarStar</div>
             <div className="port-overlay"><span>View Project</span><p>Shopify Dev · Fast FMCG</p></div>
           </div>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/teerex_web.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
-            <div className="port-tag" style={{ color: '#ccc' }}>E-Commerce Store</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/teerex_web.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
+            <div className="port-tag" style={{ color: '#eee' }}>E-Commerce Store</div>
             <div className="port-name">Teerex</div>
             <div className="port-overlay"><span>View Project</span><p>Shopify Plus · B2C</p></div>
           </div>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/zydenn_web.png")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
-            <div className="port-tag" style={{ color: '#ccc' }}>Clothing Brand</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/zydenn_web.png")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
+            <div className="port-tag" style={{ color: '#eee' }}>Clothing Brand</div>
             <div className="port-name">Zendenn</div>
             <div className="port-overlay"><span>View Project</span><p>Shopify Store · Fashion</p></div>
           </div>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/twinstar_web.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
-            <div className="port-tag" style={{ color: '#ccc' }}>Apparel</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/twinstar_web.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
+            <div className="port-tag" style={{ color: '#eee' }}>Apparel</div>
             <div className="port-name">TwinStar</div>
             <div className="port-overlay"><span>View Project</span><p>Shopify Dev · Clothing</p></div>
           </div>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/graaps_web.png")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
-            <div className="port-tag" style={{ color: '#ccc' }}>Global Clothing</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/graaps_web.png")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
+            <div className="port-tag" style={{ color: '#eee' }}>Global Clothing</div>
             <div className="port-name">Graaps</div>
             <div className="port-overlay"><span>View Project</span><p>Shopify · International</p></div>
           </div>

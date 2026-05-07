@@ -335,34 +335,34 @@ export default function WebApplicationsPage() {
         <div className="s-label reveal"><span className="s-label-line"></span>07 — Portfolio</div>
         <div className="s-title reveal">Recent Web Projects</div>
         <div className="port-grid reveal" style={{ transitionDelay: '0.15s' }}>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/sugarstar_web.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className="port-category" style={{ color: '#ccc' }}>Shopify Development</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/sugarstar_web.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="port-category" style={{ color: '#eee' }}>Shopify Development</div>
             <div className="port-name">SugarStar</div>
-            <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Shopify</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Online Store</span></div>
+            <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Shopify</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Online Store</span></div>
             <div className="port-overlay"><span>View Project</span><p>Premium Confectionery Online Store</p></div>
           </div>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/team3-logo-white.png")', backgroundSize: 'cover, contain', backgroundRepeat: 'no-repeat, no-repeat', backgroundPosition: 'center, center' }}>
-            <div className="port-category" style={{ color: '#ccc' }}>Architectural & Interior</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/team3-logo-white.png")', backgroundSize: 'cover, contain', backgroundRepeat: 'no-repeat, no-repeat', backgroundPosition: 'center, center' }}>
+            <div className="port-category" style={{ color: '#eee' }}>Architectural & Interior</div>
             <div className="port-name">Team3</div>
-            <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Architecture</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Interior Design</span></div>
+            <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Architecture</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Interior Design</span></div>
             <div className="port-overlay"><span>View Project</span><p>Architectural & Interior Designs</p></div>
           </div>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/JpWeb_works.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className="port-category" style={{ color: '#ccc' }}>Interior & Aluminium Works</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/JpWeb_works.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="port-category" style={{ color: '#eee' }}>Interior & Aluminium Works</div>
             <div className="port-name">JP Aluminium Interior</div>
-            <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Custom App</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Automation</span></div>
+            <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Custom App</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Automation</span></div>
             <div className="port-overlay"><span>View Project</span><p>Business Automation Platform</p></div>
           </div>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/sun_holidays_web.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className="port-category" style={{ color: '#ccc' }}>Tours & Travels</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/sun_holidays_web.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="port-category" style={{ color: '#eee' }}>Tours & Travels</div>
             <div className="port-name">Sun Holidays</div>
-            <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Web App</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Booking</span></div>
+            <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Web App</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Booking</span></div>
             <div className="port-overlay"><span>View Project</span><p>Tours and Travels Booking Platform</p></div>
           </div>
-          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/malika-garments_web.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className="port-category" style={{ color: '#ccc' }}>Fashion Retail</div>
+          <div className="port-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/malika-garments_web.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="port-category" style={{ color: '#eee' }}>Fashion Retail</div>
             <div className="port-name">Mallika Garments</div>
-            <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Custom Dev</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>E-Commerce</span></div>
+            <div className="port-tags"><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Custom Dev</span><span className="port-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>E-Commerce</span></div>
             <div className="port-overlay"><span>View Project</span><p>Fashion Retail Business Solution</p></div>
           </div>
           <div className="port-item" style={{ background: 'var(--grey-mid)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '0.8rem', textAlign: 'center', padding: '2rem' }}>

@@ -113,7 +113,7 @@ export default function TechStackSection() {
                       <img
                         src={tech.logo}
                         alt={tech.name}
-                        className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                        className="w-full h-full object-contain transition-all duration-300"
                       />
                     </motion.div>
                     <span className="text-xs md:text-sm text-gray-500 group-hover:text-gray-300 transition-colors duration-300 text-center font-light">
@@ -199,7 +199,7 @@ export default function TechStackSection() {
                   <img
                     src={platform.logo}
                     alt={platform.name}
-                    className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-contain transition-all duration-300"
                   />
                 </motion.div>
                 <span className="text-xs text-gray-500 group-hover:text-gray-300 transition-colors duration-300 font-light">

@@ -34,7 +34,7 @@ function ClientCard({ client }: { client: { title: string; category: string; ima
           <img
             src={client.image}
             alt={client.title}
-            className="w-full h-full object-cover group-hover:grayscale-0 transition-all duration-300"
+            className="w-full h-full object-cover transition-all duration-300"
           />
         </div>
         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-300 pointer-events-none rounded-lg" />

@@ -471,6 +471,25 @@ export default function PerformanceMarketingPage() {
               <span style={{ color: 'rgba(255,255,255,0.4)' }}>Invested: ₹3.8L</span>
             </div>
           </div>
+
+          {/* Case 3: JP Interiors */}
+          <div className="result-case" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '16px' }}>
+            <div className="rc-industry" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1rem' }}>Industrial · Interiors</div>
+            <div className="rc-name" style={{ fontSize: '2.5rem', fontFamily: 'Bebas Neue', color: '#fff', marginBottom: '0.5rem' }}>JP Interiors</div>
+            <div className="rc-channel" style={{ color: '#fff', fontSize: '0.9rem', marginBottom: '1.5rem', fontWeight: '500' }}>Google Ads</div>
+            <p className="rc-desc" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }}>
+              Engineered high-intent search campaigns for high-ticket interior projects. Targeted specific commercial keywords to capture decision-makers at the peak of their search journey.
+            </p>
+            <div className="rc-results" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+              <div className="rc-result-item"><p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold', margin: 0 }}>₹145</p><span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>Cost Per Lead</span></div>
+              <div className="rc-result-item"><p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold', margin: 0 }}>₹18.5L</p><span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>Project Value</span></div>
+              <div className="rc-result-item"><p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold', margin: 0 }}>5.8%</p><span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>CTR</span></div>
+              <div className="rc-result-item"><p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold', margin: 0 }}>Ongoing</p><span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>Duration</span></div>
+            </div>
+            <div style={{ marginTop: '2rem', padding: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '8px', fontSize: '0.85rem' }}>
+              <span style={{ color: 'rgba(255,255,255,0.4)' }}>High-Ticket Conversion Focus</span>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -388,34 +388,34 @@ export default function MobileApplicationsPage() {
         <div className="s-label reveal"><span className="s-label-line"></span>07 — Portfolio</div>
         <div className="s-title reveal">Apps We've Built</div>
         <div className="showcase-grid reveal" style={{ transitionDelay: '0.2s' }}>
-          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/JpApp_works.png")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
-            <div className="show-category" style={{ color: '#ccc' }}>Interior & Aluminium Works</div>
+          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/JpApp_works.png")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
+            <div className="show-category" style={{ color: '#eee' }}>Interior & Aluminium Works</div>
             <div className="show-name">JP Aluminium Interior</div>
-            <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Custom App</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Automation</span></div>
+            <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Custom App</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Automation</span></div>
             <div className="show-overlay"><span>View Project</span><p>Business Automation Platform</p></div>
           </div>
-          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/team3-logo-white.png")', backgroundSize: 'cover, contain', backgroundRepeat: 'no-repeat, no-repeat', backgroundPosition: 'center, center', aspectRatio: '16/9' }}>
-            <div className="show-category" style={{ color: '#ccc' }}>Architectural & Interior</div>
+          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/team3-logo-white.png")', backgroundSize: 'cover, contain', backgroundRepeat: 'no-repeat, no-repeat', backgroundPosition: 'center, center', aspectRatio: '16/9' }}>
+            <div className="show-category" style={{ color: '#eee' }}>Architectural & Interior</div>
             <div className="show-name">Team3</div>
-            <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Architecture</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Interior Design</span></div>
+            <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Architecture</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Interior Design</span></div>
             <div className="show-overlay"><span>View Project</span><p>Architectural & Interior Designs</p></div>
           </div>
-          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/aharraa_web.png")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
-            <div className="show-category" style={{ color: '#ccc' }}>Food Delivery App</div>
+          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/aharraa_web.png")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
+            <div className="show-category" style={{ color: '#eee' }}>Food Delivery App</div>
             <div className="show-name">Aharraa</div>
-            <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Custom App</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Delivery</span></div>
+            <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Custom App</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Delivery</span></div>
             <div className="show-overlay"><span>View Project</span><p>On-demand Food Delivery Service</p></div>
           </div>
-          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/teerex_web.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
-            <div className="show-category" style={{ color: '#ccc' }}>E-Commerce Platform</div>
+          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/teerex_web.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
+            <div className="show-category" style={{ color: '#eee' }}>E-Commerce Platform</div>
             <div className="show-name">Teerex</div>
-            <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>E-Commerce</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Custom Features</span></div>
+            <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>E-Commerce</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Custom Features</span></div>
             <div className="show-overlay"><span>View Project</span><p>E-Commerce platform with custom features</p></div>
           </div>
-          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95)), url("/kido_care_web.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
-            <div className="show-category" style={{ color: '#ccc' }}>Childcare Platform</div>
+          <div className="show-item" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("/kido_care_web.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', aspectRatio: '16/9' }}>
+            <div className="show-category" style={{ color: '#eee' }}>Childcare Platform</div>
             <div className="show-name">Kido Care</div>
-            <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>iOS/Android</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#eee' }}>Healthcare</span></div>
+            <div className="show-tags"><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>iOS/Android</span><span className="show-tag" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Healthcare</span></div>
             <div className="show-overlay"><span>View Project</span><p>Pediatric Care App</p></div>
           </div>
           <div className="show-item" style={{ background: 'var(--grey-mid)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '0.8rem', textAlign: 'center', padding: '2rem', aspectRatio: '16/9' }}>

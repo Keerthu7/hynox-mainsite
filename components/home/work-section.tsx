@@ -158,9 +158,9 @@ export default function WorkSection() {
                     <img
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-full object-cover transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300" />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-300" />
 
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4">

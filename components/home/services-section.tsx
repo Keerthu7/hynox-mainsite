@@ -145,7 +145,7 @@ export default function ServicesSection() {
                         <img
                           src={service.image || "/placeholder.svg"}
                           alt={service.title}
-                          className="w-full h-full object-cover group-hover:grayscale-0 transition-all duration-500"
+                          className="w-full h-full object-cover transition-all duration-500"
                         />
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300" />
                       </>
