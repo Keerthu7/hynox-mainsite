@@ -51,6 +51,8 @@
   max-width: 650px;
   position: relative;
   z-index: 10;
+  margin-top: 4rem;
+  margin-left: 2rem;
 }
 
 .performance-marketing-page .hero-visual {
@@ -60,6 +62,7 @@
   align-items: center;
   position: relative;
   z-index: 5;
+  margin-top: 3rem;
 }
 
 /* Live metrics dashboard mockup */
@@ -72,6 +75,8 @@
   box-shadow: 0 40px 80px rgba(0,0,0,0.5); 
   opacity: 0; 
   animation: fadeIn 1.2s 0.9s forwards; 
+  transform: scale(1.15) translateX(-2rem);
+  transform-origin: center;
 }
 .performance-marketing-page .dash-frame { border: 1px solid var(--border-light); border-radius: 12px; background: var(--grey-dark); overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.7); }
 .performance-marketing-page .dash-topbar { background: var(--grey-mid); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
@@ -99,12 +104,47 @@
 .performance-marketing-page .hero-badge { font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 3px; color: var(--grey-light); text-transform: uppercase; margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 0.8s 0.3s forwards; display: flex; align-items: center; gap: 10px; }
 .performance-marketing-page .badge-line { width: 28px; height: 1px; background: var(--grey-light); }
 .performance-marketing-page .badge-dot { width: 6px; height: 6px; border-radius: 50%; border: 1px solid var(--grey-light); animation: blink 2s infinite; }
-.performance-marketing-page .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 7.5vw, 100px); line-height: 0.95; letter-spacing: 1px; color: var(--white); opacity: 0; animation: fadeUp 0.8s 0.5s forwards; max-width: 600px; }
+.performance-marketing-page .hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  color: var(--white);
+  opacity: 0;
+  animation: fadeUp 0.8s 0.5s forwards;
+  max-width: 600px;
+}
 .performance-marketing-page .hero-title em { font-style: normal; -webkit-text-stroke: 1.5px var(--white); color: transparent; }
 .performance-marketing-page .hero-meta { display: flex; flex-direction: column; align-items: flex-start; gap: 1.8rem; margin-top: 1.5rem; opacity: 0; animation: fadeUp 0.8s 0.7s forwards; }
-.performance-marketing-page .hero-desc { max-width: 460px; font-size: 0.95rem; line-height: 1.8; color: var(--grey-light); }
-.performance-marketing-page .hero-actions { display: flex; flex-direction: row; gap: 1.2rem; width: 100%; max-width: 460px; }
-.performance-marketing-page .btn-p, .performance-marketing-page .btn-g { flex: 1; font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; padding: 1rem 1.5rem; cursor: pointer; text-decoration: none; display: block; text-align: center; transition: all 0.2s; }
+.performance-marketing-page .hero-desc {
+  max-width: 90%;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--grey-light);
+}
+.performance-marketing-page .hero-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: 460px;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+.performance-marketing-page .btn-p, .performance-marketing-page .btn-g {
+  flex: 1;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.05rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
 .performance-marketing-page .btn-p { color: var(--black); background: var(--white); border: none; }
 .performance-marketing-page .btn-p:hover { opacity: 0.85; }
 .performance-marketing-page .btn-g { color: var(--white); background: transparent; border: 1px solid var(--border-light); }
@@ -313,6 +353,14 @@
   }
   .performance-marketing-page .hero-content {
     max-width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .performance-marketing-page .hero-title {
+    font-size: clamp(40px, 12vw, 70px);
+  }
+  .performance-marketing-page .hero-desc {
+    font-size: 0.9rem;
   }
   .performance-marketing-page .hero-visual {
     justify-content: center;
@@ -323,6 +371,7 @@
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+    transform: scale(1);
   }
   .performance-marketing-page .hero-badge {
     justify-content: center;

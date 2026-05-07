@@ -53,6 +53,8 @@
   max-width: 650px;
   position: relative;
   z-index: 10;
+  margin-top: 4rem;
+  margin-left: 5rem;
 }
 
 .social-media-page .hero-visual {
@@ -62,6 +64,7 @@
   align-items: center;
   position: relative;
   z-index: 5;
+  margin-top: 3rem;
 }
 
 /* Social floating feed mockup */
@@ -72,6 +75,8 @@
   gap: 10px;
   opacity: 0;
   animation: fadeIn 1s 0.8s forwards;
+  transform: scale(1.15) translateX(-9rem);
+  transform-origin: center;
 }
 .social-media-page .feed-post {
   background: var(--grey-dark);
@@ -205,8 +210,8 @@
 }
 .social-media-page .hero-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(48px, 9vw, 120px);
-  line-height: 0.9;
+  font-size: 5.5rem;
+  line-height: 1.1;
   letter-spacing: 1px;
   color: var(--white);
   opacity: 0;
@@ -231,45 +236,48 @@
   z-index: 1;
 }
 .social-media-page .hero-desc {
-  max-width: 460px;
-  font-size: 0.95rem;
+  max-width: 90%;
+  font-size: 1rem;
   line-height: 1.8;
   color: var(--grey-light);
 }
 .social-media-page .hero-actions {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
   min-width: 190px;
+  margin-top: 1.5rem;
 }
 .social-media-page .btn-p {
   font-family: 'Space Mono', monospace;
-  font-size: 0.62rem;
+  font-size: 1.05rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--black);
   background: var(--white);
   border: none;
-  padding: 1rem 2rem;
+  padding: 12px 28px;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   text-align: center;
   transition: opacity 0.2s;
+  white-space: nowrap;
 }
 .social-media-page .btn-p:hover { opacity: 0.85; }
 .social-media-page .btn-g {
   font-family: 'Space Mono', monospace;
-  font-size: 0.62rem;
+  font-size: 1.05rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--white);
   background: transparent;
   border: 1px solid var(--border-light);
-  padding: 1rem 2rem;
+  padding: 12px 28px;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   text-align: center;
   transition: border-color 0.2s;
+  white-space: nowrap;
 }
 .social-media-page .btn-g:hover { border-color: var(--grey-light); }
 .social-media-page .hero-scroll {
@@ -583,6 +591,11 @@
   }
   .social-media-page .hero-content {
     max-width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .social-media-page .hero-title {
+    font-size: clamp(40px, 12vw, 75px);
   }
   .social-media-page .hero-visual {
     justify-content: center;
@@ -606,6 +619,7 @@
   .social-media-page .hero-feed { 
     margin: 0 auto;
     width: 240px;
+    transform: scale(1);
   }
   .social-media-page .intro-grid,
   .social-media-page .why-cols,

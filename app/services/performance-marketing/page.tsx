@@ -55,33 +55,33 @@ export default function PerformanceMarketingPage() {
 
       {/* HERO */}
       <section className="hero" id="hero">
-        <div className="hero-content" style={{ marginTop: '4rem', marginLeft: '2rem' }}>
+        <div className="hero-content">
           <div className="hero-badge">
             <div className="badge-dot"></div>
             <div className="badge-line"></div>
             Performance Marketing — HYNOX
           </div>
           
-          <h1 className="hero-title" style={{ fontSize: '5rem', lineHeight: '1.1' }}>
+          <h1 className="hero-title">
             Every Rupee<br/>
             Spent Must<br/>
             <em>Return More</em>
           </h1>
           
           <div className="hero-meta">
-            <p className="hero-desc" style={{ fontSize: '1rem', maxWidth: '90%' }}>HYNOX runs performance marketing campaigns engineered for measurable ROI — Meta Ads, Google Ads, LinkedIn, YouTube and programmatic — tracked to the rupee, optimised daily, scaled relentlessly.</p>
+            <p className="hero-desc">HYNOX runs performance marketing campaigns engineered for measurable ROI — Meta Ads, Google Ads, LinkedIn, YouTube and programmatic — tracked to the rupee, optimised daily, scaled relentlessly.</p>
             
             {/* INGE MAATHAVUM: Buttons-a flex row add panni side-by-side aakirukom */}
-            <div className="hero-actions" style={{ display: 'flex', flexDirection: 'row', gap: '1rem', marginTop: '1.5rem', alignItems: 'center' }}>
-              <a href="/#work" className="btn-p" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', display: 'inline-block', textAlign: 'center' }}>See Our Works</a>
-              <a href="/contact" className="btn-g" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', display: 'inline-block', textAlign: 'center' }}>Free Ad Audit</a>
+            <div className="hero-actions">
+              <a href="/#work" className="btn-p">See Our Works</a>
+              <a href="/contact" className="btn-g">Free Ad Audit</a>
             </div>
           </div>
         </div>
 
-        <div className="hero-visual" style={{ marginTop: '3rem' }}>
+        <div className="hero-visual">
           {/* Live Dashboard Mockup */}
-          <div className="hero-dashboard" style={{ transform: 'scale(1.15) translateX(-2rem)', transformOrigin: 'center' }}>
+          <div className="hero-dashboard">
             <div className="dash-frame">
               <div className="dash-topbar">
                 <div className="dash-title">Campaign Dashboard</div>

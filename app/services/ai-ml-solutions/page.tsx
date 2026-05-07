@@ -37,32 +37,32 @@ export default function AiMlSolutionsPage() {
         <div className="hero-bg-text">HYNOX</div>
         
         {/* INGE MAATHAVUM: marginTop & marginLeft add panni text-a keela & right side move pannirukom */}
-        <div className="hero-content" style={{ marginTop: '-7rem', marginLeft: '2rem' }}>
+        <div className="hero-content">
           <div className="hero-badge"><span></span>Agentic AI Solutions — Est. 2024</div>
           
           {/* INGE MAATHAVUM: Title size & line height adjust pannirukom */}
-          <h1 className="hero-title" style={{ fontSize: '5.4rem', lineHeight: '1.1' }}>
+          <h1 className="hero-title">
             AI Agents<br/>
             That <em>Close</em><br/>
             Deals For You
           </h1>
           
           {/* INGE MAATHAVUM: Description size adjust pannirukom */}
-          <p className="hero-sub" style={{ fontSize: '1rem', maxWidth: '90%' }}>
+          <p className="hero-sub">
             HYNOX deploys autonomous AI pipelines that find leads, send messages, book meetings and grow your revenue — fully automated, 24 hours a day.
           </p>
           
           {/* INGE MAATHAVUM: Buttons-a flex row add panni side-by-side aakirukom */}
-          <div className="hero-bottom" style={{ display: 'flex', flexDirection: 'row', gap: '1rem', marginTop: '1.5rem', alignItems: 'center' }}>
-            <a href="#pipeline" className="hero-cta" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', display: 'inline-block', textAlign: 'center' }}>See How It Works</a>
-            <a href="/contact" className="hero-cta-ghost" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', display: 'inline-block', textAlign: 'center' }}>Get In Touch</a>
+          <div className="hero-bottom">
+            <a href="#pipeline" className="hero-cta">See How It Works</a>
+            <a href="/contact" className="hero-cta-ghost">Get In Touch</a>
           </div>
         </div>
 
         {/* INGE MAATHAVUM: marginTop add panni visual block-a konjam keela thalli vachirukom */}
-        <div className="hero-visual" style={{ marginTop: '3rem' }}>
+        <div className="hero-visual">
           {/* INGE MAATHAVUM: scale() use panni image size perisaakirukkom */}
-          <img src="/aiml-hero.png" alt="AI Neural Network" className="hero-visual-img" style={{ transform: 'scale(1.2)', transformOrigin: 'center' }} />
+          <img src="/aiml-hero.png" alt="AI Neural Network" className="hero-visual-img" />
           <div className="hero-visual-fade"></div>
         </div>
         

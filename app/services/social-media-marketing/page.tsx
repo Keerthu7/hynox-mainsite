@@ -74,33 +74,33 @@ export default function SocialMediaPage() {
 
       {/* HERO */}
       <section className="hero" id="hero">
-        <div className="hero-content" style={{ marginTop: '4rem', marginLeft: '5rem' }}>
+        <div className="hero-content">
           <div className="hero-badge">
             <div className="badge-dot"></div>
             <div className="badge-line"></div>
             Social Media Marketing — HYNOX
           </div>
 
-          <h1 className="hero-title" style={{ fontSize: '5.5rem', lineHeight: '1.1' }}>
+          <h1 className="hero-title">
             Social That<br/>
             <em>Drives</em> Profit<br/>
             Not Just Likes
           </h1>
 
           <div className="hero-meta">
-            <p className="hero-desc" style={{ fontSize: '1rem', maxWidth: '90%' }}>
+            <p className="hero-desc">
               HYNOX manages, grows and monetises your social media presence — from daily content and influencer campaigns to video production and personal brand building. We make your brand impossible to ignore.
             </p>
             
-            <div className="hero-actions" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem', alignItems: 'flex-start' }}>
-              <a href="/#work" className="btn-p" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', display: 'inline-block', textAlign: 'center' }}>See Our Works</a>
-              <a href="/contact" className="btn-g" style={{ fontSize: '1.05rem', padding: '12px 28px', whiteSpace: 'nowrap', display: 'inline-block', textAlign: 'center' }}>Free Audit</a>
+            <div className="hero-actions">
+              <a href="/#work" className="btn-p">See Our Works</a>
+              <a href="/contact" className="btn-g">Free Audit</a>
             </div>
           </div>
         </div>
 
-        <div className="hero-visual" style={{ marginTop: '3rem' }}>
-          <div className="hero-feed" aria-hidden="true" style={{ transform: 'scale(1.15) translateX(-9rem)', transformOrigin: 'center' }}>
+        <div className="hero-visual">
+          <div className="hero-feed" aria-hidden="true">
             <div className="feed-post live">
               <span className="live-badge">Live</span>
               <div className="feed-header">

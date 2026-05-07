@@ -51,6 +51,8 @@
   max-width: 650px;
   position: relative;
   z-index: 10;
+  margin-top: -7rem;
+  margin-left: 2rem;
 }
 .ai-ml-page .hero-visual {
   flex: 1;
@@ -59,6 +61,7 @@
   align-items: center;
   position: relative;
   z-index: 5;
+  margin-top: 3rem;
 }
 .ai-ml-page .hero-visual-img {
   width: 100%;
@@ -68,6 +71,8 @@
   display: block;
   opacity: 0;
   animation: fadeIn 1.2s 0.6s forwards;
+  transform: scale(1.2);
+  transform-origin: center;
 }
 .ai-ml-page .hero-visual-fade {
   position: absolute;
@@ -113,8 +118,8 @@
 }
 .ai-ml-page .hero-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(40px, 6vw, 90px);
-  line-height: 0.92;
+  font-size: 5.4rem;
+  line-height: 1.1;
   letter-spacing: 2px;
   color: var(--white);
   opacity: 0;
@@ -128,8 +133,8 @@
   color: transparent;
 }
 .ai-ml-page .hero-sub {
-  max-width: 400px;
-  font-size: 0.82rem;
+  max-width: 90%;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--grey-light);
   margin-top: 1.2rem;
@@ -141,9 +146,9 @@
 .ai-ml-page .hero-bottom {
   display: flex;
   flex-direction: row;
-  gap: 1.2rem;
+  gap: 1rem;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   opacity: 0;
   animation: fadeUp 0.8s 0.9s forwards;
   position: relative;
@@ -151,29 +156,33 @@
 }
 .ai-ml-page .hero-cta {
   font-family: 'Space Mono', monospace;
-  font-size: 0.7rem;
+  font-size: 1.05rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--black);
   background: var(--white);
   border: none;
-  padding: 1rem 2.4rem;
+  padding: 12px 28px;
   text-decoration: none;
   display: inline-block;
   transition: opacity 0.2s;
+  white-space: nowrap;
+  text-align: center;
 }
 .ai-ml-page .hero-cta:hover { opacity: 0.85; }
 .ai-ml-page .hero-cta-ghost {
   font-family: 'Space Mono', monospace;
-  font-size: 0.7rem;
+  font-size: 1.05rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--white);
   border: 1px solid var(--border);
-  padding: 1rem 2.4rem;
+  padding: 12px 28px;
   text-decoration: none;
   display: inline-block;
   transition: border-color 0.2s;
+  white-space: nowrap;
+  text-align: center;
 }
 .ai-ml-page .hero-cta-ghost:hover { border-color: var(--grey-light); }
 .ai-ml-page .hero-scroll {
@@ -727,8 +736,8 @@
     background: linear-gradient(to top, var(--black) 0%, rgba(5,5,5,0.4) 40%, transparent 100%);
   }
   
-  .ai-ml-page .hero-title { font-size: clamp(42px, 12vw, 80px); }
-  .ai-ml-page .hero-sub { margin: 1rem auto 0; }
+  .ai-ml-page .hero-title { font-size: clamp(40px, 12vw, 70px); }
+  .ai-ml-page .hero-sub { margin: 1rem auto 0; font-size: 0.9rem; }
   
   .ai-ml-page .why-grid,
   .ai-ml-page .contact-section,
