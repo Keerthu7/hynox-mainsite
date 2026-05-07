@@ -438,7 +438,7 @@ export default function PerformanceMarketingPage() {
           <div className="result-case" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '16px' }}>
             <div className="rc-industry" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1rem' }}>E-Commerce · Loungewear</div>
             <div className="rc-name" style={{ fontSize: '2.5rem', fontFamily: 'Bebas Neue', color: '#fff', marginBottom: '0.5rem' }}>SugarStar</div>
-            <div className="rc-channel" style={{ color: '#fff', fontSize: '0.9rem', marginBottom: '1.5rem', fontWeight: '500' }}>Meta Message Campaigns</div>
+            <div className="rc-channel" style={{ color: '#fff', fontSize: '0.9rem', marginBottom: '1.5rem', fontWeight: '500' }}>Meta ads</div>
             <p className="rc-desc" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }}>
               Executed hyper-targeted message campaigns to drive direct inquiries. Achieved massive scale with optimized entry costs, resulting in high-intent sales conversions.
             </p>
@@ -457,7 +457,7 @@ export default function PerformanceMarketingPage() {
           <div className="result-case" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '16px' }}>
             <div className="rc-industry" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1rem' }}>Retail · Apparel</div>
             <div className="rc-name" style={{ fontSize: '2.5rem', fontFamily: 'Bebas Neue', color: '#fff', marginBottom: '0.5rem' }}>Teerex</div>
-            <div className="rc-channel" style={{ color: '#fff', fontSize: '0.9rem', marginBottom: '1.5rem', fontWeight: '500' }}>Google & Meta Lead Gen</div>
+            <div className="rc-channel" style={{ color: '#fff', fontSize: '0.9rem', marginBottom: '1.5rem', fontWeight: '500' }}>Meta ads</div>
             <p className="rc-desc" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }}>
               Scaled lead generation for high-volume retail. By optimizing lead quality, we delivered a consistent flow of prospects and a strong return on marketing investment.
             </p>

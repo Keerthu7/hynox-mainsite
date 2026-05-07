@@ -10,6 +10,7 @@ import { Toaster } from "react-hot-toast"
 import { GoogleTagManager } from '@next/third-parties/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
+import { WhatsAppButton } from "@/components/whatsapp-button"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -65,6 +66,7 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
           <SiteFooter />
+          <WhatsAppButton />
           <Toaster />
         </ThemeProvider>
       </body>

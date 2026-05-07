@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Flame, TrendingUp, CheckCircle, Instagram, Youtube, Music, Linkedin, Twitter,
@@ -11,6 +11,33 @@ import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
 export default function SocialMediaPage() {
+  const gridRef = useRef<HTMLDivElement>(null);
+  const thumbRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    const thumb = thumbRef.current;
+    if (!grid || !thumb) return;
+
+    const handleScroll = () => {
+      const scrollLeft = grid.scrollLeft;
+      const scrollWidth = grid.scrollWidth - grid.clientWidth;
+      if (scrollWidth <= 0) return;
+      const percentage = scrollLeft / scrollWidth;
+      // track width is 180px, thumb width is 35% (63px)
+      const trackWidth = 180;
+      const thumbWidth = trackWidth * 0.35;
+      const moveRange = trackWidth - thumbWidth;
+      thumb.style.transform = `translateX(${percentage * moveRange}px)`;
+    };
+
+    grid.addEventListener('scroll', handleScroll);
+    // Initialize position
+    handleScroll();
+
+    return () => grid.removeEventListener('scroll', handleScroll);
+  }, []);
+
   useEffect(() => {
     // Scroll reveal
     const obs = new IntersectionObserver((entries) => {
@@ -196,11 +223,217 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
+      {/* PORTFOLIO SECTION - 6 BOXES WITH VIDEO & CUSTOM SCROLLBAR */}
+      <section style={{ background: 'var(--black)', overflow: 'hidden', padding: '80px 8vw' }} id="portfolio">
+        <style>{`
+          .portfolio-grid { 
+            display: flex; 
+            gap: 1.2rem; 
+            margin-top: 4rem; 
+            overflow-x: auto; 
+            padding: 0 0 2rem;
+            scrollbar-width: none; /* Hide default scrollbar */
+            scroll-snap-type: x mandatory;
+            position: relative;
+          }
+          .portfolio-grid::-webkit-scrollbar { display: none; }
+          
+          .port-item { 
+            /* 5 boxes visible aaga width calculation: (100% - total gap) / 5 */
+            flex: 0 0 calc((84vw - (1.2rem * 4)) / 5); 
+            aspect-ratio: 9/16; 
+            position: relative; 
+            overflow: hidden; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-end; 
+            padding: 1.5rem; 
+            background-color: #000; 
+            border-radius: 20px;
+            scroll-snap-align: start;
+            border: 1px solid rgba(255,255,255,0.1);
+          }
+
+          .port-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+          }
+
+          .port-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+            z-index: 1;
+            pointer-events: none; /* Video mela click aagama irukka */
+          }
+
+          .port-content { position: relative; z-index: 2; pointer-events: none; }
+          .port-tag { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; background: rgba(0,0,0,0.7); padding: 4px 10px; border-radius: 4px; display: inline-block; color: #fff; }
+          .port-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--white); text-shadow: 0 2px 10px rgba(0,0,0,1); }
+          
+          /* Gray Scroll Indicator */
+          .scroll-bar-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            padding-bottom: 4rem;
+          }
+          .scroll-track {
+            width: 180px;
+            height: 6px;
+            background: #1a1a1a; 
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+          }
+          .scroll-thumb {
+            position: absolute;
+            width: 35%;
+            height: 100%;
+            background: #4a4a4a; 
+            border-radius: 10px;
+            transition: transform 0.1s ease-out; /* Smooth movement */
+          }
+
+          @media (max-width: 1024px) {
+            .port-item { flex: 0 0 250px; } 
+          }
+        `}</style>
+        
+        <div className="s-label reveal"><span className="s-label-line"></span>03 — Portfolio</div>
+        <div className="s-title reveal">Recent Works</div>
+        
+        <div className="portfolio-grid reveal" ref={gridRef} style={{ transitionDelay: '0.2s' }}>
+          
+          {/* Box 1 */}
+          <div className="port-item">
+            {/* NOTE: path-la /public nu poda koodathu. Verum /1.mp4 thaan podanum */}
+            <video className="port-video" autoPlay loop muted playsInline>
+              <source src="/1.mp4" type="video/mp4" />
+            </video>
+            
+          </div>
+
+          {/* Box 2 */}
+          <div className="port-item">
+            <video className="port-video" autoPlay loop muted playsInline>
+              <source src="/2.mp4" type="video/mp4" />
+            </video>
+           
+          </div>
+
+          {/* Box 3 */}
+          <div className="port-item">
+            <video className="port-video" autoPlay loop muted playsInline>
+              <source src="/3.mp4" type="video/mp4" />
+            </video>
+            
+          </div>
+
+          {/* Box 4 */}
+          <div className="port-item">
+            {/* Oru vellai videos folder-kulla iruntha ippadi podanum: /videos/client4.mp4 */}
+            <video className="port-video" autoPlay loop muted playsInline>
+              <source src="/4.mp4" type="video/mp4" />
+            </video>
+           
+          </div>
+
+          {/* Box 5 */}
+          <div className="port-item">
+            <video className="port-video" autoPlay loop muted playsInline>
+              <source src="/5.mp4" type="video/mp4" />
+            </video>
+           
+          </div>
+
+          {/* Box 6 - CTA (Hidden until scroll) */}
+          <div className="port-item" style={{ background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', border: '1px dashed rgba(255,255,255,0.2)' }}>
+            <div className="port-content">
+              <div style={{ fontFamily: "'Bebas Neue'", fontSize: '2rem', lineHeight: '1.1', color: '#fff' }}>Your Brand<br/>Next?</div>
+              <a href="/contact" style={{ fontFamily: "'Space Mono'", fontSize: '0.6rem', background: '#fff', color: '#000', padding: '10px 18px', borderRadius: '4px', textDecoration: 'none', display: 'inline-block', marginTop: '1rem', fontWeight: 'bold' }}>Start Now →</a>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Gray Scroll Bar Indicator */}
+        <div className="scroll-bar-wrap reveal">
+          <div className="scroll-track">
+            <div className="scroll-thumb" ref={thumbRef}></div>
+          </div>
+        </div>
+
+        {/* INSIGHTS IMAGE SECTION */}
+        <div className="insights-container reveal" style={{ marginTop: '5rem', textAlign: 'center' }}>
+           <div className="insights-header" style={{ marginBottom: '3.5rem' }}>
+              <div style={{ fontFamily: "'Space Mono'", fontSize: '0.7rem', color: 'var(--grey-light)', textTransform: 'uppercase', letterSpacing: '3px', marginBottom: '0.5rem' }}>Proof of Performance</div>
+              <h3 style={{ fontFamily: "'Bebas Neue'", fontSize: '3.5rem', color: '#fff', letterSpacing: '1px' }}>View Insights</h3>
+           </div>
+           
+           <style>{`
+             .insights-grid {
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               gap: 2.5rem;
+               align-items: start;
+             }
+             @media (max-width: 992px) {
+               .insights-grid {
+                 grid-template-columns: 1fr;
+                 max-width: 450px;
+                 margin: 0 auto;
+                 gap: 3rem;
+               }
+             }
+           `}</style>
+
+           <div className="insights-grid">
+              <div className="insights-image-wrap" style={{ 
+                borderRadius: '24px', 
+                overflow: 'hidden', 
+                border: '1px solid rgba(255,255,255,0.15)', 
+                boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
+                background: '#0a0a0a'
+              }}>
+                 <img src="/instagram_insights.png" alt="Reach Insights" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              </div>
+              <div className="insights-image-wrap" style={{ 
+                borderRadius: '24px', 
+                overflow: 'hidden', 
+                border: '1px solid rgba(255,255,255,0.15)', 
+                boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
+                background: '#0a0a0a'
+              }}>
+                 <img src="/instagram_insights_2.png" alt="Engagement Insights" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              </div>
+              <div className="insights-image-wrap" style={{ 
+                borderRadius: '24px', 
+                overflow: 'hidden', 
+                border: '1px solid rgba(255,255,255,0.15)', 
+                boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
+                background: '#0a0a0a'
+              }}>
+                 <img src="/instagram_insights_3.png" alt="Growth Insights" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              </div>
+           </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section id="services">
         <div className="srv-header">
           <div>
-            <div className="s-label reveal"><span className="s-label-line"></span>03 — What We Do</div>
+            <div className="s-label reveal"><span className="s-label-line"></span>04 — What We Do</div>
             <div className="s-title reveal">Our Social<br/>Media Services</div>
           </div>
           <p className="reveal">A complete suite of social media services — handled by dedicated specialists who eat, sleep and breathe social media. No generalists. No juniors. No excuses.</p>
@@ -274,7 +507,7 @@ export default function SocialMediaPage() {
 
       {/* CONTENT PILLARS */}
       <section className="pillars-section">
-        <div className="s-label reveal"><span className="s-label-line"></span>04 — Content Framework</div>
+        <div className="s-label reveal"><span className="s-label-line"></span>05 — Content Framework</div>
         <div className="s-title reveal">The 4 Content<br/>Pillars We Build</div>
         <div className="pillars-grid reveal" style={{ transitionDelay: '0.15s' }}>
           <div className="pillar-item">
@@ -306,7 +539,7 @@ export default function SocialMediaPage() {
 
       {/* PROCESS */}
       <section style={{ background: 'var(--grey-dark)' }} id="process">
-        <div className="s-label reveal"><span className="s-label-line"></span>05 — How We Work</div>
+        <div className="s-label reveal"><span className="s-label-line"></span>06 — How We Work</div>
         <div className="s-title reveal">Our Monthly<br/>Process</div>
         <div className="process-wrap reveal" style={{ transitionDelay: '0.15s' }}>
           <div className="proc-row">
@@ -368,7 +601,7 @@ export default function SocialMediaPage() {
 
       {/* INFLUENCER SECTION */}
       <section className="influencer-section" id="influencer">
-        <div className="s-label reveal"><span className="s-label-line"></span>06 — Influencer Marketing</div>
+        <div className="s-label reveal"><span className="s-label-line"></span>07 — Influencer Marketing</div>
         <div className="s-title reveal">Influencer Network<br/>That Converts</div>
         <div className="inf-grid">
           <div>
@@ -428,7 +661,7 @@ export default function SocialMediaPage() {
 
       {/* VIDEO PRODUCTION */}
       <section className="video-section" id="video">
-        <div className="s-label reveal"><span className="s-label-line"></span>07 — Video Production</div>
+        <div className="s-label reveal"><span className="s-label-line"></span>08 — Video Production</div>
         <div className="s-title reveal">Video Content That<br/>Stops the Scroll</div>
         <div className="video-grid">
           <div className="video-card reveal">
@@ -472,7 +705,7 @@ export default function SocialMediaPage() {
 
       {/* PERSONAL BRANDING */}
       <section className="brand-section">
-        <div className="s-label reveal"><span className="s-label-line"></span>08 — Personal Branding</div>
+        <div className="s-label reveal"><span className="s-label-line"></span>09 — Personal Branding</div>
         <div className="s-title reveal">Build a Brand<br/>Around You</div>
         <div className="brand-grid">
           <div className="brand-left reveal">
@@ -516,7 +749,7 @@ export default function SocialMediaPage() {
       <section className="analytics-section">
         <div className="analytics-intro">
           <div>
-            <div className="s-label reveal"><span className="s-label-line"></span>09 — Analytics & Reporting</div>
+            <div className="s-label reveal"><span className="s-label-line"></span>10 — Analytics & Reporting</div>
             <div className="s-title reveal">Data-Driven.<br/>Always.</div>
           </div>
           <p className="reveal">Every decision we make is backed by data. We track, measure and optimise everything — so you always know exactly what's working, what's growing and where your ROI is coming from.</p>
@@ -547,7 +780,7 @@ export default function SocialMediaPage() {
 
       {/* RESULTS */}
       <section className="results-section" style={{ background: 'var(--grey-dark)', borderTop: '1px solid var(--border)' }}>
-        <div className="s-label reveal"><span className="s-label-line"></span>10 — Results We Deliver</div>
+        <div className="s-label reveal"><span className="s-label-line"></span>11 — Results We Deliver</div>
         <div className="s-title reveal">Real Numbers.<br/>Real Growth.</div>
         <div className="results-grid reveal" style={{ transitionDelay: '0.15s', marginTop: '4rem' }}>
           <div className="result-item">
@@ -573,164 +806,9 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
-{/* PORTFOLIO SECTION - 6 BOXES WITH VIDEO & CUSTOM SCROLLBAR */}
-      <section style={{ background: 'var(--black)', overflow: 'hidden' }} id="portfolio">
-        <style>{`
-          .portfolio-grid { 
-            display: flex; 
-            gap: 1.2rem; 
-            margin-top: 4rem; 
-            overflow-x: auto; 
-            padding: 0 4vw 2rem;
-            scrollbar-width: none; /* Hide default scrollbar */
-            scroll-snap-type: x mandatory;
-            position: relative;
-          }
-          .portfolio-grid::-webkit-scrollbar { display: none; }
-          
-          .port-item { 
-            /* 5 boxes visible aaga width calculation: (100% - total gap) / 5 */
-            flex: 0 0 calc((92vw - (1.2rem * 4)) / 5); 
-            aspect-ratio: 9/16; 
-            position: relative; 
-            overflow: hidden; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: flex-end; 
-            padding: 1.5rem; 
-            background-color: #000; 
-            border-radius: 20px;
-            scroll-snap-align: start;
-            border: 1px solid rgba(255,255,255,0.1);
-          }
-
-          .port-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-          }
-
-          .port-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
-            z-index: 1;
-            pointer-events: none; /* Video mela click aagama irukka */
-          }
-
-          .port-content { position: relative; z-index: 2; pointer-events: none; }
-          .port-tag { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; background: rgba(0,0,0,0.7); padding: 4px 10px; border-radius: 4px; display: inline-block; color: #fff; }
-          .port-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--white); text-shadow: 0 2px 10px rgba(0,0,0,1); }
-          
-          /* Gray Scroll Indicator */
-          .scroll-bar-wrap {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-            padding-bottom: 4rem;
-          }
-          .scroll-track {
-            width: 180px;
-            height: 6px;
-            background: #1a1a1a; 
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-          }
-          .scroll-thumb {
-            position: absolute;
-            width: 35%;
-            height: 100%;
-            background: #4a4a4a; 
-            border-radius: 10px;
-            animation: scrollProgress 3s infinite ease-in-out;
-          }
-          @keyframes scrollProgress {
-            0% { transform: translateX(-100%); }
-            50% { transform: translateX(180%); }
-            100% { transform: translateX(-100%); }
-          }
-
-          @media (max-width: 1024px) {
-            .port-item { flex: 0 0 250px; } 
-          }
-        `}</style>
-        
-        <div className="s-label reveal" style={{ marginLeft: '4vw' }}><span className="s-label-line"></span>02 — Portfolio</div>
-        <div className="s-title reveal" style={{ marginLeft: '4vw' }}>Recent Works</div>
-        
-        <div className="portfolio-grid reveal" style={{ transitionDelay: '0.2s' }}>
-          
-          {/* Box 1 */}
-          <div className="port-item">
-            {/* NOTE: path-la /public nu poda koodathu. Verum /1.mp4 thaan podanum */}
-            <video className="port-video" autoPlay loop muted playsInline>
-              <source src="/1.mp4" type="video/mp4" />
-            </video>
-            
-          </div>
-
-          {/* Box 2 */}
-          <div className="port-item">
-            <video className="port-video" autoPlay loop muted playsInline>
-              <source src="/2.mp4" type="video/mp4" />
-            </video>
-           
-          </div>
-
-          {/* Box 3 */}
-          <div className="port-item">
-            <video className="port-video" autoPlay loop muted playsInline>
-              <source src="/3.mp4" type="video/mp4" />
-            </video>
-            
-          </div>
-
-          {/* Box 4 */}
-          <div className="port-item">
-            {/* Oru vellai videos folder-kulla iruntha ippadi podanum: /videos/client4.mp4 */}
-            <video className="port-video" autoPlay loop muted playsInline>
-              <source src="/4.mp4" type="video/mp4" />
-            </video>
-           
-          </div>
-
-          {/* Box 5 */}
-          <div className="port-item">
-            <video className="port-video" autoPlay loop muted playsInline>
-              <source src="/5.mp4" type="video/mp4" />
-            </video>
-           
-          </div>
-
-          {/* Box 6 - CTA (Hidden until scroll) */}
-          <div className="port-item" style={{ background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', border: '1px dashed rgba(255,255,255,0.2)' }}>
-            <div className="port-content">
-              <div style={{ fontFamily: "'Bebas Neue'", fontSize: '2rem', lineHeight: '1.1', color: '#fff' }}>Your Brand<br/>Next?</div>
-              <a href="/contact" style={{ fontFamily: "'Space Mono'", fontSize: '0.6rem', background: '#fff', color: '#000', padding: '10px 18px', borderRadius: '4px', textDecoration: 'none', display: 'inline-block', marginTop: '1rem', fontWeight: 'bold' }}>Start Now →</a>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Gray Scroll Bar Indicator */}
-        <div className="scroll-bar-wrap reveal">
-          <div className="scroll-track">
-            <div className="scroll-thumb"></div>
-          </div>
-        </div>
-      </section>
       {/* FAQ */}
       <section id="faq">
-        <div className="s-label reveal"><span className="s-label-line"></span>13 — FAQ</div>
+        <div className="s-label reveal"><span className="s-label-line"></span>12 — FAQ</div>
         <div className="s-title reveal">Frequently Asked<br/>Questions</div>
         <div className="faq-list reveal" style={{ transitionDelay: '0.15s' }}>
           <div className="faq-item">
