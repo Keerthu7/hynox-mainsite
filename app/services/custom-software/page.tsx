@@ -488,7 +488,7 @@ export default function CustomSoftwarePage() {
           <div className="faq-list reveal" style={{ transitionDelay: '0.15s' }}>
             <div className="faq-item">
               <div className="faq-q" onClick={toggleFaq}><h4>How long does custom software take to build?</h4><span className="faq-toggle">+</span></div>
-              <div className="faq-a"><p>A focused single-module tool takes 6–10 weeks. A full multi-module platform like an ERP or CRM takes 4–8 months. Enterprise-grade SaaS products with complex architecture take 6–12 months. We give you a milestone-by-milestone timeline during the discovery phase — not a vague estimate.</p></div>
+              <div className="faq-a"><p>A focused single-module tool takes 6–10 weeks. A full multi-module platform like an ERP or CRM takes 4–8 months. Enterprise-grade SaaS products with complex architecture take 6–12 months. We give you a milestone-by-milestone timeline during the discovery phase — not a vintage estimate.</p></div>
             </div>
             <div className="faq-item">
               <div className="faq-q" onClick={toggleFaq}><h4>Will I own the source code?</h4><span className="faq-toggle">+</span></div>
