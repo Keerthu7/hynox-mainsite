@@ -64,7 +64,7 @@ export default function WorkSection() {
             {
               title: "Team3 Associates",
               category: "Custom Development",
-              image: "/team3_logo.png",
+              image: "/team3_works.png",
               description: "Interior Design and Project Execution",
             },
             {
