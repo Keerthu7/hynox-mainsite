@@ -21,6 +21,7 @@ export default function ProductsSection() {
       ],
       cta: "Scale Your Brand",
       image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&q=80&w=2000",
+      link: "/services/ecommerce-support",
     },
     {
       title: "ENTERPRISE SYSTEMS & AUTOMATION",
@@ -35,6 +36,7 @@ export default function ProductsSection() {
       ],
       cta: "Optimize Operations",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000",
+      link: "/contact",
     },
   ];
 
@@ -111,7 +113,7 @@ export default function ProductsSection() {
                   ))}
                 </ul>
 
-                <Link href="/contact" className="w-full">
+                <Link href={section.link} className="w-full">
                   <Button 
                     className="w-full h-12 bg-white text-black hover:bg-gray-200 rounded-none text-xs font-light tracking-[0.2em] group/btn transition-all duration-300"
                   >

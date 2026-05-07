@@ -1,8 +1,9 @@
+"use client";
+
 import type React from "react"
 import "../globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
-// import { metadata } from "./metadata" // Import metadata from the new file
 import { SiteHeader } from "@/components/site-header"
 import { homePageStructuredData } from "./home-structured-data"
 import { SiteFooter } from "@/components/site-footer"
@@ -11,6 +12,7 @@ import { GoogleTagManager } from '@next/third-parties/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 import { WhatsAppButton } from "@/components/whatsapp-button"
+import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,6 +21,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname();
+  const isEcommercePage = pathname === "/services/ecommerce-support";
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -61,12 +66,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <GoogleTagManager gtmId="GTM-KMLDP729" />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <SiteHeader />
+          {!isEcommercePage && <SiteHeader />}
           {children}
           <Analytics />
           <SpeedInsights />
-          <SiteFooter />
-          <WhatsAppButton />
+          {!isEcommercePage && <SiteFooter />}
+          {!isEcommercePage && <WhatsAppButton />}
           <Toaster />
         </ThemeProvider>
       </body>
