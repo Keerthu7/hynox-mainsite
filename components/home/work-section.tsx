@@ -56,16 +56,22 @@ export default function WorkSection() {
               description: "Premium confectionery online store",
             },
             {
+              title: "JP Interiors App",
+              category: "App Development",
+              image: "/JpApp_works.png?height=400&width=600",
+              description: "Custom business automation and project management app",
+            },
+            {
+              title: "Team3 Associates",
+              category: "Custom Development",
+              image: "/team3-logo-white.png?height=400&width=600",
+              description: "Interior Design and Project Execution",
+            },
+            {
               title: "JP Interiors Web",
               category: "Web Development",
               image: "/JpWeb_works.png?height=400&width=600",
               description: "Interior design portfolio and service showcase",
-            },
-            {
-              title: "Team3",
-              category: "Custom Development",
-              image: "/team3-logo-white.png?height=400&width=600",
-              description: "Interior Design and Project Execution",
             },
             {
               title: "Food delivery app",
