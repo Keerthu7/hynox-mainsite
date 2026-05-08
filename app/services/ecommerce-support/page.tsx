@@ -2,7 +2,6 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
-import CTAsection from "@/components/home/CTAsection";
 import { 
   Shirt, 
   ShoppingBag, 

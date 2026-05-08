@@ -9,7 +9,6 @@ import {
   Palette, Bot, Facebook, ArrowRight, PlayCircle,
   Plus, Check, X, Layout
 } from 'lucide-react';
-import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
 export default function PerformanceMarketingPage() {

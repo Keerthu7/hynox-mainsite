@@ -9,7 +9,6 @@ import {
   Pin, RefreshCcw,
   ClipboardCheck, Key, Rocket, ShieldCheck
 } from 'lucide-react';
-import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
 export default function CustomSoftwarePage() {

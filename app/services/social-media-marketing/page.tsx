@@ -7,7 +7,6 @@ import {
   ClipboardList, Handshake, Settings, Clapperboard, User, Banknote, MessageCircle, PenTool, Brain,
   Target, Lightbulb, Sprout, Star, Crown, Video, Smartphone, Mic, Sparkles, Megaphone, BarChart, Heart
 } from 'lucide-react';
-import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
 export default function SocialMediaPage() {

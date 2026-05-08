@@ -8,7 +8,6 @@ import {
   Triangle, Atom, Palette, Box, Database, Layers, Brain, Flame, FileEdit, CreditCard, Figma,
   Search, Lock
 } from 'lucide-react';
-import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
 
@@ -487,7 +486,6 @@ export default function WebApplicationsPage() {
         </div>
       </section>
 
-      <CTAsection />
     </div>
   );
 }

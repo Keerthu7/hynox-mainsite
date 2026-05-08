@@ -7,7 +7,6 @@ import {
   Apple, TabletSmartphone, Triangle, Box, Database, Flame, CreditCard, Figma,
   MessageSquare, Target, Search, BarChart, Mic, Workflow, Code
 } from 'lucide-react';
-import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
 export default function MobileApplicationsPage() {

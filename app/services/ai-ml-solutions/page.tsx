@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Target, Bot, Workflow, PenTool, ArrowRight } from 'lucide-react';
-import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
 export default function AiMlSolutionsPage() {
@@ -33,41 +32,42 @@ export default function AiMlSolutionsPage() {
 
       {/* HERO */}
       <section className="hero" id="hero">
-        <div className="hero-bg-text">HYNOX</div>
+        <div className="hero-bg-text">AI·ML</div>
         
-        {/* INGE MAATHAVUM: marginTop & marginLeft add panni text-a keela & right side move pannirukom */}
         <div className="hero-content">
-          <div className="hero-badge"><span></span>Agentic AI Solutions — Est. 2024</div>
+          <div className="hero-badge">
+            <span></span>Artificial Intelligence — HYNOX
+          </div>
           
-          {/* INGE MAATHAVUM: Title size & line height adjust pannirukom */}
           <h1 className="hero-title">
-            AI Agents<br/>
-            That <em>Close</em><br/>
-            Deals For You
+            AI That<br/>
+            <em>Solves</em> Real<br/>
+            Problems
           </h1>
           
-          {/* INGE MAATHAVUM: Description size adjust pannirukom */}
           <p className="hero-sub">
-            HYNOX deploys autonomous AI pipelines that find leads, send messages, book meetings and grow your revenue — fully automated, 24 hours a day.
+            HYNOX builds production-grade AI systems that automate workflows, predict outcomes and unlock hidden insights. From LLM agents to predictive analytics — we deliver intelligence that scales.
           </p>
           
-          {/* INGE MAATHAVUM: Buttons-a flex row add panni side-by-side aakirukom */}
           <div className="hero-bottom">
-            <a href="#pipeline" className="hero-cta">See How It Works</a>
-            <a href="/contact" className="hero-cta-ghost">Get In Touch</a>
+            <a href="/contact" className="hero-cta">Start a Project</a>
+            <a href="#services" className="hero-cta-ghost">Our Solutions</a>
           </div>
         </div>
 
-        {/* INGE MAATHAVUM: marginTop add panni visual block-a konjam keela thalli vachirukom */}
         <div className="hero-visual">
-          {/* INGE MAATHAVUM: scale() use panni image size perisaakirukkom */}
-          <img src="/aiml-hero.png" alt="AI Neural Network" className="hero-visual-img" />
           <div className="hero-visual-fade"></div>
+          <img 
+            src="/ai_visual.png" 
+            alt="AI Visual" 
+            className="hero-visual-img" 
+            suppressHydrationWarning
+          />
         </div>
-        
+
         <div className="hero-scroll">
-          <div className="scroll-line"></div>
           <span>Scroll</span>
+          <div className="scroll-line"></div>
         </div>
       </section>
 
@@ -272,7 +272,6 @@ export default function AiMlSolutionsPage() {
       </section>
 
       </div>
-      <CTAsection />
     </div>
   );
 }

@@ -6,7 +6,6 @@ import {
   Hexagon, Layout, Building2, Network, ArrowRightLeft, Gauge, Bot,
   ShoppingBag, Zap, Droplet, Atom, Figma, Package, Link, Mail, BarChart, Brain, RefreshCw, Rocket 
 } from 'lucide-react';
-import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
 
