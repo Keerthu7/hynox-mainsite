@@ -9,8 +9,6 @@ import {
   Pin, RefreshCcw,
   ClipboardCheck, Key, Rocket, ShieldCheck
 } from 'lucide-react';
-import { SiteHeader } from '@/components/site-header';
-import { SiteFooter } from '@/components/site-footer';
 import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
@@ -42,9 +40,7 @@ export default function CustomSoftwarePage() {
   };
 
   return (
-    <>
-      <SiteHeader />
-      <div className="custom-software-page">
+    <div className="custom-software-page">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -515,11 +511,7 @@ export default function CustomSoftwarePage() {
             </div>
           </div>
         </section>
-      </div>
-
       {/* GLOBAL CTA SECTION */}
-      <CTAsection />
-      <SiteFooter />
-    </>
+    </div>
   );
 }

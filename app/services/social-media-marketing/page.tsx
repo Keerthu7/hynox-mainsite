@@ -8,8 +8,6 @@ import {
   Target, Lightbulb, Sprout, Star, Crown, Video, Smartphone, Mic, Sparkles, Megaphone, BarChart, Heart
 } from 'lucide-react';
 import CTAsection from '@/components/home/CTAsection';
-import { SiteHeader } from '@/components/site-header';
-import { SiteFooter } from '@/components/site-footer';
 import './styles.css';
 
 export default function SocialMediaPage() {
@@ -68,9 +66,7 @@ export default function SocialMediaPage() {
   };
 
   return (
-    <>
-      <SiteHeader />
-      <div className="social-media-page">
+    <div className="social-media-page">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -227,7 +223,7 @@ export default function SocialMediaPage() {
       </section>
 
       {/* PORTFOLIO SECTION - 6 BOXES WITH VIDEO & CUSTOM SCROLLBAR */}
-      <section style={{ background: 'var(--black)', overflow: 'hidden', padding: '80px 8vw' }} id="portfolio">
+      <section style={{ background: 'var(--black)', overflow: 'hidden', padding: '140px 8vw 80px' }} id="portfolio">
         <style>{`
           .portfolio-grid { 
             display: flex; 
@@ -841,9 +837,6 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
-      </div>
-      <CTAsection />
-      <SiteFooter />
-    </>
+    </div>
   );
 }

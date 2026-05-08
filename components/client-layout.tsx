@@ -9,14 +9,13 @@ import { Toaster } from "react-hot-toast";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isEcommercePage = pathname === "/services/ecommerce-support";
 
   return (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-      {!isEcommercePage && <SiteHeader />}
+      <SiteHeader />
       {children}
-      {!isEcommercePage && <SiteFooter />}
-      {!isEcommercePage && <WhatsAppButton />}
+      <SiteFooter />
+      <WhatsAppButton />
       <Toaster />
     </ThemeProvider>
   );

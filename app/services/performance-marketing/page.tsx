@@ -10,8 +10,6 @@ import {
   Plus, Check, X, Layout
 } from 'lucide-react';
 import CTAsection from '@/components/home/CTAsection';
-import { SiteHeader } from '@/components/site-header';
-import { SiteFooter } from '@/components/site-footer';
 import './styles.css';
 
 export default function PerformanceMarketingPage() {
@@ -51,9 +49,7 @@ export default function PerformanceMarketingPage() {
   ];
 
   return (
-    <>
-      <SiteHeader />
-      <div className="performance-marketing-page">
+    <div className="performance-marketing-page">
       <div className="grain-overlay"></div>
 
       {/* HERO */}
@@ -553,8 +549,5 @@ export default function PerformanceMarketingPage() {
       </section>
 
     </div>
-    <CTAsection />
-    <SiteFooter />
-    </>
   );
 }

@@ -1391,6 +1391,15 @@
   .mobile-app-page .hero-scroll {
     display: none;
   }
+  .mobile-app-page .ai-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .mobile-app-page .ai-visual {
+    position: relative;
+    top: 0;
+    margin-top: 2rem;
+  }
   .mobile-app-page .intro-grid,
   .mobile-app-page .why-cols,
   .mobile-app-page .contact-wrap {

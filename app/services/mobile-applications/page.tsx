@@ -39,8 +39,7 @@ export default function MobileApplicationsPage() {
   };
 
   return (
-    <>
-      <div className="mobile-app-page">
+    <div className="mobile-app-page">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -534,8 +533,6 @@ export default function MobileApplicationsPage() {
         </div>
       </section>
 
-      </div>
-      <CTAsection />
-    </>
+    </div>
   );
 }

@@ -6,8 +6,6 @@ import {
   Hexagon, Layout, Building2, Network, ArrowRightLeft, Gauge, Bot,
   ShoppingBag, Zap, Droplet, Atom, Figma, Package, Link, Mail, BarChart, Brain, RefreshCw, Rocket 
 } from 'lucide-react';
-import { SiteHeader } from '@/components/site-header';
-import { SiteFooter } from '@/components/site-footer';
 import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
@@ -41,9 +39,7 @@ export default function ShopifyDevelopmentPage() {
   };
 
   return (
-    <>
-      <SiteHeader />
-      <div className="shopify-dev-page">
+    <div className="shopify-dev-page">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -78,7 +74,7 @@ export default function ShopifyDevelopmentPage() {
         <div className="hero-visual">
           <div className="hero-shopify-icon">
             <img 
-              src="/shopify_v10.png?v=10" 
+              src="/shopify_transparent.png" 
               alt="Shopify Logo" 
               className="hero-logo-img" 
               suppressHydrationWarning
@@ -373,9 +369,6 @@ export default function ShopifyDevelopmentPage() {
         </div>
       </section>
 
-      </div>
-      <CTAsection />
-      <SiteFooter />
-    </>
+    </div>
   );
 }

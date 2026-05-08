@@ -5,7 +5,7 @@
 .ecommerce-page::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.3;}
 
 /* HERO */
-.ecommerce-page .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 3rem 5rem;position:relative;overflow:hidden;}
+.ecommerce-page .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:160px 10% 5rem;position:relative;overflow:hidden;}
 
 /* Ecom Store Mockup */
 .ecommerce-page .hero-store{position:absolute;right:10vw;top:50%;transform:translateY(-52%);width:340px;opacity:0;animation:fadeIn 1s 0.8s forwards;}
@@ -58,13 +58,13 @@
 .ecommerce-page .ticker-item b{color:var(--white);font-weight:400;}
 
 /* SECTION */
-.ecommerce-page section{padding:7rem 3rem;border-top:1px solid var(--border);}
+.ecommerce-page section{padding:7rem 10%;border-top:1px solid var(--border);}
 .ecommerce-page .s-label{font-family:'Space Mono',monospace;font-size:0.8rem;letter-spacing:3px;color:var(--grey-light);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
 .ecommerce-page .s-label-line{width:20px;height:1px;background:var(--grey-light);display:inline-block;}
 .ecommerce-page .s-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6.5vw,88px);line-height:1;letter-spacing:1px;}
 
 /* PROMISE BAND */
-.ecommerce-page .promise-band{background:var(--white);color:var(--black);padding:2.5rem 3rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:3rem;}
+.ecommerce-page .promise-band{background:var(--white);color:var(--black);padding:2.5rem 10%;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:3rem;}
 .ecommerce-page .pb-main{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,4vw,52px);letter-spacing:1px;line-height:1;flex:1;}
 .ecommerce-page .pb-main em{font-style:normal;-webkit-text-stroke:1.5px var(--black);color:transparent;}
 .ecommerce-page .pb-items{display:flex;gap:3rem;}
@@ -243,7 +243,7 @@
 .ecommerce-page .faq-item.open .faq-a{max-height:240px;}
 
 /* CTA */
-.ecommerce-page .cta-section{background:var(--white);color:var(--black);border-top:none;text-align:left;padding:8rem 3rem;}
+.ecommerce-page .cta-section{background:var(--white);color:var(--black);border-top:none;text-align:left;padding:8rem 10%;}
 .ecommerce-page .cta-section .s-label{color:rgba(0,0,0,0.4);justify-content:flex-start;}
 .ecommerce-page .cta-section .s-label-line{background:rgba(0,0,0,0.3);}
 .ecommerce-page .cta-section .s-title{color:var(--black);}
@@ -256,8 +256,8 @@
 
 /* CONTACT */
 .ecommerce-page .contact-wrap{display:grid;grid-template-columns:1fr 1fr;}
-.ecommerce-page .contact-left{padding:5rem 3rem;border-right:1px solid var(--border);border-top:1px solid var(--border);}
-.ecommerce-page .contact-right{padding:5rem 3rem;border-top:1px solid var(--border);background:var(--grey-dark);}
+.ecommerce-page .contact-left{padding:5rem 10%;border-right:1px solid var(--border);border-top:1px solid var(--border);}
+.ecommerce-page .contact-right{padding:5rem 10%;border-top:1px solid var(--border);background:var(--grey-dark);}
 .ecommerce-page .contact-info{margin-top:2.5rem;}
 .ecommerce-page .ci{padding:1.2rem 0;border-bottom:1px solid var(--border);}
 .ecommerce-page .ci-label{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:2px;color:var(--grey-light);text-transform:uppercase;margin-bottom:0.3rem;}
@@ -271,7 +271,7 @@
 .ecommerce-page .form-submit{font-family:'Space Mono',monospace;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--black);background:var(--white);border:none;padding:1rem 2rem;width:100%;margin-top:0.5rem;transition:opacity 0.2s;}
 .ecommerce-page .form-submit:hover{opacity:0.85;}
 
-.ecommerce-page footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;}
+.ecommerce-page footer{border-top:1px solid var(--border);padding:2rem 10%;display:flex;justify-content:space-between;align-items:center;}
 .ecommerce-page .f-logo{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:4px;}
 .ecommerce-page .f-logo span{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:2px;color:var(--grey-light);margin-left:10px;vertical-align:middle;}
 .ecommerce-page footer p{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:1px;color:var(--grey-light);}
@@ -316,7 +316,7 @@
 @media (max-width: 992px) {
   .ecommerce-page .hero {
     flex-direction: column;
-    padding: 100px 1.5rem 60px;
+    padding: 140px 12% 60px;
     text-align: left;
     gap: 2.5rem;
     min-height: auto;
@@ -386,7 +386,7 @@
   .ecommerce-page .contact-right { border-right: none; }
   .ecommerce-page .why-col:first-child,
   .ecommerce-page .contact-left { border-bottom: 1px solid var(--border); }
-  .ecommerce-page section { padding: 4rem 1rem; }
+  .ecommerce-page section { padding: 4rem 12%; }
   .ecommerce-page .promise-band {
     flex-direction: column;
     padding: 3rem 1.5rem;

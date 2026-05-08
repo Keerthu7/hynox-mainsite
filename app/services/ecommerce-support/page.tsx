@@ -2,8 +2,6 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
 import CTAsection from "@/components/home/CTAsection";
 import { 
   Shirt, 
@@ -65,7 +63,6 @@ export default function EcommerceSupport() {
 
   return (
     <div className="ecommerce-page">
-      <SiteHeader />
 
       {/* HERO */}
       <section className="hero" id="hero">
@@ -1119,8 +1116,6 @@ export default function EcommerceSupport() {
         </div>
       </section>
 
-      <CTAsection/>
-      <SiteFooter />
     </div>
   );
 }
