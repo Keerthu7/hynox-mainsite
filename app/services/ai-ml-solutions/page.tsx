@@ -271,7 +271,6 @@ export default function AiMlSolutionsPage() {
         </div>
       </section>
 
-      </div>
     </div>
   );
 }
