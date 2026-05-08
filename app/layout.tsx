@@ -1,29 +1,24 @@
-"use client";
-
 import type React from "react"
 import "../globals.css"
 import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
-import { SiteHeader } from "@/components/site-header"
 import { homePageStructuredData } from "./home-structured-data"
-import { SiteFooter } from "@/components/site-footer"
-import { Toaster } from "react-hot-toast"
 import { GoogleTagManager } from '@next/third-parties/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
-import { WhatsAppButton } from "@/components/whatsapp-button"
-import { usePathname } from "next/navigation";
+import ClientLayout from "@/components/client-layout"
 
 const inter = Inter({ subsets: ["latin"] })
+
+export const metadata = {
+  title: 'HYNOX | Premium Digital Solutions',
+  description: 'HYNOX designs and builds high-performance mobile and web applications.',
+}
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const pathname = usePathname();
-  const isEcommercePage = pathname === "/services/ecommerce-support";
-
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -63,17 +58,13 @@ export default function RootLayout({
         />
         {/* End Meta Pixel Code */}
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         <GoogleTagManager gtmId="GTM-KMLDP729" />
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {!isEcommercePage && <SiteHeader />}
+        <ClientLayout>
           {children}
-          <Analytics />
-          <SpeedInsights />
-          {!isEcommercePage && <SiteFooter />}
-          {!isEcommercePage && <WhatsAppButton />}
-          <Toaster />
-        </ThemeProvider>
+        </ClientLayout>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

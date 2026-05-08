@@ -10,6 +10,8 @@ import {
   Plus, Check, X, Layout
 } from 'lucide-react';
 import CTAsection from '@/components/home/CTAsection';
+import { SiteHeader } from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
 import './styles.css';
 
 export default function PerformanceMarketingPage() {
@@ -50,7 +52,8 @@ export default function PerformanceMarketingPage() {
 
   return (
     <>
-    <div className="performance-marketing-page">
+      <SiteHeader />
+      <div className="performance-marketing-page">
       <div className="grain-overlay"></div>
 
       {/* HERO */}
@@ -426,14 +429,7 @@ export default function PerformanceMarketingPage() {
         <div className="s-label reveal" style={{ textAlign: 'center', marginBottom: '1rem' }}><span className="s-label-line"></span>08 — Case Studies</div>
         <div className="s-title reveal" style={{ textAlign: 'center', marginBottom: '4rem' }}>Campaigns We've<br/>Run & Won</div>
         
-        <div className="results-grid reveal" style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
-          gap: '2rem', 
-          padding: '0 8vw',
-          maxWidth: '1200px',
-          margin: '0 auto'
-        }}>
+        <div className="results-grid reveal">
           {/* Case 1: SugarStar */}
           <div className="result-case" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '16px' }}>
             <div className="rc-industry" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1rem' }}>E-Commerce · Loungewear</div>
@@ -442,7 +438,7 @@ export default function PerformanceMarketingPage() {
             <p className="rc-desc" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }}>
               Executed hyper-targeted message campaigns to drive direct inquiries. Achieved massive scale with optimized entry costs, resulting in high-intent sales conversions.
             </p>
-            <div className="rc-results" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+            <div className="rc-results">
               <div className="rc-result-item"><p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold', margin: 0 }}>₹9.9</p><span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>Cost Per Click</span></div>
               <div className="rc-result-item"><p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold', margin: 0 }}>₹4.2L</p><span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>Total Sales</span></div>
               <div className="rc-result-item"><p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold', margin: 0 }}>₹1L</p><span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>Net Profit</span></div>
@@ -461,7 +457,7 @@ export default function PerformanceMarketingPage() {
             <p className="rc-desc" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }}>
               Scaled lead generation for high-volume retail. By optimizing lead quality, we delivered a consistent flow of prospects and a strong return on marketing investment.
             </p>
-            <div className="rc-results" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+            <div className="rc-results">
               <div className="rc-result-item"><p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold', margin: 0 }}>₹220</p><span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>Cost Per Lead</span></div>
               <div className="rc-result-item"><p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold', margin: 0 }}>₹11.48L</p><span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>Total Returns</span></div>
               <div className="rc-result-item"><p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold', margin: 0 }}>3.02×</p><span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>ROI</span></div>
@@ -558,6 +554,7 @@ export default function PerformanceMarketingPage() {
 
     </div>
     <CTAsection />
+    <SiteFooter />
     </>
   );
 }

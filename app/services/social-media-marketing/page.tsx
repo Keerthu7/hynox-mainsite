@@ -8,6 +8,8 @@ import {
   Target, Lightbulb, Sprout, Star, Crown, Video, Smartphone, Mic, Sparkles, Megaphone, BarChart, Heart
 } from 'lucide-react';
 import CTAsection from '@/components/home/CTAsection';
+import { SiteHeader } from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
 import './styles.css';
 
 export default function SocialMediaPage() {
@@ -67,6 +69,7 @@ export default function SocialMediaPage() {
 
   return (
     <>
+      <SiteHeader />
       <div className="social-media-page">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -840,6 +843,7 @@ export default function SocialMediaPage() {
 
       </div>
       <CTAsection />
+      <SiteFooter />
     </>
   );
 }

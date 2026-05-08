@@ -6,6 +6,8 @@ import {
   Hexagon, Layout, Building2, Network, ArrowRightLeft, Gauge, Bot,
   ShoppingBag, Zap, Droplet, Atom, Figma, Package, Link, Mail, BarChart, Brain, RefreshCw, Rocket 
 } from 'lucide-react';
+import { SiteHeader } from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
 import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
@@ -40,6 +42,7 @@ export default function ShopifyDevelopmentPage() {
 
   return (
     <>
+      <SiteHeader />
       <div className="shopify-dev-page">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -74,7 +77,12 @@ export default function ShopifyDevelopmentPage() {
 
         <div className="hero-visual">
           <div className="hero-shopify-icon">
-            <Hexagon size={280} strokeWidth={0.5} className="mx-auto" />
+            <img 
+              src="/shopify_v10.png?v=10" 
+              alt="Shopify Logo" 
+              className="hero-logo-img" 
+              suppressHydrationWarning
+            />
           </div>
         </div>
 
@@ -314,7 +322,7 @@ export default function ShopifyDevelopmentPage() {
         <div className="why-cols reveal" style={{ transitionDelay: '0.2s' }}>
           <div className="why-col">
             <div className="why-col-title">Other Agencies</div>
-            <div className="why-item"><div className="why-check">✗</div><p>Use generic templates and call it "custom"</p></div>
+            <div className="why-item"><div className="why-check">✗</div><p>Use generic templates and call it \"custom\"</p></div>
             <div className="why-item"><div className="why-check">✗</div><p>Disappear after launch with no support</p></div>
             <div className="why-item"><div className="why-check">✗</div><p>No understanding of conversion optimisation</p></div>
             <div className="why-item"><div className="why-check">✗</div><p>Slow delivery — weeks to get a simple change</p></div>
@@ -367,6 +375,7 @@ export default function ShopifyDevelopmentPage() {
 
       </div>
       <CTAsection />
+      <SiteFooter />
     </>
   );
 }

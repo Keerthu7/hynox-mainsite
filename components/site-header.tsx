@@ -56,20 +56,21 @@ export function SiteHeader() {
               className="flex items-center gap-4"
             >
               <Link href="/" className="flex items-center gap-3 group">
-                <div className="relative">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <Image
-                      src="/hynox_logo.jpg"
-                      alt="HYNOX Logo"
-                      width={36}
-                      height={36}
-                      className="rounded-full border border-gray-700 group-hover:border-gray-500 transition-colors duration-300"
-                    />
-                  </motion.div>
-                </div>
+                  <div className="relative" suppressHydrationWarning>
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                        <img
+                        src="/hynox_logo.jpg?v=100"
+                        alt="HYNOX Logo"
+                        width={36}
+                        height={36}
+                        className="rounded-full border border-gray-700 group-hover:border-gray-500 transition-colors duration-300"
+                        suppressHydrationWarning
+                      />
+                    </motion.div>
+                  </div>
                 <motion.span
                   className="text-xl font-light text-white group-hover:text-gray-200 transition-colors duration-300"
                   whileHover={{ x: 2 }}
@@ -181,17 +182,19 @@ export function SiteHeader() {
                 <div className="flex justify-between items-center mb-8">
                   <Link
                     href="/"
-                    className="flex items-center gap-3"
                     onClick={closeMobileMenu}
                   >
-                    <Image
-                      src="/hynox_logo.jpg"
-                      alt="HYNOX Logo"
-                      width={32}
-                      height={32}
-                      className="rounded-full"
-                    />
-                    <span className="text-lg font-light text-white">HYNOX</span>
+                    <div className="flex items-center gap-3" suppressHydrationWarning>
+                      <img
+                        src="/hynox_logo.jpg?v=100"
+                        alt="HYNOX Logo"
+                        width={28}
+                        height={28}
+                        className="rounded-full border border-gray-700"
+                        suppressHydrationWarning
+                      />
+                      <span className="text-lg font-light text-white">HYNOX</span>
+                    </div>
                   </Link>
 
                   <button

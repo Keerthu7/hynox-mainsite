@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export function SiteFooter() {
   return (
-    <footer className="py-32 bg-black relative" id="contact">
+    <footer className="py-16 md:py-32 bg-black relative" id="contact">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
@@ -18,13 +18,14 @@ export function SiteFooter() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2 space-y-8"
           >
-            <div className="flex items-center gap-3">
-              <Image
-                src="/hynox_logo.jpg"
+            <div className="flex items-center gap-3" suppressHydrationWarning>
+              <img
+                src="/hynox_logo.jpg?v=100"
                 alt="HYNOX Logo"
                 width={28}
                 height={28}
                 className="rounded-full border border-gray-700"
+                suppressHydrationWarning
               />
               <span className="text-2xl font-light text-white">HYNOX</span>
             </div>
@@ -269,31 +270,31 @@ export function SiteFooter() {
             © 2024 HYNOX. All rights reserved.
           </div>
           
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-4">
             <Link 
               href="/privacy-policy" 
-              className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300 font-light"
+              className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300 font-light whitespace-nowrap"
             >
               Privacy Policy
             </Link>
-            <div className="w-px h-4 bg-gray-700" />
+            <div className="hidden md:block w-px h-4 bg-gray-700" />
             <Link 
               href="/terms-and-conditions" 
-              className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300 font-light"
+              className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300 font-light whitespace-nowrap"
             >
               Terms of Service
             </Link>
-            <div className="w-px h-4 bg-gray-700" />
+            <div className="hidden md:block w-px h-4 bg-gray-700" />
             <Link 
               href="/cancellation-refund-policy" 
-              className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300 font-light"
+              className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300 font-light whitespace-nowrap"
             >
               Cancellation & Refund Policy
             </Link>
-            <div className="w-px h-4 bg-gray-700" />
+            <div className="hidden md:block w-px h-4 bg-gray-700" />
             <Link 
               href="/shipping-delivery-policy" 
-              className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300 font-light"
+              className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300 font-light whitespace-nowrap"
             >
               Shipping & Delivery Policy
             </Link>

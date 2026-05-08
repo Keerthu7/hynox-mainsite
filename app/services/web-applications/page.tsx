@@ -308,8 +308,6 @@ export default function WebApplicationsPage() {
         </div>
       </section>
 
-
-
       {/* TECH STACK */}
       <section>
         <div className="s-label reveal"><span className="s-label-line"></span>06 — Technology</div>
@@ -457,38 +455,6 @@ export default function WebApplicationsPage() {
           </div>
         </div>
       </section>
-
-      {/* TESTIMONIALS */}
-      {/* <section style={{ background: 'var(--grey-dark)' }}>
-        <div className="s-label reveal"><span className="s-label-line"></span>10 — Client Reviews</div>
-        <div className="s-title reveal">What Clients Say</div>
-        <div className="testi-grid reveal" style={{ transitionDelay: '0.15s', marginTop: '4rem' }}>
-          <div className="testi-card">
-            <div className="testi-stars">★★★★★</div>
-            <p className="testi-quote">"HYNOX delivered our entire website in under 3 weeks. It scored 100 on PageSpeed and leads doubled in the first month. Incredible team."</p>
-            <div className="testi-author">
-              <div className="testi-avatar">R</div>
-              <div className="testi-info"><p>Rajan Mehta</p><span>CEO, Nexus Infra</span></div>
-            </div>
-          </div>
-          <div className="testi-card" style={{ borderRight: '1px solid var(--border)' }}>
-            <div className="testi-stars">★★★★★</div>
-            <p className="testi-quote">"We went from a slow WordPress site to a blazing Next.js platform. The AI chatbot they built handles 80% of our support queries automatically."</p>
-            <div className="testi-author">
-              <div className="testi-avatar">P</div>
-              <div className="testi-info"><p>Priya Sharma</p><span>Founder, LearnPath</span></div>
-            </div>
-          </div>
-          <div className="testi-card">
-            <div className="testi-stars">★★★★★</div>
-            <p className="testi-quote">"The landing page they built converted at 38%. We'd tried two other agencies before HYNOX. Should have started here."</p>
-            <div className="testi-author">
-              <div className="testi-avatar">A</div>
-              <div className="testi-info"><p>Arjun Nair</p><span>CMO, Launchpad AI</span></div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* FAQ */}
       <section id="faq">

@@ -346,7 +346,7 @@
 }
 .mobile-app-page .hero-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(40px, 8vw, 120px);
+  font-size: clamp(36px, 6vw, 90px);
   line-height: 0.95;
   letter-spacing: 1px;
   color: var(--white);
@@ -361,8 +361,9 @@
 }
 .mobile-app-page .hero-meta {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 2.5rem;
   margin-top: 2.5rem;
   opacity: 0;
   animation: fadeUp 0.8s 0.7s forwards;
@@ -1339,8 +1340,8 @@
 @media (max-width: 992px) {
   .mobile-app-page .hero {
     flex-direction: column;
-    padding: 120px 2rem 60px;
-    text-align: center;
+    padding: 120px 10% 60px;
+    text-align: left;
     gap: 3rem;
     min-height: auto;
   }
@@ -1351,23 +1352,27 @@
     align-items: center;
   }
   .mobile-app-page .hero-badge {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .mobile-app-page .hero-title {
-    font-size: clamp(48px, 12vw, 80px);
+    font-size: clamp(36px, 10vw, 64px);
   }
   .mobile-app-page .hero-meta {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
     margin-top: 2rem;
   }
   .mobile-app-page .hero-desc {
     max-width: 100%;
+    font-size: 1.15rem !important;
+    line-height: 1.7 !important;
   }
   .mobile-app-page .hero-actions {
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
+    gap: 1.2rem;
   }
   .mobile-app-page .btn-primary, .mobile-app-page .btn-ghost {
     width: 100%;
@@ -1401,7 +1406,7 @@
     grid-template-columns: 60px 1fr;
   }
   .mobile-app-page section {
-    padding: 5rem 2rem;
+    padding: 5rem 10% !important;
   }
 }
 

@@ -518,12 +518,12 @@
 .social-media-page .faq-item.open .faq-a { max-height: 220px; }
 
 /* CTA */
-.social-media-page .cta-section { background: var(--white); color: var(--black); border-top: none; text-align: center; padding: 8rem 8vw; }
-.social-media-page .cta-section .s-label { color: rgba(0,0,0,0.4); justify-content: center; }
+.social-media-page .cta-section { background: var(--white); color: var(--black); border-top: none; text-align: left; padding: 8rem 10vw; }
+.social-media-page .cta-section .s-label { color: rgba(0,0,0,0.4); justify-content: flex-start; }
 .social-media-page .cta-section .s-label-line { background: rgba(0,0,0,0.3); }
 .social-media-page .cta-section .s-title { color: var(--black); }
-.social-media-page .cta-section p { max-width: 500px; margin: 1.5rem auto 3rem; font-size: 0.95rem; line-height: 1.8; color: rgba(0,0,0,0.5); }
-.social-media-page .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.social-media-page .cta-section p { max-width: 500px; margin: 1.5rem 0 3rem; font-size: 0.95rem; line-height: 1.8; color: rgba(0,0,0,0.5); text-align: left; }
+.social-media-page .cta-btns { display: flex; gap: 1rem; justify-content: flex-start; flex-wrap: wrap; }
 .social-media-page .cta-dark { font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--white); background: var(--black); border: none; padding: 1.1rem 2.5rem; text-decoration: none; transition: opacity 0.2s; }
 .social-media-page .cta-dark:hover { opacity: 0.85; }
 .social-media-page .cta-outline { font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--black); border: 1px solid rgba(0,0,0,0.2); padding: 1.1rem 2.5rem; text-decoration: none; transition: border-color 0.2s; }
@@ -584,10 +584,11 @@
 @media (max-width: 992px) {
   .social-media-page .hero { 
     flex-direction: column; 
-    padding: 8rem 2rem 4rem; 
-    text-align: center;
-    justify-content: center;
+    padding: 120px 10% 20px !important; 
+    text-align: left;
+    justify-content: flex-start;
     min-height: auto;
+    gap: 2rem;
   }
   .social-media-page .hero-content {
     max-width: 100%;
@@ -598,27 +599,31 @@
     font-size: clamp(40px, 12vw, 75px);
   }
   .social-media-page .hero-visual {
-    justify-content: center;
-    margin-top: 2rem;
+    justify-content: flex-start;
+    margin-top: 4rem;
     width: 100%;
+    display: flex !important;
   }
   .social-media-page .hero-badge {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .social-media-page .hero-meta { 
     flex-direction: column; 
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem; 
   }
   .social-media-page .hero-actions {
-    align-items: center !important;
+    align-items: flex-start !important;
+    width: 100%;
   }
   .social-media-page .hero-desc {
-    margin: 0 auto;
+    margin: 0;
+    max-width: 100%;
   }
   .social-media-page .hero-feed { 
-    margin: 0 auto;
-    width: 240px;
+    margin: 0;
+    width: 100%;
+    max-width: 280px;
     transform: scale(1);
   }
   .social-media-page .intro-grid,
@@ -634,7 +639,10 @@
   .social-media-page .contact-left { border-bottom: 1px solid var(--border); }
   .social-media-page .proc-row { grid-template-columns: 80px 1fr; gap: 1rem; }
   .social-media-page .proc-badge { justify-self: start; grid-column: 2; margin-top: 0.5rem; }
-  .social-media-page section { padding: 5rem 2rem; }
+  .social-media-page section { padding: 5rem 10% !important; text-align: left; }
+  .social-media-page .ticker-wrap {
+    margin-top: -2rem;
+  }
   .social-media-page .hero-scroll { right: 2rem; }
 }
 
@@ -646,7 +654,7 @@
   .social-media-page .pkg-grid,
   .social-media-page .video-grid,
   .social-media-page .analytics-grid,
-  .social-media-page .results-grid { grid-template-columns: 1fr; }
+  .social-media-page .results-grid { grid-template-columns: 1fr; text-align: left; }
   
   .social-media-page .plat-card,
   .social-media-page .srv-card,
@@ -673,10 +681,10 @@
   .social-media-page .contact-left,
   .social-media-page .contact-right { padding: 3rem 1.5rem; }
   
-  .social-media-page .proc-row { grid-template-columns: 1fr; gap: 1rem; text-align: center; }
-  .social-media-page .proc-num-box { width: 60px; height: 60px; font-size: 1.2rem; margin: 0 auto; }
-  .social-media-page .proc-badge { grid-column: 1; margin: 0.5rem auto 0; }
-  .social-media-page .proc-tools { justify-content: center; }
+  .social-media-page .proc-row { grid-template-columns: 1fr; gap: 1rem; text-align: left; }
+  .social-media-page .proc-num-box { width: 60px; height: 60px; font-size: 1.2rem; margin: 0; }
+  .social-media-page .proc-badge { grid-column: 1; margin: 0.5rem 0 0; }
+  .social-media-page .proc-tools { justify-content: flex-start; }
   
   .social-media-page .cta-btns { flex-direction: column; }
   .social-media-page .srv-card::before { height: 100%; opacity: 0; }

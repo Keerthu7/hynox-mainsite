@@ -311,7 +311,7 @@
 
 /* SECTION BASE */
 .web-app-page section {
-  padding: 7rem 8vw;
+  padding: 4rem 10%;
   border-top: 1px solid var(--border);
 }
 .web-app-page .s-label {
@@ -821,13 +821,17 @@
 .web-app-page .port-item:hover .port-overlay { opacity: 0; }
 
 /* PERFORMANCE */
-.web-app-page .perf-section { border-top: 1px solid var(--border); }
+.web-app-page .perf-section { border-top: 1px solid var(--border); overflow-x: hidden; }
 .web-app-page .perf-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: start;
   margin-top: 4rem;
+}
+@media (max-width: 992px) {
+  .web-app-page .perf-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .web-app-page .perf-text h3 { font-size: 1.5rem; }
 }
 .web-app-page .perf-text h3 {
   font-family: 'Bebas Neue', sans-serif;
@@ -1289,8 +1293,8 @@
 @media (max-width: 992px) {
   .web-app-page .hero {
     flex-direction: column;
-    padding: 120px 2rem 60px;
-    text-align: center;
+    padding: 120px 10% 60px;
+    text-align: left;
     gap: 3rem;
     min-height: auto;
   }
@@ -1299,25 +1303,28 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
   .web-app-page .hero-badge {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .web-app-page .hero-title {
     font-size: clamp(48px, 12vw, 80px);
   }
   .web-app-page .hero-meta {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
     margin-top: 2rem;
   }
   .web-app-page .hero-desc {
     max-width: 100%;
+    text-align: left;
+    font-size: 1.15rem;
+    line-height: 1.6;
   }
   .web-app-page .hero-actions {
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
   }
   .web-app-page .btn-p, .web-app-page .btn-g {
@@ -1325,16 +1332,33 @@
     max-width: 300px;
   }
   .web-app-page .hero-visual {
-    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
   }
   .web-app-page .hero-code-bg {
-    width: 100%;
-    max-width: 340px;
-    font-size: 0.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    width: 140%;
+    font-size: 0.75rem;
+    line-height: 1.5;
     text-align: left;
-    margin: 0 auto;
-    opacity: 0.2;
+    opacity: 0.25 !important;
+    filter: grayscale(1) brightness(1.2);
+    white-space: pre;
+    font-family: 'Space Mono', monospace;
+    pointer-events: none;
+  }
+  .web-app-page .hero-code-bg span {
+    color: inherit !important;
+    opacity: 0.8;
   }
   .web-app-page .hero-scroll {
     display: none;
@@ -1347,7 +1371,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .web-app-page .s-title {
-    font-size: clamp(36px, 8vw, 60px);
+    font-size: clamp(38px, 10vw, 64px);
+    text-align: left;
   }
   .web-app-page .why-cols,
   .web-app-page .contact-wrap {
@@ -1362,21 +1387,46 @@
   .web-app-page .proc-row {
     grid-template-columns: 60px 1fr;
   }
+  .web-app-page .perf-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .web-app-page .perf-text h3 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+  .web-app-page .hero-code-bg {
+    display: block !important;
+    opacity: 0.3 !important;
+  }
 }
 
 @media (max-width: 768px) {
   .web-app-page .srv-header {
     grid-template-columns: 1fr;
     gap: 2rem;
-    text-align: center;
+    text-align: left;
   }
   .web-app-page .s-label {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .web-app-page .srv-grid,
   .web-app-page .port-grid,
   .web-app-page .pkg-grid {
     grid-template-columns: 1fr;
+  }
+  .web-app-page .sc-desc,
+  .web-app-page .intro-text p,
+  .web-app-page .proc-content p,
+  .web-app-page .perf-text p,
+  .web-app-page .why-item p,
+  .web-app-page .faq-a p {
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+  }
+  .web-app-page .sc-name,
+  .web-app-page .proc-content h3 {
+    font-size: 1.8rem !important;
   }
   .web-app-page .expertise-strip {
     grid-template-columns: repeat(2, 1fr);
@@ -1395,21 +1445,33 @@
   }
   .web-app-page .proc-row {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
+    gap: 1.5rem;
+    padding: 2rem 0;
   }
   .web-app-page .proc-num {
-    margin: 0 auto;
+    margin: 0;
+    font-size: 1.2rem;
   }
   .web-app-page .proc-tools {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+  .web-app-page .proc-duration {
+    text-align: left;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
   }
   .web-app-page footer {
     flex-direction: column;
     gap: 1.5rem;
-    text-align: center;
+    text-align: left;
+    align-items: flex-start;
+    padding: 2rem 10%;
   }
   .web-app-page .f-links {
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
 
@@ -1427,7 +1489,7 @@
     border-right: none !important;
   }
   .web-app-page .nav {
-    padding: 1rem 1.5rem;
+    padding: 1rem 10%;
   }
   .web-app-page .nav-cta {
     display: none;

@@ -37,15 +37,16 @@
 
 /* HERO */
 .shopify-dev-page .hero {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 8vw;
+  padding: 0 10% 80px;
   position: relative;
   overflow: hidden;
   gap: 4rem;
+  text-align: left;
 }
 
 .shopify-dev-page .hero-content {
@@ -53,18 +54,18 @@
   max-width: 650px;
   position: relative;
   z-index: 10;
-  margin-top: 4rem;
-  margin-left: 2rem;
+  margin-top: -9rem;
+  margin-left: 0;
 }
 
 .shopify-dev-page .hero-visual {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   z-index: 5;
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 
 .shopify-dev-page .hero-grid-bg {
@@ -80,13 +81,21 @@
 }
 
 .shopify-dev-page .hero-shopify-icon {
-  opacity: 0.1;
+  opacity: 1;
   pointer-events: none;
   user-select: none;
   color: var(--white);
   animation: floatY 8s ease-in-out infinite;
-  transform: scale(1.2);
+  transform: scale(1.1);
   transform-origin: center;
+  filter: drop-shadow(0 0 40px rgba(255,255,255,0.05));
+  width: 100%;
+  max-width: 600px;
+}
+.shopify-dev-page .hero-logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .shopify-dev-page .hero-badge {
@@ -116,7 +125,7 @@
 
 .shopify-dev-page .hero-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(40px, 8vw, 120px);
+  font-size: clamp(40px, 6vw, 85px);
   line-height: 1.1;
   letter-spacing: 1px;
   color: var(--white);
@@ -216,8 +225,11 @@
   overflow: hidden;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 0.9rem 0;
+  padding: 0.3rem 0;
   background: var(--grey-dark);
+  margin-top: -15rem;
+  position: relative;
+  z-index: 20;
 }
 .shopify-dev-page .ticker-track {
   display: flex;
@@ -411,10 +423,15 @@
 @media (max-width: 992px) {
   .shopify-dev-page .hero {
     flex-direction: column;
-    padding: 120px 2rem 60px;
-    text-align: center;
-    gap: 3rem;
+    padding: 120px 10% 0 !important;
+    text-align: left;
+    gap: 2rem;
     min-height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .shopify-dev-page .ticker-wrap {
+    margin-top: -2rem;
   }
   .shopify-dev-page .hero-content {
     margin-top: 0;
@@ -422,40 +439,51 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
   }
   .shopify-dev-page .hero-badge {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .shopify-dev-page .hero-title {
-    font-size: clamp(48px, 12vw, 80px);
+    font-size: clamp(36px, 9vw, 52px);
   }
   .shopify-dev-page .hero-meta {
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
   }
   .shopify-dev-page .hero-desc {
     max-width: 100%;
+    font-size: 1.15rem !important;
+    line-height: 1.7 !important;
+    text-align: left;
   }
   .shopify-dev-page .hero-actions {
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
+    gap: 1rem;
+    margin-top: 0.8rem;
   }
   .shopify-dev-page .btn-primary, .shopify-dev-page .btn-ghost {
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
   }
   .shopify-dev-page .hero-visual {
     width: 100%;
     justify-content: center;
-    padding: 2rem 0;
-    margin-top: 0;
+    padding: 1rem 0 0 0 !important;
+    margin-top: 15rem !important;
+    margin-bottom: 0 !important;
+    display: block !important;
   }
   .shopify-dev-page .hero-shopify-icon {
-    opacity: 0.05;
+    opacity: 0.9;
     transform: scale(1);
+    display: block !important;
+    max-width: 280px;
+    margin: 0 auto;
   }
   .shopify-dev-page .hero-scroll {
     display: none;
@@ -469,17 +497,17 @@
   .shopify-dev-page .why-col:first-child,
   .shopify-dev-page .contact-left { border-bottom: 1px solid var(--border); }
   .shopify-dev-page .process-row { grid-template-columns: 60px 1fr; }
-  .shopify-dev-page section { padding: 5rem 2rem; }
+  .shopify-dev-page section { padding: 5rem 10% !important; text-align: left; }
 }
 
 @media (max-width: 768px) {
   .shopify-dev-page .services-header {
     grid-template-columns: 1fr;
     gap: 2rem;
-    text-align: center;
+    text-align: left;
   }
   .shopify-dev-page .s-label {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .shopify-dev-page .services-grid,
   .shopify-dev-page .portfolio-grid,
@@ -509,19 +537,26 @@
   }
   .shopify-dev-page .process-row {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .shopify-dev-page .proc-num {
-    margin: 0 auto;
+    margin: 0;
   }
   .shopify-dev-page .proc-tools {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .shopify-dev-page .cta-btns {
     flex-direction: column;
+    align-items: flex-start;
+  }
+  .shopify-dev-page .cta-section p {
+    text-align: left;
+    margin: 1.5rem 0 3rem;
   }
   .shopify-dev-page .hero-shopify-icon {
-    display: none;
+    display: block !important;
+    opacity: 0.8;
+    margin-top: 1rem;
   }
 }
 

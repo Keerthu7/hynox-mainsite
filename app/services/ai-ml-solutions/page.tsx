@@ -3,6 +3,8 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Target, Bot, Workflow, PenTool, ArrowRight } from 'lucide-react';
+import { SiteHeader } from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
 import CTAsection from '@/components/home/CTAsection';
 import './styles.css';
 
@@ -27,6 +29,7 @@ export default function AiMlSolutionsPage() {
 
   return (
     <>
+      <SiteHeader />
       <div className="ai-ml-page">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -274,6 +277,7 @@ export default function AiMlSolutionsPage() {
 
       </div>
       <CTAsection />
+      <SiteFooter />
     </>
   );
 }

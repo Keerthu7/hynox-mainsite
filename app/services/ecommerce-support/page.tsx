@@ -883,51 +883,51 @@ export default function EcommerceSupport() {
         </div>
         <div className="tech-grid reveal" style={{ transitionDelay: "0.15s" }}>
           <div className="tech-item">
-            <span className="tech-icon"><CheckCircle2 className="text-green-500" strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg" alt="Shopify" /></span>
             <div className="tech-name">Shopify Plus</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><Atom strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" /></span>
             <div className="tech-name">Next.js / React</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><Facebook className="text-blue-500" strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://www.svgrepo.com/show/303154/instagram-2016-logo.svg" alt="Meta Ads" /></span>
             <div className="tech-name">Meta Ads</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><Search strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://www.svgrepo.com/show/303114/google-ads-logo.svg" alt="Google Ads" /></span>
             <div className="tech-name">Google Ads</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><BarChart3 strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://www.svgrepo.com/show/303102/google-analytics-logo.svg" alt="GA4" /></span>
             <div className="tech-name">Google Analytics 4</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><Mail strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/klaviyo/klaviyo-icon.svg" alt="Klaviyo" /></span>
             <div className="tech-name">Klaviyo</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><CreditCard strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/razorpay/razorpay-icon.svg" alt="Razorpay" /></span>
             <div className="tech-name">Razorpay</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><Flame className="text-orange-500" strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/hotjar/hotjar-icon.svg" alt="Hotjar" /></span>
             <div className="tech-name">Hotjar / Clarity</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><Ruler strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/google_tagmanager/google_tagmanager-icon.svg" alt="GTM" /></span>
             <div className="tech-name">Google Tag Manager</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><Brain strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/triplewhale/triplewhale-icon.svg" alt="Triple Whale" onError={(e) => { e.currentTarget.src = "https://www.svgrepo.com/show/448234/linkedin.svg" }} /></span>
             <div className="tech-name">Triple Whale</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"></span>
+            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/anthropic/anthropic-icon.svg" alt="Claude AI" /></span>
             <div className="tech-name">Claude AI</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><Palette strokeWidth={1.5} /></span>
+            <span className="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /></span>
             <div className="tech-name">Figma / Canva</div>
           </div>
         </div>
