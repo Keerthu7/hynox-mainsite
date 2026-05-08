@@ -41,7 +41,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 120px 8vw 60px;
+  padding: 160px 8vw 60px;
   position: relative;
   overflow: hidden;
   gap: 4rem;
@@ -51,7 +51,7 @@
   max-width: 650px;
   position: relative;
   z-index: 10;
-  margin-top: -7rem;
+  margin-top: -3rem;
   margin-left: 2rem;
 }
 .ai-ml-page .hero-visual {

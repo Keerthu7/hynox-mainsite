@@ -30,7 +30,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 8vw;
+  padding: 0 10%;
   position: relative;
   overflow: hidden;
   gap: 4rem;
@@ -106,7 +106,7 @@
 .custom-software-page .ticker-item b { color: var(--white); font-weight: 400; }
 
 /* SECTION BASE */
-.custom-software-page section { padding: 7rem 3rem; border-top: 1px solid var(--border); }
+.custom-software-page section { padding: 7rem 10%; border-top: 1px solid var(--border); }
 .custom-software-page .s-label { font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 3px; color: var(--grey-light); text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; }
 .custom-software-page .s-label-line { width: 20px; height: 1px; background: var(--grey-light); display: inline-block; }
 .custom-software-page .s-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 6.5vw, 88px); line-height: 1; letter-spacing: 1px; }
@@ -189,7 +189,7 @@
 .custom-software-page .arch-layer-badge.active { color: var(--white); border-color: var(--border-light); }
 
 /* PACKAGES */
-.custom-software-page .pkg-section { padding: 7rem 3rem; border-top: 1px solid var(--border); }
+.custom-software-page .pkg-section { padding: 7rem 10%; border-top: 1px solid var(--border); }
 .custom-software-page .pkg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--border); margin-top: 4rem; }
 .custom-software-page .pkg-card { padding: 2.2rem; border-right: 1px solid var(--border); }
 .custom-software-page .pkg-card:last-child { border-right: none; }
@@ -214,7 +214,7 @@
 .custom-software-page .pkg-btn:hover { opacity: 0.85; }
 
 /* ENGAGEMENT MODELS */
-.custom-software-page .engage-section { background: var(--grey-dark); padding: 7rem 3rem; border-top: 1px solid var(--border); }
+.custom-software-page .engage-section { background: var(--grey-dark); padding: 7rem 10%; border-top: 1px solid var(--border); }
 .custom-software-page .engage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--border); margin-top: 4rem; }
 .custom-software-page .engage-card { padding: 2.5rem; border-right: 1px solid var(--border); position: relative; overflow: hidden; }
 .custom-software-page .engage-card:last-child { border-right: none; }
@@ -240,7 +240,7 @@
 .custom-software-page .case-result-item span { font-family: 'Space Mono', monospace; font-size: 0.45rem; letter-spacing: 1px; color: var(--grey-light); text-transform: uppercase; }
 
 /* WHY */
-.custom-software-page .why-section { background: var(--grey-dark); padding: 7rem 3rem; border-top: 1px solid var(--border); }
+.custom-software-page .why-section { background: var(--grey-dark); padding: 7rem 10%; border-top: 1px solid var(--border); }
 .custom-software-page .why-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); margin-top: 4rem; }
 .custom-software-page .why-col { padding: 3rem; border-right: 1px solid var(--border); }
 .custom-software-page .why-col:last-child { border-right: none; background: var(--white); color: var(--black); }
