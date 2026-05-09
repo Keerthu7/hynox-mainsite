@@ -54,7 +54,7 @@
   max-width: 650px;
   position: relative;
   z-index: 10;
-  margin-top: 0;
+  margin-top: -3rem; /* Moved up slightly */
   margin-left: 0;
 }
 
@@ -63,9 +63,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  position: relative;
-  z-index: 5;
-  margin-top: 15rem;
+  position: absolute; /* Changed to absolute for background feel */
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; /* Lower z-index */
+  opacity: 0.15; /* Lower opacity for background feel */
+  pointer-events: none;
 }
 
 .shopify-dev-page .hero-grid-bg {
@@ -471,18 +475,23 @@
   }
   .shopify-dev-page .hero-visual {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0 !important;
-    margin-top: 1.5rem !important;
-    margin-bottom: 0 !important;
+    margin-top: 5rem !important; /* Moved down slightly in mobile */
+    margin-bottom: 2rem !important;
     display: flex !important;
+    position: relative; /* Revert to relative for mobile stacking */
+    right: auto;
+    top: auto;
+    transform: none;
+    opacity: 0.8; /* More visible in mobile as it's the main visual */
   }
   .shopify-dev-page .hero-shopify-icon {
     opacity: 0.9;
     transform: scale(1);
     display: block !important;
-    max-width: 200px;
-    margin: 0;
+    max-width: 180px;
+    margin: 0 auto;
   }
   .shopify-dev-page .hero-scroll {
     display: none;

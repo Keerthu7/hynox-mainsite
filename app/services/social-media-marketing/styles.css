@@ -312,6 +312,7 @@
   border-bottom: 1px solid var(--border);
   padding: 0.9rem 0;
   background: var(--grey-dark);
+  margin-top: 3rem; /* Moved down slightly */
 }
 .social-media-page .ticker-track {
   display: flex;
