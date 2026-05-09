@@ -364,7 +364,7 @@
   }
   .performance-marketing-page .hero-visual {
     justify-content: flex-start;
-    margin-top: 4rem;
+    margin-top: 0;
     width: 100%;
     display: flex !important;
   }

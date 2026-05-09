@@ -58,7 +58,7 @@ export default function AiMlSolutionsPage() {
         <div className="hero-visual">
           <div className="hero-visual-fade"></div>
           <img 
-            src="/ai_visual.png" 
+            src="/aiml-hero.png" 
             alt="AI Visual" 
             className="hero-visual-img" 
             suppressHydrationWarning

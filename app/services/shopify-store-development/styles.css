@@ -1,5 +1,5 @@
 :root {
-  --black: #050505;
+  --black: #0c0c0c;
   --white: #F5F5F0;
   --grey-dark: #0E0E0E;
   --grey-mid: #1A1A1A;
@@ -65,7 +65,7 @@
   align-items: center;
   position: absolute; /* Changed to absolute for background feel */
   right: 5%;
-  top: 50%;
+  top: 65%;
   transform: translateY(-50%);
   z-index: 1; /* Lower z-index */
   opacity: 0.15; /* Lower opacity for background feel */

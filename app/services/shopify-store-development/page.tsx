@@ -73,7 +73,7 @@ export default function ShopifyDevelopmentPage() {
         <div className="hero-visual">
           <div className="hero-shopify-icon">
             <img 
-              src="/shopify_logo.png" 
+              src="/shopify_v10.png" 
               alt="Shopify Logo" 
               className="hero-logo-img" 
               suppressHydrationWarning
