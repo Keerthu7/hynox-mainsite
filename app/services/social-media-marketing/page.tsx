@@ -409,7 +409,7 @@ export default function SocialMediaPage() {
                 boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
                 background: '#0a0a0a'
               }}>
-                 <img src="/instagram_insights.png" alt="Reach Insights" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                 <img src="/instagram_insights.jpeg" alt="Reach Insights" style={{ width: '100%', height: 'auto', display: 'block' }} />
               </div>
               <div className="insights-image-wrap" style={{ 
                 borderRadius: '24px', 
@@ -418,7 +418,7 @@ export default function SocialMediaPage() {
                 boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
                 background: '#0a0a0a'
               }}>
-                 <img src="/instagram_insights_2.png" alt="Engagement Insights" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                 <img src="/instagram_insights_2.jpeg" alt="Engagement Insights" style={{ width: '100%', height: 'auto', display: 'block' }} />
               </div>
               
            </div>
