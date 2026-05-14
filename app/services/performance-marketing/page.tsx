@@ -420,13 +420,13 @@ export default function PerformanceMarketingPage() {
 
 
       {/* RESULTS / CASE STUDIES SECTION */}
-      <section className="results-section" id="results" style={{ background: '#050505', padding: '100px 0' }}>
+      <section className="results-section" id="results" style={{ background: '#050505' }}>
         <div className="s-label reveal" style={{ textAlign: 'center', marginBottom: '1rem' }}><span className="s-label-line"></span>08 — Case Studies</div>
         <div className="s-title reveal" style={{ textAlign: 'center', marginBottom: '4rem' }}>Campaigns We've<br/>Run & Won</div>
         
         <div className="results-grid reveal">
           {/* Case 1: SugarStar */}
-          <div className="result-case" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '16px' }}>
+          <div className="result-case">
             <div className="rc-industry" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1rem' }}>E-Commerce · Loungewear</div>
             <div className="rc-name" style={{ fontSize: '2.5rem', fontFamily: 'Bebas Neue', color: '#fff', marginBottom: '0.5rem' }}>SugarStar</div>
             <div className="rc-channel" style={{ color: '#fff', fontSize: '0.9rem', marginBottom: '1.5rem', fontWeight: '500' }}>Meta ads</div>
@@ -445,7 +445,7 @@ export default function PerformanceMarketingPage() {
           </div>
 
           {/* Case 2: Teerex */}
-          <div className="result-case" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '16px' }}>
+          <div className="result-case">
             <div className="rc-industry" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1rem' }}>Retail · Apparel</div>
             <div className="rc-name" style={{ fontSize: '2.5rem', fontFamily: 'Bebas Neue', color: '#fff', marginBottom: '0.5rem' }}>Teerex</div>
             <div className="rc-channel" style={{ color: '#fff', fontSize: '0.9rem', marginBottom: '1.5rem', fontWeight: '500' }}>Meta ads</div>

@@ -780,87 +780,57 @@ export default function EcommerceSupport() {
           <br />
           Built & Scaled
         </div>
-        <div className="results-grid reveal" style={{ transitionDelay: "0.15s" }}>
+        <div className="results-grid reveal">
+          {/* Case 1: SugarStar */}
           <div className="rc-item">
-            <div className="rc-niche">Fashion & Apparel · D2C</div>
-            <div className="rc-name">The Label Co.</div>
-            <div className="rc-desc">
-              Built a complete Shopify store from scratch, produced 40 product
-              photos + 6 UGC videos, launched Meta campaigns and managed social
-              — all within 45 days of brief. Now a self-sustaining revenue
-              machine.
-            </div>
+            <div className="rc-niche">E-Commerce · Loungewear</div>
+            <div className="rc-name">SugarStar</div>
+            <p className="rc-desc">
+              Executed hyper-targeted message campaigns to drive direct inquiries. Achieved massive scale with optimized entry costs, resulting in high-intent sales conversions.
+            </p>
             <div className="rc-nums">
               <div className="rc-num-item">
-                <p>₹12L</p>
-                <span>First 90 days revenue</span>
+                <p>₹9.9</p>
+                <span>Cost Per Click</span>
               </div>
               <div className="rc-num-item">
-                <p>5.2×</p>
-                <span>ROAS achieved</span>
+                <p>₹4.2L</p>
+                <span>Total Sales</span>
               </div>
               <div className="rc-num-item">
-                <p>28K</p>
-                <span>Instagram followers gained</span>
+                <p>₹1L</p>
+                <span>Net Profit</span>
               </div>
               <div className="rc-num-item">
-                <p>45d</p>
-                <span>Idea to live store</span>
+                <p>4 Months</p>
+                <span>Duration</span>
               </div>
             </div>
           </div>
+
+          {/* Case 2: Teerex */}
           <div className="rc-item">
-            <div className="rc-niche">Beauty & Skincare · D2C</div>
-            <div className="rc-name">Glow Studio</div>
-            <div className="rc-desc">
-              Migrated from a slow Wix site to a custom Shopify store, rebuilt
-              the ad account from scratch, produced UGC testimonial videos and
-              implemented a full abandoned cart + post-purchase email sequence.
-            </div>
+            <div className="rc-niche">Retail · Apparel</div>
+            <div className="rc-name">Teerex</div>
+            <p className="rc-desc">
+              Scaled lead generation for high-volume retail. By optimizing lead quality, we delivered a consistent flow of prospects and a strong return on marketing investment.
+            </p>
             <div className="rc-nums">
               <div className="rc-num-item">
-                <p>+240%</p>
-                <span>Revenue increase</span>
+                <p>₹220</p>
+                <span>Cost Per Lead</span>
               </div>
               <div className="rc-num-item">
-                <p>-44%</p>
-                <span>CPA reduction</span>
+                <p>₹11.48L</p>
+                <span>Total Returns</span>
               </div>
               <div className="rc-num-item">
-                <p>22%</p>
-                <span>Email CVR</span>
+                <p>3.02×</p>
+                <span>ROI</span>
               </div>
               <div className="rc-num-item">
-                <p>3mo</p>
-                <span>To full scale</span>
-              </div>
-            </div>
-          </div>
-          <div className="rc-item">
-            <div className="rc-niche">Home & Living · D2C</div>
-            <div className="rc-name">Craft & Co.</div>
-            <div className="rc-desc">
-              Full end-to-end launch — brand identity, Shopify store, 60 product
-              photos, social setup across Instagram and Pinterest, Google
-              Shopping campaigns and a full analytics dashboard tracking every
-              SKU's contribution to revenue.
-            </div>
-            <div className="rc-nums">
-              <div className="rc-num-item">
-                <p>₹8L</p>
-                <span>Month 2 revenue</span>
-              </div>
-              <div className="rc-num-item">
-                <p>4.7×</p>
-                <span>Google Shopping ROAS</span>
-              </div>
-              <div className="rc-num-item">
-                <p>3.8%</p>
-                <span>Store conversion rate</span>
-              </div>
-              <div className="rc-num-item">
-                <p>60d</p>
-                <span>From brand to revenue</span>
+                <p>6 Months</p>
+                <span>Duration</span>
               </div>
             </div>
           </div>
@@ -877,53 +847,53 @@ export default function EcommerceSupport() {
           <br />
           Tech Stack
         </div>
-        <div className="tech-grid reveal" style={{ transitionDelay: "0.15s" }}>
+        <div className="tech-grid reveal">
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg" alt="Shopify" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/shopify/white" alt="Shopify" /></span>
             <div className="tech-name">Shopify Plus</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/nextdotjs/white" alt="Next.js" /></span>
             <div className="tech-name">Next.js / React</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://www.svgrepo.com/show/303154/instagram-2016-logo.svg" alt="Meta Ads" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/meta/white" alt="Meta Ads" /></span>
             <div className="tech-name">Meta Ads</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://www.svgrepo.com/show/303114/google-ads-logo.svg" alt="Google Ads" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/googleads/white" alt="Google Ads" /></span>
             <div className="tech-name">Google Ads</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://www.svgrepo.com/show/303102/google-analytics-logo.svg" alt="GA4" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/googleanalytics/white" alt="GA4" /></span>
             <div className="tech-name">Google Analytics 4</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/klaviyo/klaviyo-icon.svg" alt="Klaviyo" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/klaviyo/white" alt="Klaviyo" /></span>
             <div className="tech-name">Klaviyo</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/razorpay/razorpay-icon.svg" alt="Razorpay" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/razorpay/white" alt="Razorpay" /></span>
             <div className="tech-name">Razorpay</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/hotjar/hotjar-icon.svg" alt="Hotjar" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/hotjar/white" alt="Hotjar" /></span>
             <div className="tech-name">Hotjar / Clarity</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/google_tagmanager/google_tagmanager-icon.svg" alt="GTM" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/googletagmanager/white" alt="GTM" /></span>
             <div className="tech-name">Google Tag Manager</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/triplewhale/triplewhale-icon.svg" alt="Triple Whale" onError={(e) => { e.currentTarget.src = "https://www.svgrepo.com/show/448234/linkedin.svg" }} /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/triplewhale/white" alt="Triple Whale" onError={(e) => { e.currentTarget.src = "https://cdn.simpleicons.org/linkedin/white" }} /></span>
             <div className="tech-name">Triple Whale</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://www.vectorlogo.zone/logos/anthropic/anthropic-icon.svg" alt="Claude AI" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/anthropic/white" alt="Claude AI" /></span>
             <div className="tech-name">Claude AI</div>
           </div>
           <div className="tech-item">
-            <span className="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /></span>
+            <span className="tech-icon"><img src="https://cdn.simpleicons.org/figma/white" alt="Figma" /></span>
             <div className="tech-name">Figma / Canva</div>
           </div>
         </div>

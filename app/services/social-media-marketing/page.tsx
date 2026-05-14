@@ -380,19 +380,25 @@ export default function SocialMediaPage() {
            
            <style>{`
              .insights-grid {
-               display: grid;
-               grid-template-columns: repeat(3, 1fr);
-               gap: 2.5rem;
-               align-items: start;
-             }
-             @media (max-width: 992px) {
-               .insights-grid {
-                 grid-template-columns: 1fr;
-                 max-width: 450px;
-                 margin: 0 auto;
-                 gap: 3rem;
-               }
-             }
+    display: flex;          /* Changed from grid to flex */
+    justify-content: center; /* This centers the items horizontally */
+    gap: 2.5rem;
+    align-items: start;
+    flex-wrap: wrap;        /* Allows them to wrap on small screens */
+  }
+
+  .insights-image-wrap {
+    width: 100%;
+    max-width: 380px;       /* Keeps the images at a consistent size */
+  }
+
+  @media (max-width: 992px) {
+    .insights-grid {
+      flex-direction: column; /* Stacks them on mobile */
+      align-items: center;
+      gap: 3rem;
+    }
+  }
            `}</style>
 
            <div className="insights-grid">
@@ -414,15 +420,7 @@ export default function SocialMediaPage() {
               }}>
                  <img src="/instagram_insights_2.png" alt="Engagement Insights" style={{ width: '100%', height: 'auto', display: 'block' }} />
               </div>
-              <div className="insights-image-wrap" style={{ 
-                borderRadius: '24px', 
-                overflow: 'hidden', 
-                border: '1px solid rgba(255,255,255,0.15)', 
-                boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
-                background: '#0a0a0a'
-              }}>
-                 <img src="/instagram_insights_3.png" alt="Growth Insights" style={{ width: '100%', height: 'auto', display: 'block' }} />
-              </div>
+              
            </div>
         </div>
       </section>
