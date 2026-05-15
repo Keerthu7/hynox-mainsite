@@ -267,7 +267,7 @@ export function SiteFooter() {
           className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <div className="text-sm text-gray-500 font-light">
-            © 2024 HYNOX. All rights reserved.
+            © 2026 HYNOX. All rights reserved.
           </div>
           
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-4">
