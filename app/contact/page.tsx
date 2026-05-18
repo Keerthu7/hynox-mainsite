@@ -30,7 +30,7 @@ import {
 const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required." }),
   email: z.string().email({ message: "Invalid email address." }),
-  phone: z.string().optional(),
+  phone: z.string().min(1, { message: "Phone number is required." }),
   subject: z.string().min(1, { message: "Subject is required." }),
   interest: z.string().optional(),
   message: z.string().min(1, { message: "Message is required." }),
@@ -218,10 +218,10 @@ export default function ContactPage() {
 
                 <div className="space-y-2">
                   <label className="text-sm font-light text-gray-400 tracking-wider">
-                    Phone Number
+                    Phone Number *
                   </label>
                   <Input
-                    placeholder="Enter your phone number (Optional)"
+                    placeholder="Enter your phone number"
                     type="tel"
                     className="h-12 border border-gray-700 bg-black/50 focus:border-gray-500 transition-all duration-300 text-white placeholder-gray-500 font-light rounded-none"
                     {...form.register("phone")}

@@ -59,8 +59,8 @@ export async function POST(request: Request) {
 
     // --- END SPAM PROTECTION ---
 
-    if (!name || !email || !subject || !message) {
-      return NextResponse.json({ message: 'Name, Email, Subject, and Message are required.' }, { status: 400 });
+    if (!name || !email || !phone || !subject || !message) {
+      return NextResponse.json({ message: 'Name, Email, Phone, Subject, and Message are required.' }, { status: 400 });
     }
 
     // Log API key for debugging (remove first/last few chars for security)
