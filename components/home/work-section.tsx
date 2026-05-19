@@ -195,18 +195,7 @@ export default function WorkSection() {
                       </p>
                     </div>
 
-                    {/* Visit Link */}
-                    <motion.div className="flex items-center justify-between pt-4 border-t border-gray-800 group-hover:border-gray-700 transition-colors duration-300">
-                      <span className="text-xs text-gray-600 group-hover:text-gray-400 transition-colors duration-300 font-light">
-                        Visit Live Site
-                      </span>
 
-                      <motion.div
-                        className="w-4 h-px bg-gray-600 group-hover:bg-gray-400 transition-colors duration-300"
-                        whileHover={{ scaleX: 1.5 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    </motion.div>
                   </div>
                 </div>
               </motion.a>
