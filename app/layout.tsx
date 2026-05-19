@@ -2,7 +2,7 @@ import type React from "react"
 import "../globals.css"
 import { Inter } from "next/font/google"
 import { homePageStructuredData } from "./home-structured-data"
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 import ClientLayout from "@/components/client-layout"
@@ -60,6 +60,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className} suppressHydrationWarning>
         <GoogleTagManager gtmId="GTM-KMLDP729" />
+        <GoogleAnalytics gaId="G-SQRXLH7ZZ8" />
         <ClientLayout>
           {children}
         </ClientLayout>
