@@ -4,17 +4,17 @@ import { homePageStructuredData } from './home-structured-data';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'HYNOX | Custom Software & Cloud Solutions for Business Growth',
-  description: 'HYNOX delivers bespoke software development, cutting-edge IT solutions, and efficient manufacturing services. Elevate your business with our innovative and reliable technology partnerships.',
-  keywords: 'HYNOX, software development, IT solutions, custom software, web application development, mobile app development, enterprise software, cloud solutions, data analytics, AI development, machine learning, digital transformation, technology consulting, manufacturing services, product engineering, quality assurance, cybersecurity, IT infrastructure, managed IT services, blockchain development, IoT solutions, UI/UX design, full-stack development, frontend development, backend development, DevOps, agile development, custom CRM, custom ERP, e-commerce solutions, SaaS development, startup technology partner, innovation, reliability, scalable solutions, modern technology, expert developers, digital strategy, business process automation, system integration, API development, database management, software architecture, technical support, IT outsourcing, offshore development, nearshore development, global IT services, technology partnership, future-proof solutions, advanced analytics, intelligent automation, secure software, high-performance computing, digital innovation, strategic IT, business growth, technology leadership',
+  title: 'Best Web, App & Software Company in Tiruppur | Hynox.in',
+  description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur, Tamil Nadu? Hynox delivers premium digital solutions.',
+  keywords: 'web design company in Tiruppur, website development Tiruppur, app development Tiruppur, Shopify store Tiruppur, custom software Tiruppur, ERP software Tiruppur, software company in Tiruppur, web development company Tamil Nadu, mobile app development Tamil Nadu, best IT company Tiruppur, website company near me, Shopify developer Tamil Nadu, ecommerce website Tiruppur, garment ERP software Tiruppur, textile software company Tiruppur, HYNOX, hynox.in, IT services Tiruppur, software developers Tiruppur',
   openGraph: {
-    title: 'HYNOX | Custom Software & Cloud Solutions for Business Growth',
-    description: 'HYNOX delivers bespoke software development, cutting-edge IT solutions, and efficient manufacturing services. Elevate your business with our innovative and reliable technology partnerships.',
-    url: 'https://www.hynox.in',
+    title: 'Best Web, App & Software Company in Tiruppur | Hynox.in',
+    description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur, Tamil Nadu? Hynox delivers premium digital solutions.',
+    url: 'https://hynox.in',
     siteName: 'HYNOX',
     images: [
       {
-        url: 'https://www.hynox.in/hynox_logo.jpg',
+        url: 'https://hynox.in/hynox_logo.jpg',
         width: 800,
         height: 600,
         alt: 'HYNOX Logo',
@@ -25,12 +25,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'HYNOX | Custom Software & Cloud Solutions for Business Growth',
-    description: 'HYNOX delivers bespoke software development, cutting-edge IT solutions, and efficient manufacturing services. Elevate your business with our innovative and reliable technology partnerships.',
-    creator: '@hynox_org',
-    images: ['https://www.hynox.in/hynox_logo.jpg'],
+    title: 'Best Web, App & Software Company in Tiruppur | Hynox.in',
+    description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur, Tamil Nadu? Hynox delivers premium digital solutions.',
+    images: ['https://hynox.in/hynox_logo.jpg'],
+  },
+  other: {
+    'geo.region': 'IN-TN',
+    'geo.placename': 'Tiruppur',
+    'geo.position': '11.1085;77.3411',
+    'ICBM': '11.1085, 77.3411',
   },
 }
+
 
 export default function HomePage() {
   return (
