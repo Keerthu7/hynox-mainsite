@@ -2,7 +2,7 @@ export const homePageStructuredData: any[] = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Best Web, App & Software Company in Tiruppur | Hynox.in",
+    "name": "Best Web, App & Software Company in Tiruppur / Tirupur | Hynox.in",
     "url": "https://hynox.in",
     "potentialAction": {
       "@type": "SearchAction",
@@ -39,6 +39,10 @@ export const homePageStructuredData: any[] = [
       },
       {
         "@type": "City",
+        "name": "Tirupur"
+      },
+      {
+        "@type": "City",
         "name": "Coimbatore"
       },
       {
@@ -68,10 +72,11 @@ export const homePageStructuredData: any[] = [
     },
     "areaServed": [
       {"@type": "City", "name": "Tiruppur"},
+      {"@type": "City", "name": "Tirupur"},
       {"@type": "City", "name": "Coimbatore"},
       {"@type": "State", "name": "Tamil Nadu"}
     ],
-    "description": "Professional web design and website development services in Tiruppur and Coimbatore, Tamil Nadu, optimized for high performance and conversions."
+    "description": "Professional web design and website development services in Tiruppur / Tirupur and Coimbatore, Tamil Nadu, optimized for high performance and conversions."
   },
   {
     "@context": "https://schema.org",
@@ -85,10 +90,11 @@ export const homePageStructuredData: any[] = [
     },
     "areaServed": [
       {"@type": "City", "name": "Tiruppur"},
+      {"@type": "City", "name": "Tirupur"},
       {"@type": "City", "name": "Coimbatore"},
       {"@type": "State", "name": "Tamil Nadu"}
     ],
-    "description": "Top mobile app development services in Tiruppur and Tamil Nadu, specializing in custom Android and iOS applications."
+    "description": "Top mobile app development services in Tiruppur / Tirupur and Tamil Nadu, specializing in custom Android and iOS applications."
   },
   {
     "@context": "https://schema.org",
@@ -102,6 +108,7 @@ export const homePageStructuredData: any[] = [
     },
     "areaServed": [
       {"@type": "City", "name": "Tiruppur"},
+      {"@type": "City", "name": "Tirupur"},
       {"@type": "City", "name": "Coimbatore"},
       {"@type": "State", "name": "Tamil Nadu"}
     ],
@@ -119,10 +126,11 @@ export const homePageStructuredData: any[] = [
     },
     "areaServed": [
       {"@type": "City", "name": "Tiruppur"},
+      {"@type": "City", "name": "Tirupur"},
       {"@type": "City", "name": "Coimbatore"},
       {"@type": "State", "name": "Tamil Nadu"}
     ],
-    "description": "Bespoke custom software development services in Tiruppur to automate business workflows and scale operations."
+    "description": "Bespoke custom software development services in Tiruppur / Tirupur to automate business workflows and scale operations."
   },
   {
     "@context": "https://schema.org",
@@ -136,9 +144,10 @@ export const homePageStructuredData: any[] = [
     },
     "areaServed": [
       {"@type": "City", "name": "Tiruppur"},
+      {"@type": "City", "name": "Tirupur"},
       {"@type": "City", "name": "Coimbatore"},
       {"@type": "State", "name": "Tamil Nadu"}
     ],
-    "description": "Premium ERP software solutions in Tiruppur, specializing in textile and garment ERP systems for complete industry automation."
+    "description": "Premium ERP software solutions in Tiruppur / Tirupur, specializing in textile and garment ERP systems for complete industry automation."
   }
 ];

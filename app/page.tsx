@@ -4,12 +4,12 @@ import { homePageStructuredData } from './home-structured-data';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Best Web, App & Software Company in Tiruppur | Hynox.in',
-  description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur, Tamil Nadu? Hynox delivers premium digital solutions.',
-  keywords: 'web design company in Tiruppur, website development Tiruppur, app development Tiruppur, Shopify store Tiruppur, custom software Tiruppur, ERP software Tiruppur, software company in Tiruppur, web development company Tamil Nadu, mobile app development Tamil Nadu, best IT company Tiruppur, website company near me, Shopify developer Tamil Nadu, ecommerce website Tiruppur, garment ERP software Tiruppur, textile software company Tiruppur, HYNOX, hynox.in, IT services Tiruppur, software developers Tiruppur',
+  title: 'Best Web, App & Software Company in Tiruppur / Tirupur | Hynox.in',
+  description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur / Tirupur, Tamil Nadu? Hynox delivers premium IT solutions.',
+  keywords: 'web design company in Tiruppur, web design company in Tirupur, website development Tiruppur, website development Tirupur, app development Tiruppur, app development Tirupur, Shopify store Tiruppur, Shopify store Tirupur, custom software Tiruppur, custom software Tirupur, ERP software Tiruppur, ERP software Tirupur, software company in Tiruppur, software company in Tirupur, web development company Tamil Nadu, mobile app development Tamil Nadu, best IT company Tiruppur, best IT company Tirupur, website company near me, Shopify developer Tamil Nadu, ecommerce website Tiruppur, ecommerce website Tirupur, garment ERP software Tiruppur, garment ERP software Tirupur, textile software company Tiruppur, textile software company Tirupur, HYNOX, hynox.in',
   openGraph: {
-    title: 'Best Web, App & Software Company in Tiruppur | Hynox.in',
-    description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur, Tamil Nadu? Hynox delivers premium digital solutions.',
+    title: 'Best Web, App & Software Company in Tiruppur / Tirupur | Hynox.in',
+    description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur / Tirupur, Tamil Nadu? Hynox delivers premium IT solutions.',
     url: 'https://hynox.in',
     siteName: 'HYNOX',
     images: [
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Web, App & Software Company in Tiruppur | Hynox.in',
-    description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur, Tamil Nadu? Hynox delivers premium digital solutions.',
+    title: 'Best Web, App & Software Company in Tiruppur / Tirupur | Hynox.in',
+    description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur / Tirupur, Tamil Nadu? Hynox delivers premium IT solutions.',
     images: ['https://hynox.in/hynox_logo.jpg'],
   },
   other: {
