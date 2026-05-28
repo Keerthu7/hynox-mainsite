@@ -10,8 +10,8 @@ import ClientLayout from "@/components/client-layout"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: 'Best Web, App & Software Company in Tiruppur / Tirupur | Hynox.in',
-  description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur / Tirupur, Tamil Nadu? Hynox delivers premium IT solutions.',
+  title: 'Custom App Development | iOS & Android App Experts. We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!',
+  description: 'Software Development in Tiruppur & Coimbatore. App Developers in India. Build Your App With Us. Affordable App Solutions. Get Your App Built Today.',
 }
 
 export default function RootLayout({
