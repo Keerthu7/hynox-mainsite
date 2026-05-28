@@ -51,18 +51,17 @@ export default function MobileApplicationsPage() {
           <div className="hero-badge">
             <div className="hero-badge-dot"></div>
             <div className="hero-badge-line"></div>
-            App Development — HYNOX
+            Custom App Development — HYNOX
           </div>
 
-          <h1 className="hero-title">
-            Apps That <em>Scale</em><br/>
-            Businesses,<br/>
-            Not Just Look Good
+          <h1 className="hero-title" style={{ fontSize: 'clamp(3.5rem, 8vw, 6rem)' }}>
+            <em>Custom App</em> Development<br/>
+            <span style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', color: '#a1a1aa', fontFamily: "'DM Sans', sans-serif", fontWeight: 400, letterSpacing: 'normal', textTransform: 'none' }}>iOS & Android App Experts</span>
           </h1>
 
           <div className="hero-meta">
             <p className="hero-desc">
-              HYNOX designs and builds high-performance mobile and web applications — from concept to App Store. Powered by AI, built for scale, delivered on time.
+              We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!
             </p>
             
             <div className="hero-actions">
@@ -183,7 +182,7 @@ export default function MobileApplicationsPage() {
         <div className="s-title reveal">We Build Apps<br/>That Work Hard</div>
         <div className="intro-grid">
           <div className="intro-text reveal">
-            <p>Most app agencies build apps that look great in a demo and <b>fall apart in production.</b> At HYNOX, we engineer apps from the ground up — performant, scalable, and built to handle real users at real scale.</p>
+            <p>As premier <b>App Developers in India</b>, we know most agencies build apps that look great in a demo and <b>fall apart in production.</b> At HYNOX, we engineer apps from the ground up — performant, scalable, and built to handle real users at real scale.</p>
             <p>We combine <b>modern development stacks</b> with our AI expertise to deliver apps that don't just function — they actively improve your business through intelligent automation, data insights and seamless user experiences.</p>
             <p>Whether you need a <b>consumer mobile app, a SaaS platform, or a complex enterprise system</b> — HYNOX scopes it, designs it, builds it and ships it.</p>
           </div>
@@ -529,6 +528,21 @@ export default function MobileApplicationsPage() {
             <div className="faq-q" onClick={toggleFaq}><h4>What happens after the app launches?</h4><span className="faq-toggle">+</span></div>
             <div className="faq-a"><p>All packages include a post-launch support window for bug fixes. After that, we offer monthly retainer plans from ₹15,000/month — covering OS compatibility updates, new features, performance monitoring and crash reporting.</p></div>
           </div>
+        </div>
+      </section>
+
+      {/* SEO CTA SECTION */}
+      <section style={{ textAlign: 'center', padding: '8rem 2rem', background: '#050505', borderTop: '1px solid #111' }}>
+        <h2 className="reveal" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Bebas Neue', sans-serif", letterSpacing: '2px', marginBottom: '1rem', color: '#fff' }}>
+          Build Your App With Us
+        </h2>
+        <p className="reveal" style={{ fontSize: '1.2rem', color: '#888', maxWidth: '600px', margin: '0 auto 2.5rem', fontFamily: "'DM Sans', sans-serif", fontWeight: 300, lineHeight: 1.6 }}>
+          We provide <b>Affordable App Solutions</b>. We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!
+        </p>
+        <div className="reveal">
+          <a href="/contact" className="btn-primary" style={{ display: 'inline-block', fontSize: '1.1rem', padding: '16px 32px' }}>
+            Get Your App Built Today
+          </a>
         </div>
       </section>
 
