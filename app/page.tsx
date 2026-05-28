@@ -4,12 +4,12 @@ import { homePageStructuredData } from './home-structured-data';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Best Web, App & Software Company in Tiruppur / Tirupur | Hynox.in',
-  description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur / Tirupur, Tamil Nadu? Hynox delivers premium IT solutions.',
+  title: 'Custom App Development | iOS & Android App Experts. We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!',
+  description: 'We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!',
   keywords: 'web design company in Tiruppur, web design company in Tirupur, website development Tiruppur, website development Tirupur, app development Tiruppur, app development Tirupur, Shopify store Tiruppur, Shopify store Tirupur, custom software Tiruppur, custom software Tirupur, ERP software Tiruppur, ERP software Tirupur, software company in Tiruppur, software company in Tirupur, web development company Tamil Nadu, mobile app development Tamil Nadu, best IT company Tiruppur, best IT company Tirupur, website company near me, Shopify developer Tamil Nadu, ecommerce website Tiruppur, ecommerce website Tirupur, garment ERP software Tiruppur, garment ERP software Tirupur, textile software company Tiruppur, textile software company Tirupur, HYNOX, hynox.in',
   openGraph: {
-    title: 'Best Web, App & Software Company in Tiruppur / Tirupur | Hynox.in',
-    description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur / Tirupur, Tamil Nadu? Hynox delivers premium IT solutions.',
+    title: 'Custom App Development | iOS & Android App Experts. We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!',
+    description: 'We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!',
     url: 'https://hynox.in',
     siteName: 'HYNOX',
     images: [
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Web, App & Software Company in Tiruppur / Tirupur | Hynox.in',
-    description: 'Looking for the best web design, app development, Shopify, ERP & custom software company in Tiruppur / Tirupur, Tamil Nadu? Hynox delivers premium IT solutions.',
+    title: 'Custom App Development | iOS & Android App Experts. We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!',
+    description: 'We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!',
     images: ['https://hynox.in/hynox_logo.jpg'],
   },
   other: {

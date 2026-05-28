@@ -2,7 +2,7 @@ export const homePageStructuredData: any[] = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Best Web, App & Software Company in Tiruppur / Tirupur | Hynox.in",
+    "name": "Custom App Development | iOS & Android App Experts. We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!",
     "url": "https://hynox.in",
     "potentialAction": {
       "@type": "SearchAction",
