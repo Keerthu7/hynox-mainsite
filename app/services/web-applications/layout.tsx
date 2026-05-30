@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Affordable App Solutions | Get Your App Built Today',
-  description: 'We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!',
+  title: 'Web Design Company in Tiruppur | Ecommerce & Business Websites',
+  description: 'HYNOX is a leading web design company in Tiruppur creating responsive business websites, ecommerce stores, and SEO-friendly web solutions for textile and garment industries.',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

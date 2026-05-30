@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Custom App Development | iOS & Android App Experts',
-  description: 'We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!',
+  title: 'Mobile App Development Tiruppur | Android & iOS App Company',
+  description: 'Professional mobile app development company in Tiruppur offering Android, iOS, ecommerce, and business automation apps for startups and industries.',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
