@@ -10,8 +10,8 @@ import ClientLayout from "@/components/client-layout"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: 'Custom App Development | iOS & Android App Experts. We build custom iOS & Android apps for businesses. Fast delivery. Free consultation!',
-  description: 'Software Development in Tiruppur & Coimbatore. App Developers in India. Build Your App With Us. Affordable App Solutions. Get Your App Built Today.',
+  title: 'Software Company in Tiruppur | ERP, Ecommerce & Web Development',
+  description: 'HYNOX is a leading software company in Tiruppur offering ERP software, ecommerce development, web design, mobile app development, and Shopify solutions for textile, garment, and growing businesses across Tamil Nadu.',
 }
 
 export default function RootLayout({
@@ -47,18 +47,18 @@ export default function RootLayout({
             `,
           }}
         />
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `
-              <img height="1" width="1" style="display:none"
-              src="https://www.facebook.com/tr?id=1129133012473322&ev=PageView&noscript=1"
-              />
-            `,
-          }}
-        />
         {/* End Meta Pixel Code */}
       </head>
       <body className={inter.className} suppressHydrationWarning>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1129133012473322&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
         <GoogleTagManager gtmId="GTM-KMLDP729" />
         <GoogleAnalytics gaId="G-SQRXLH7ZZ8" />
         <ClientLayout>
