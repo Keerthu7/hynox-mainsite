@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { google } from 'googleapis';
-import { TransactionalEmailsApi, SendSmtpEmail, TransactionalEmailsApiApiKeys } from '@getbrevo/brevo';
+import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
@@ -66,32 +66,24 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: 'Name, Email, and Job Title are required.' }, { status: 400 });
     }
 
-    // Log API key for debugging (remove first/last few chars for security)
-    const apiKey = process.env.BREVO_API_KEY;
-    console.log('API Key exists:', !!apiKey);
-    console.log('API Key length:', apiKey?.length);
+    // Check Gmail credentials
+    const gmailUser = process.env.GMAIL_USER;
+    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
 
-    if (!apiKey) {
-      throw new Error('BREVO_API_KEY is not set in environment variables');
+    if (!gmailUser || !gmailAppPassword || gmailAppPassword === 'your_gmail_app_password_here') {
+      throw new Error('GMAIL_USER or GMAIL_APP_PASSWORD is not set correctly in environment variables');
     }
 
-    // Configure Brevo API - Alternative method
-    const apiInstance = new TransactionalEmailsApi();
+    // Configure Nodemailer
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: gmailUser,
+        pass: gmailAppPassword,
+      },
+    });
 
-    // Try setting API key using the authentications property directly
-    try {
-      apiInstance.setApiKey(TransactionalEmailsApiApiKeys.apiKey, apiKey);
-    } catch (authError) {
-      console.error('setApiKey failed, trying alternative method:', authError);
-      // Alternative: Direct property access
-      (apiInstance as any).authentications = {
-        apiKey: {
-          apiKey: apiKey
-        }
-      };
-    }
-
-    // Prepare main email content for Brevo
+    // Prepare main email content
     const mainEmailHtmlContent = `
       <h2>New Job Application</h2>
       <p><strong>Job Title:</strong> ${jobTitle}</p>
@@ -104,32 +96,34 @@ export async function POST(request: Request) {
       <p>${coverLetter || 'N/A'}</p>
     `;
 
-    const mainSendSmtpEmail = new SendSmtpEmail();
-    mainSendSmtpEmail.sender = { email: process.env.EMAIL_USER as string, name: "HYNOX" };
-    mainSendSmtpEmail.to = [{ email: process.env.COMPANY_EMAIL as string }];
-    mainSendSmtpEmail.subject = `New Job Application for ${jobTitle} from ${name}`;
-    mainSendSmtpEmail.htmlContent = mainEmailHtmlContent;
+    const attachments: any[] = [];
 
     // Attach resume if provided
     if (resume) {
       const resumeBuffer = Buffer.from(await resume.arrayBuffer());
-      mainSendSmtpEmail.attachment = [{
-        name: resume.name,
-        content: resumeBuffer.toString('base64'),
-      }];
+      attachments.push({
+        filename: resume.name,
+        content: resumeBuffer,
+      });
     }
 
-    // Send main email via Brevo
+    // Send main email via Gmail
     try {
-      const result = await apiInstance.sendTransacEmail(mainSendSmtpEmail);
-      console.log('Main application email sent successfully via Brevo:', result);
+      await transporter.sendMail({
+        from: `"HYNOX Careers" <${gmailUser}>`,
+        to: gmailUser, // Sending to yourself
+        replyTo: email, // Reply to applicant
+        subject: `New Job Application for ${jobTitle} from ${name}`,
+        html: mainEmailHtmlContent,
+        attachments: attachments.length > 0 ? attachments : undefined,
+      });
+      console.log('Main application email sent successfully via Gmail.');
     } catch (mainErr: any) {
-      console.error('Error sending main email via Brevo:', mainErr);
-      console.error('Error response:', mainErr.response?.data);
+      console.error('Error sending main email via Gmail:', mainErr);
       throw mainErr;
     }
 
-    // Send confirmation email to applicant via Brevo
+    // Send confirmation email to applicant via Gmail
     if (email) {
       const confirmationEmailHtmlContent = `
         <p>Hi ${name},</p>
@@ -151,45 +145,46 @@ export async function POST(request: Request) {
         +91 88705 24355</p>
       `;
 
-      const confirmationSendSmtpEmail = new SendSmtpEmail();
-      confirmationSendSmtpEmail.sender = { email: process.env.EMAIL_USER as string, name: "HYNOX" };
-      confirmationSendSmtpEmail.to = [{ email: email }];
-      confirmationSendSmtpEmail.subject = `Application Received – ${jobTitle} @ HYNOX`;
-      confirmationSendSmtpEmail.htmlContent = confirmationEmailHtmlContent;
-
       try {
-        await apiInstance.sendTransacEmail(confirmationSendSmtpEmail);
-        console.log('Confirmation email sent to applicant via Brevo.');
+        await transporter.sendMail({
+          from: `"HYNOX Careers" <${gmailUser}>`,
+          to: email,
+          subject: `Application Received – ${jobTitle} @ HYNOX`,
+          html: confirmationEmailHtmlContent,
+        });
+        console.log('Confirmation email sent to applicant via Gmail.');
       } catch (confErr) {
-        console.error('Error sending confirmation email via Brevo:', confErr);
+        console.error('Error sending confirmation email via Gmail:', confErr);
+        // Do not throw here, as the main email was successful
       }
     }
 
     // --- Google Sheets Logic ---
     try {
-      const auth = new google.auth.GoogleAuth({
-        credentials: {
-          client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
-          private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-        },
-        scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-      });
+      if (process.env.GOOGLE_SHEETS_CLIENT_EMAIL && process.env.GOOGLE_SHEETS_PRIVATE_KEY && process.env.GOOGLE_SHEET_CAREERS_ID) {
+        const auth = new google.auth.GoogleAuth({
+          credentials: {
+            client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
+            private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+          },
+          scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+        });
 
-      const sheets = google.sheets({ version: 'v4', auth });
+        const sheets = google.sheets({ version: 'v4', auth });
 
-      const newRow = [jobTitle, name, email, phone || 'N/A', coverLetter || 'N/A', additionalLinks || 'N/A'];
+        const newRow = [jobTitle, name, email, phone || 'N/A', coverLetter || 'N/A', additionalLinks || 'N/A'];
 
-      await sheets.spreadsheets.values.append({
-        spreadsheetId: process.env.GOOGLE_SHEET_CAREERS_ID,
-        range: 'CAREERS_APPLICATIONS!A:F',
-        valueInputOption: 'USER_ENTERED',
-        requestBody: {
-          values: [newRow],
-        },
-      });
+        await sheets.spreadsheets.values.append({
+          spreadsheetId: process.env.GOOGLE_SHEET_CAREERS_ID,
+          range: 'CAREERS_APPLICATIONS!A:F',
+          valueInputOption: 'USER_ENTERED',
+          requestBody: {
+            values: [newRow],
+          },
+        });
 
-      console.log('Careers application data successfully saved to Google Sheet.');
-
+        console.log('Careers application data successfully saved to Google Sheet.');
+      }
     } catch (sheetError) {
       console.error('Error saving careers application data to Google Sheet:', sheetError);
     }

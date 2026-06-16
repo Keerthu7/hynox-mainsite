@@ -54,14 +54,12 @@ export default function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps
 
   return (
     <div className="min-h-screen bg-black text-white relative">
-      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(articleStructuredData),
           }}
         />
-      </head>
       {/* Hero Section */}
       <section className="pt-32 bg-black">
         <div className="container mx-auto px-4">

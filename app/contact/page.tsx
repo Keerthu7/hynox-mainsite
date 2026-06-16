@@ -185,7 +185,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit, () => toast.error("Please fill out all required fields correctly."))} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-light text-gray-400 tracking-wider">
