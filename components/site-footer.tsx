@@ -248,11 +248,18 @@ export function SiteFooter() {
               </Link>
             </div>
             
-            <div className="space-y-2">
-              <h4 className="text-sm font-light text-gray-400 uppercase tracking-wider">Location</h4>
+            <div className="space-y-4">
+              <h4 className="text-sm font-light text-gray-400 uppercase tracking-wider">Locations</h4>
               <p className="text-gray-300 font-light">
-                Jeeva St, Pandiyan Nagar<br />
+                <strong>Tiruppur:</strong><br />
+                Jeeva St, Pandiyan Nagar,<br />
                 Tirupur-641 602
+              </p>
+              <p className="text-gray-300 font-light">
+                <strong>Coimbatore:</strong><br />
+                3rd Floor, Sri Govindaraj Tower, 38/4,<br />
+                Father Randy St, R.S. Puram,<br />
+                Coimbatore, Tamil Nadu 641002
               </p>
             </div>
           </div>

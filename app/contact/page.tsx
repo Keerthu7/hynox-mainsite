@@ -105,8 +105,14 @@ export default function ContactPage() {
     },
     {
       icon: MapPin,
-      title: "Location",
-      content: "Tirupur, Tamil Nadu",
+      title: "Tiruppur Office",
+      content: "Jeeva St, Pandiyan Nagar, Tirupur-641 602",
+      href: null,
+    },
+    {
+      icon: MapPin,
+      title: "Coimbatore Office",
+      content: "3rd Floor, Sri Govindaraj Tower, 38/4, Father Randy St, R.S. Puram, Coimbatore, Tamil Nadu 641002",
       href: null,
     },
     {
