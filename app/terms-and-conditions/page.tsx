@@ -315,8 +315,8 @@ export default function TermsAndConditions() {
                     <span className="text-gray-400 font-light">www.hynox.in</span>
                   </div>
                   <div className="flex items-center gap-4">
-                    <MapPin className="w-5 h-5 text-gray-500" />
-                    <span className="text-gray-400 font-light">Jeeva St, Pandiyan Nagar, Tirupur</span>
+                    <MapPin className="w-5 h-5 text-gray-500 flex-shrink-0" />
+                    <span className="text-gray-400 font-light">3rd Floor, Sri Govindaraj Tower, 38/4, Father Randy St, R.S. Puram, Coimbatore, Tamil Nadu 641002</span>
                   </div>
                 </div>
               </div>
